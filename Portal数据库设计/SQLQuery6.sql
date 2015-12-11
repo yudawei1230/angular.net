@@ -1,0 +1,1 @@
+select top 15  Yaopin.*  from  Yaopin  where  1=1  and Yaopin.IsDel=0 order by  ID desc

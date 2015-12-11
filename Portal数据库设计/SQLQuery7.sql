@@ -1,0 +1,1 @@
+insert yaopin(YaopinName,ID,YaopinPrice,YaopinDate,YaopinPrimaryKey,IsDel,IsSort,AddDate)values('янкА',9,'15.50','2015-10-12',NEWID(),'false','1','2015-10-12 00:00:00.000')

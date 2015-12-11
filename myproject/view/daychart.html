@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>chart</title>
+        <meta http-equiv="Content-Type" content="text/html" charset="gb2312" /> 
+        <link type="text/css" rel="stylesheet" href="../stylesheets/daychart.css" />
+        <script type="text/javascript" src="../javascript/plugins/jquery.js"></script>
+        <script type="text/javascript" src="../javascript/plugins/angular-1.4.0-rc.2/angular.min.js"></script>
+	    <script type="text/javascript" language="JavaScript" src="../javascript/page/daychart.js" charset="gb2312"></script>
+    </head>
+    <body ng-app="dayform">
+        <nav>
+            <p>茂名高科生产用药情况</p>
+            <div>
+                <select id="year_select">
+                    <option>2005</option>
+                    <option>2006</option>
+                    <option>2007</option>
+                    <option>2008</option>
+                    <option>2009</option>
+                    <option>2010</option>
+                    <option>2011</option>
+                    <option>2012</option>
+                    <option>2013</option>
+                    <option>2014</option>
+                    <option>2015</option>
+                    <option>2016</option>
+                </select>
+                <p>年</p>
+                    <select id="month_select">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                 </select>
+                <p>月</p>
+                <select id="dat-select">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>28</option>
+                    <option>29</option>
+                    <option>30</option>
+                    <option>31</option>
+                </select>
+                <p>日</p>
+            </div> 
+        </nav>
+        <div class="daychart" ng-controller="dayform">
+            <table>
+                <head>
+                    <tr>
+                        <th colspan="15">茂名高科2015年10月生产，用药，包装情况</th>
+                    </tr>
+                    <tr>
+                        <th colspan="15">月累计</th>
+                    </tr>
+                    <tr>
+                        <th colspan="1">&nbsp;</th>
+                        <th colspan="4">&nbsp;</th>
+                        <th colspan="10">单耗（kg/t）</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2" colspan="1">产品型号</th>
+                        <th rowspan="1" colspan="4">产量（t）</th>
+                        <th rowspan="1" colspan="2">硫酸</th>
+                        <th rowspan="1" colspan="2">保险粉</th>
+                        <th rowspan="1" colspan="2">六偏</th>
+                        <th rowspan="1" colspan="2">DC</th>
+                        <th rowspan="1" colspan="2">液碱</th>
+                    </tr>
+                    <tr>
+                        <th>本月计划</th>
+                        <th>上月累计</th>
+                        <th>本月累计</th>
+                        <th>完成率（%）</th>
+                        <th>上月累计</th>
+                        <th>本月累计</th>
+                        <th>上月累计</th>
+                        <th>本月累计</th>
+                        <th>上月累计</th>
+                        <th>本月累计</th>
+                        <th>上月累计</th>
+                        <th>本月累计</th>
+                        <th>上月累计</th>
+                        <th>本月累计</th>
+                    </tr>
+                    <tr>
+                        <th>干粉合计</th>
+                        <th>{{GFProSum| number:2}}</th>
+                        <th>{{GFLastMonthProTotal| number:2}}</th>
+                        <th>{{GFThisMonthProTotal| number:2}}</th>
+                        <th>{{GFFinishedRate| number:2}}%</th>
+                        <th>{{GFlsLastMonthTotal| number:2}}</th>
+                        <th>{{GFlsThisMonthTotal| number:2}}</th>
+                        <th>{{GFbxfLastMonthTotal| number:2}}</th>
+                        <th>{{GFbxfThisMonthTotal| number:2}}</th>
+                        <th>{{GFlpLastMonthTotal| number:2}}</th>
+                        <th>{{GFlpThisMonthTotal| number:2}}</th>
+                        <th>{{GFdcLastMonthTotal| number:2}}</th>
+                        <th>{{GFdcThisMonthTotal| number:2}}</th>
+                        <th>{{GFyjLastMonthTotal| number:2}}</th>
+                        <th>{{GFyjThisMonthTotal| number:2}}</th>
+                       
+                    </tr>
+                    <tr>
+                        <th>瓷土合计</th>
+                        <th>{{CtProSum | number:2}}</th>
+                        <th>{{CtLastMonthProTotal| number:2}}</th>
+                        <th>{{CtThisMonthProTotal| number:2}}</th>
+                        <th>{{CtProFinishedRate| number:2}}%</th>
+                        <th>{{CtlsLastMonthTotal| number:2}}</th>
+                        <th>{{CtlsThisMonthTotal| number:2}}</th>
+                        <th>{{CtbxfLastMonthTotal| number:2}}</th>
+                        <th>{{CtbxfThisMonthTotal| number:2}}</th>
+                        <th>{{CtlpLastMonthTotal| number:2}}</th>
+                        <th>{{CtlpThisMonthTotal| number:2}}</th>
+                        <th>{{CtdcLastMonthTotal| number:2}}</th>
+                        <th>{{CtdcThisMonthTotal| number:2}}</th>
+                        <th>{{CtyjLastMonthTotal| number:2}}</th>
+                        <th>{{CtyjThisMonthTotal| number:2}}</th>
+                    </tr>
+                    <tr>
+                        <th>无漂土合计</th>
+                        <th>{{WptProSum | number:2}}</th>
+                        <th>{{WptLastMonthProTotal| number:2}}</th>
+                        <th>{{WptThisMonthProTotal| number:2}}</th>
+                        <th>{{WptProFinishedRate| number:2}}%</th>
+                        <th>{{WptlsLastMonthTotal| number:2}}</th>
+                        <th>{{WptlsThisMonthTotal| number:2}}</th>
+                        <th>{{WptbxfLastMonthTotal| number:2}}</th>
+                        <th>{{WptbxfThisMonthTotal| number:2}}</th>
+                        <th>{{WptlpLastMonthTotal| number:2}}</th>
+                        <th>{{WptlpThisMonthTotal| number:2}}</th>
+                        <th>{{WptdcLastMonthTotal| number:2}}</th>
+                        <th>{{WptdcThisMonthTotal| number:2}}</th>
+                        <th>{{WptyjLastMonthTotal| number:2}}</th>
+                        <th>{{WptyjThisMonthTotal| number:2}}</th>
+                    </tr>
+                </head>
+                <tbody>
+                    <tr>
+                        <td>干粉一合计</td>
+                        <td>{{GfOneProSum | number:2}}</td>
+                        <td>{{GfOneLastMonthProTotal| number:2}}</td>
+                        <td>{{GfOneThisMonthProTotal| number:2}}</td>
+                        <td>{{GfOneProFinishedRate| number:2}}%</td>
+                        <td>{{GfOnelsLastMonthTotal| number:2}}</td>
+                        <td>{{GfOnelsThisMonthTotal| number:2}}</td>
+                        <td>{{GfOnebxfLastMonthTotal| number:2}}</td>
+                        <td>{{GfOnebxfThisMonthTotal| number:2}}</td>
+                        <td>{{GfOnelpLastMonthTotal| number:2}}</td>
+                        <td>{{GfOnelpThisMonthTotal| number:2}}</td>
+                        <td>{{GfOnedcLastMonthTotal| number:2}}</td>
+                        <td>{{GfOnedcThisMonthTotal| number:2}}</td>
+                        <td>{{GfOneyjLastMonthTotal| number:2}}</td>
+                        <td>{{GfOneyjThisMonthTotal| number:2}}</td>
+                    </tr>
+                </tbody>
+                <tbody ng-repeat="x in GfOneProduct">
+                    <tr>
+                        <td>{{x.name}}</td>
+                        <td>{{x.monthPlan}}</td>
+                        <td>{{x.ProlastMonthTotal}}</td>
+                        <td>{{x.ProthisMonthTotal}}</td>
+                        <td>{{x.ProfinsiehedRate}}</td>
+                        <td>{{x.lsLastMonthTotal}}</td>
+                        <td>{{x.lsThisMonthTotal}}</td>
+                        <td>{{x.bxfLastMonthTotal}}</td>
+                        <td>{{x.bxfThisMonthTotal}}</td>
+                        <td>{{x.lpLastMonthTotal}}</td>
+                        <td>{{x.lpThisMonthTotal}}</td>
+                        <td>{{x.dcLastMonthTotal}}</td>
+                        <td>{{x.dcThisMonthTotal}}</td>
+                        <td>{{x.yjLastMonthTotal}}</td>
+                        <td>{{x.yjThisMonthTotal}}</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <td>干粉三合计</td>
+                    <td>{{GfThreeProSum | number:2}}</td>
+                    <td>{{GfThreeLastMonthProTotal| number:2}}</td>
+                    <td>{{GfThreeThisMonthProTotal| number:2}}</td>
+                    <td>{{GfThreeProFinishedRate| number:2}}%</td>
+                    <td>{{GfThreelsLastMonthTotal| number:2}}</td>
+                    <td>{{GfThreelsThisMonthTotal| number:2}}</td>
+                    <td>{{GfThreebxfLastMonthTotal| number:2}}</td>
+                    <td>{{GfThreebxfThisMonthTotal| number:2}}</td>
+                    <td>{{GfThreelpLastMonthTotal| number:2}}</td>
+                    <td>{{GfThreelpThisMonthTotal| number:2}}</td>
+                    <td>{{GfThreedcLastMonthTotal| number:2}}</td>
+                    <td>{{GfThreedcThisMonthTotal| number:2}}</td>
+                    <td>{{GfThreeyjLastMonthTotal| number:2}}</td>
+                    <td>{{GfThreeyjThisMonthTotal| number:2}}</td>
+                </tbody>
+                <tbody ng-repeat="x in GfThreeProduct">
+                    <tr>
+                        <td>{{x.name}}</td>
+                        <td>{{x.monthPlan}}</td>
+                        <td>{{x.ProlastMonthTotal}}</td>
+                        <td>{{x.ProthisMonthTotal}}</td>
+                        <td>{{x.ProfinsiehedRate}}</td>
+                        <td>{{x.lsLastMonthTotal}}</td>
+                        <td>{{x.lsThisMonthTotal}}</td>
+                        <td>{{x.bxfLastMonthTotal}}</td>
+                        <td>{{x.bxfThisMonthTotal}}</td>
+                        <td>{{x.lpLastMonthTotal}}</td>
+                        <td>{{x.lpThisMonthTotal}}</td>
+                        <td>{{x.dcLastMonthTotal}}</td>
+                        <td>{{x.dcThisMonthTotal}}</td>
+                        <td>{{x.yjLastMonthTotal}}</td>
+                        <td>{{x.yjThisMonthTotal}}</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <td>瓷土合计</td>
+                    <td>{{CtProSum | number:2}}</td>
+                    <td>{{CtLastMonthProTotal| number:2}}</td>
+                    <td>{{CtThisMonthProTotal| number:2}}</td>
+                    <td>{{CtProFinishedRate| number:2}}%</td>
+                    <td>{{CtlsLastMonthTotal| number:2}}</td>
+                    <td>{{CtlsThisMonthTotal| number:2}}</td>
+                    <td>{{CtbxfLastMonthTotal| number:2}}</td>
+                    <td>{{CtbxfThisMonthTotal| number:2}}</td>
+                    <td>{{CtlpLastMonthTotal| number:2}}</td>
+                    <td>{{CtlpThisMonthTotal| number:2}}</td>
+                    <td>{{CtdcLastMonthTotal| number:2}}</td>
+                    <td>{{CtdcThisMonthTotal| number:2}}</td>
+                    <td>{{CtyjLastMonthTotal| number:2}}</td>
+                    <td>{{CtyjThisMonthTotal| number:2}}</td>
+                </tbody>
+                <tbody ng-repeat="x in CtProduct">
+                    <tr>
+                        <td>{{x.name}}</td>
+                        <td>{{x.monthPlan}}</td>
+                        <td>{{x.ProlastMonthTotal}}</td>
+                        <td>{{x.ProthisMonthTotal}}</td>
+                        <td>{{x.ProfinsiehedRate}}</td>
+                        <td>{{x.lsLastMonthTotal}}</td>
+                        <td>{{x.lsThisMonthTotal}}</td>
+                        <td>{{x.bxfLastMonthTotal}}</td>
+                        <td>{{x.bxfThisMonthTotal}}</td>
+                        <td>{{x.lpLastMonthTotal}}</td>
+                        <td>{{x.lpThisMonthTotal}}</td>
+                        <td>{{x.dcLastMonthTotal}}</td>
+                        <td>{{x.dcThisMonthTotal}}</td>
+                        <td>{{x.yjLastMonthTotal}}</td>
+                        <td>{{x.yjThisMonthTotal}}</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <td>无漂土合计</td>
+                    <td>{{WptProSum | number:2}}</td>
+                    <td>{{WptLastMonthProTotal| number:2}}</td>
+                    <td>{{WptThisMonthProTotal| number:2}}</td>
+                    <td>{{WptProFinishedRate| number:2}}%</td>
+                    <td>{{WptlsLastMonthTotal| number:2}}</td>
+                    <td>{{WptlsThisMonthTotal| number:2}}</td>
+                    <td>{{WptbxfLastMonthTotal| number:2}}</td>
+                    <td>{{WptbxfThisMonthTotal| number:2}}</td>
+                    <td>{{WptlpLastMonthTotal| number:2}}</td>
+                    <td>{{WptlpThisMonthTotal| number:2}}</td>
+                    <td>{{WptdcLastMonthTotal| number:2}}</td>
+                    <td>{{WptdcThisMonthTotal| number:2}}</td>
+                    <td>{{WptyjLastMonthTotal| number:2}}</td>
+                    <td>{{WptyjThisMonthTotal| number:2}}</td>
+                </tbody>
+                <tbody ng-repeat="x in WptProduct">
+                    <tr>
+                        <td>{{x.name}}</td>
+                        <td>{{x.monthPlan}}</td>
+                        <td>{{x.ProlastMonthTotal}}</td>
+                        <td>{{x.ProthisMonthTotal}}</td>
+                        <td>{{x.ProfinsiehedRate}}</td>
+                        <td>{{x.lsLastMonthTotal}}</td>
+                        <td>{{x.lsThisMonthTotal}}</td>
+                        <td>{{x.bxfLastMonthTotal}}</td>
+                        <td>{{x.bxfThisMonthTotal}}</td>
+                        <td>{{x.lpLastMonthTotal}}</td>
+                        <td>{{x.lpThisMonthTotal}}</td>
+                        <td>{{x.dcLastMonthTotal}}</td>
+                        <td>{{x.dcThisMonthTotal}}</td>
+                        <td>{{x.yjLastMonthTotal}}</td>
+                        <td>{{x.yjThisMonthTotal}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

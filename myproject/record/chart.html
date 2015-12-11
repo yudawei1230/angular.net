@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<title>chart</title>
+	<meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="../javascript/plugins/bootstrap-3.3.4/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/chart.css">
+</head>
+<body >
+	<div class="charts"  ng-app="myapp">
+	    <table ng-controller="Chart">
+		<thead>
+			<tr >
+				<th colspan="12">茂名高科2015年10月生产、用药、包装情况</th>
+			</tr>
+			<tr>
+				<th colspan="12">29日情况</th>
+			</tr>
+			<tr>
+				<th colspan="4">&nbsp;</th>
+				<th colspan="5">单耗(kg/t)</th>
+				<th colspan="3" rowspan="3">备注</th>
+			</tr>
+			<tr>
+				<th rowspan="2">产品型号</th>
+				<th rowspan="2">班次</th>
+				<th colspan="2">产量</th>
+				<th>硫酸</th>
+				<th>保险粉</th>
+				<th>六偏</th>
+				<th>DC</th>
+				<th>液碱</th>
+			</tr>
+			<tr>
+				<th>计划</th>
+				<th>实际</th>
+				<th colspan="5">实际</th>
+			</tr>
+			<tr>
+				<th colspan="2">干粉合计</td>
+				<th>150</th>
+				<th>155.4</th>
+				<th>11.01</th>
+				<th>13.72</th>
+				<th>2.06</th>
+				<th>1.99</th>
+				<th>3.27</th>
+				<th>——</th>
+			</tr>
+			<tr>
+				<th colspan="2">瓷土合计</th>
+				<th>400</th>
+				<th>350.0</th>
+				<th>4.08</th>
+				<th>8.42</th>
+				<th>&nbsp;</th>
+				<th>&nbsp;</th>
+				<th>&nbsp;</th>
+				<th>&nbsp;</th>
+			</tr>
+			<tr>
+				<th colspan="2">无漂土合计</th>
+				<th>0.0</th>
+				<th>0.0</th>
+				<th>&nbsp;</th>
+				<th>&nbsp;</th>
+				<th>&nbsp;</th>
+				<th>&nbsp;</th>
+				<th>&nbsp;</th>
+				<th>&nbsp;</th>
+			</tr>
+			<tr>
+				<th colspan="2">干粉一合计</th>
+				<th>{{GfSum | number:2}}</th>
+				<th>{{ProductOutput | number:2}}</th>
+				<th>{{GfLsCost | number:2}}</th>
+				<th>{{GfBxfCost | number:2}}</th>
+				<th>{{GfLpCost | number:2}}</th>
+				<th>{{GfDcCost | number:2}}</th>
+				<th>{{GfYjCost | number:2}}</th>
+				<th>——</th>
+			</tr>
+		</thead>
+		<tbody ng-repeat="x in GfProduction">
+			<tr>
+				<td rowspan="3">{{x.name}}</td>
+				<td>零班</td>
+				<td rowspan="3">{{x.planYield}}</td>
+				<td>{{x.lRealYield}}</td>
+				<td>{{x.lLS}}</td>
+				<td>{{x.lBXF}}</td>
+				<td>{{x.lLP}}</td>
+				<td>{{x.lDC}}</td>
+				<td>{{x.lYJ}}</td>
+				<td>保险粉用量+3°~+4°</td>
+			</tr>
+			<tr>
+
+				<td>白班</td>
+				<td>{{x.bRealYield}}</td>
+				<td>{{x.bLS}}</td>
+				<td>{{x.bBXF}}</td>
+				<td>{{x.bLP}}</td>
+				<td>{{x.bDC}}</td>
+				<td>{{x.bYJ}}</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>中班</td>
+				<td>{{x.zRealYield}}</td>
+				<td>{{x.zLS}}</td>
+				<td>{{x.zBXF}}</td>
+				<td>{{x.zLP}}</td>
+				<td>{{x.zDC}}</td>
+				<td>{{x.zYJ}}</td>
+				<td>&nbsp;</td>
+			</tr>
+		</tbody>
+        <tbody ng-repeat="x in Ctproduction">
+            <tr>
+				<td rowspan="3">{{x.Name}}</td>
+				<td>零班</td>
+				<td rowspan="3">{{x.planYield}}</td>
+				<td>{{x.lRealYield}}</td>
+				<td>{{x.lLS}}</td>
+				<td>{{x.lBXF}}</td>
+				<td>{{x.lLP}}</td>
+				<td>{{x.lDC}}</td>
+				<td>{{x.lYJ}}</td>
+				<td>保险粉用量+3°~+4°</td>
+			</tr>
+			<tr>
+
+				<td>白班</td>
+				<td>{{x.bRealYield}}</td>
+				<td>{{x.bLS}}</td>
+				<td>{{x.bBXF}}</td>
+				<td>{{x.bLP}}</td>
+				<td>{{x.bDC}}</td>
+				<td>{{x.bYJ}}</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>中班</td>
+				<td>{{x.zRealYield}}</td>
+				<td>{{x.zLS}}</td>
+				<td>{{x.zBXF}}</td>
+				<td>{{x.zLP}}</td>
+				<td>{{x.zDC}}</td>
+				<td>{{x.zYJ}}</td>
+				<td>&nbsp;</td>
+			</tr>
+        </tbody>
+	</table>
+
+
+	</div>
+	<script type="text/javascript" src="../javascript/plugins/jquery.js"></script>
+    <script type="text/javascript" src="../javascript/plugins/angular-1.4.0-rc.2/angular.min.js"></script>
+    <script type="text/javascript" src="../javascript/plugins/bootstrap-3.3.4/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../javascript/page/chart.js" charset="gbk"></script>
+</body>
+</html>
