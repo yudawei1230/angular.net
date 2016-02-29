@@ -1,0 +1,40 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="css/css.css" rel="stylesheet" />
+<script src="js/jquery-1.10.1.min.js"></script> 
+<script src="js/idangerous.swiper.min.js"></script> 
+
+<title>海印移动门户</title>
+</head>
+
+<body>
+<div style=" width:100%; height:50px; color:#fff; background:#C35586">
+  <div class="back"><a href="javascript:history.go(-1)">返回</a></div>
+  <div style="font-size:18px; line-height:50px;" align="center">最新动态</div>
+</div>
+
+<div class="wrap">
+<div style="padding:10px">
+  <div align="center" style=" font-size:18px; color:#c51c63; padding-bottom:10px;" id="newsTitle">
+  </div>
+  <div class="new_nr" id="newsContent"> 
+  <img src="" id="newsImg">
+  </div>
+  </div>
+</div>
+    <script>
+        var URL = location.href;
+        var newsID = URL.split("=")[1].split("&")[0];
+        $(document).ready(function () {
+            $.post('/json/PublicHandler.ashx?Method=HighsunPortal_GetCenterNewsByID&newsID=' + newsID, function (item) {
+                $('#newsTitle').html(item[2]);
+                $('#newsContent').html(item[3]);
+                
+            },"json");
+        });
+    </script>
+</body>
+</html>

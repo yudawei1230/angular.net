@@ -1,0 +1,138 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using WebSite.Models;
+using System.Configuration;
+
+using System.IO;
+
+using WebSite.Comman;
+
+
+namespace highsunMobileOA
+{
+    public partial class SLTradingWaterReport : System.Web.UI.Page
+    {
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+
+                if (string.IsNullOrEmpty(WebSite.Comman.CookieSession.GetCookie("LoginName")))
+                {
+                    Response.Redirect("login.aspx");
+                }
+            }
+            ReadingtxtFile();
+        }
+
+        public void ReadingtxtFile()
+        {
+            string datetime = DateTime.Now.AddDays(-1).ToString();
+            string fileName = "SL_TRANS_INF_" + string.Format("{0:yyyyMMdd}", Convert.ToDateTime(datetime)) + ".txt";
+            string filePath = @"D:\file\" + fileName;
+            //如文件不存在，则写入，否则，不做其他操作，如有重复，则返回错误
+            if (!File.Exists(filePath))
+            {
+                try
+                {
+                    SFTPHelper sftpHelper = new SFTPHelper("192.168.5.22", "root", "sftp4hyadmin");
+                    sftpHelper.Connect();
+
+                    sftpHelper.Get(@"/root/SLTradingWaterFiles/" + fileName, @"D:\file\");
+                    sftpHelper.Disconnect();
+                    using (StreamReader sr = new StreamReader(filePath, System.Text.Encoding.GetEncoding("gb2312")))
+                    {
+
+                        String line;
+
+                        while ((line = sr.ReadLine()) != null)
+                        {
+                            SLTradingWaterInfo sltradingwaterInfo = new SLTradingWaterInfo();
+                            String txn_num = string.Empty;
+                            String sys_seq_num = string.Empty;
+                            String txn_date = string.Empty;
+                            String trans_date_time = string.Empty;
+                            String pan = string.Empty;
+                            String amt_trans = string.Empty;
+                            String retrivl_ref = string.Empty;
+                            String authr_id_resp = string.Empty;
+                            String term_id = string.Empty;
+                            String mcht_no = string.Empty;
+                            String mcht_nm = string.Empty;
+                            String misc_1 = string.Empty;
+                            String misc_2 = string.Empty;
+                            String misc_3 = string.Empty;
+                            String inst_code = string.Empty;
+                            String agen_no = string.Empty;
+                            String oper_no = string.Empty;
+                            String resp_code = string.Empty;
+                            String offline_flg = string.Empty;
+
+
+                            sltradingwaterInfo.Txn_num = line.ToString().Substring(0, 4);//4
+
+                            sltradingwaterInfo.Sys_seq_num = line.ToString().Substring(4, 6);//6
+
+                            sltradingwaterInfo.Txn_date = line.ToString().Substring(10, 8);//8
+
+                            sltradingwaterInfo.Trans_date_time = line.ToString().Substring(18, 10);//10
+
+                            sltradingwaterInfo.Pan = line.ToString().Substring(28, 19);//19
+
+                            sltradingwaterInfo.Amt_trans = line.ToString().Substring(47, 12);//12
+
+                            sltradingwaterInfo.Retrivl_ref = line.ToString().Substring(59, 12);//12
+
+                            sltradingwaterInfo.Authr_id_resp = line.ToString().Substring(71, 6);//6
+
+                            sltradingwaterInfo.Term_id = line.ToString().Substring(77, 8);//8
+
+                            sltradingwaterInfo.Mcht_no = line.ToString().Substring(85, 15);//15
+
+                            sltradingwaterInfo.Mcht_nm = line.ToString().Substring(100, line.Length - 163);//line.Length-163
+
+                            sltradingwaterInfo.Misc_1 = line.ToString().Substring(line.Length - 63, 12);//12
+
+                            sltradingwaterInfo.Misc_2 = line.ToString().Substring(line.Length - 51, 12);//12
+
+                            sltradingwaterInfo.Misc_3 = line.ToString().Substring(line.Length - 39, 12);//12
+
+                            sltradingwaterInfo.Inst_code = line.ToString().Substring(line.Length - 27, 8);//8
+
+                            sltradingwaterInfo.Agen_no = line.ToString().Substring(line.Length - 19, 8);//8
+
+                            sltradingwaterInfo.Oper_no = line.ToString().Substring(line.Length - 11, 8);//8
+
+                            sltradingwaterInfo.Resp_code = line.ToString().Substring(line.Length - 3, 2);//2
+
+                            sltradingwaterInfo.Offline_flg = line.ToString().Substring(line.Length - 1, 1);//1 
+
+                            try
+                            {
+                                WebSite.BLL.PublicHandler handler = new WebSite.BLL.PublicHandler();
+
+                                handler.InsertSLTradingWaterData(sltradingwaterInfo);
+                            }
+                            catch
+                            {
+
+                            }
+                        }
+                    }
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+    }
+}

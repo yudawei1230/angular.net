@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=yes">
+<title>管理商品</title>
+<link rel="stylesheet" type="text/css" href="css/common.css?ver=342dd111111">
+<script type="text/javascript" src="js/jquery.1.4.2-min.js"></script>
+<script type="text/javascript" src="js/common.js?ver=5678"></script>
+<script type="text/javascript" src="js/jquery.iosslider.js"></script>
+<script type="text/javascript" src="js/add_product.js"></script>
+</head>
+<body>
+<div class="topBox">
+  <div class="GoBack"><a href="javascript:history.go(-1);">返回</a></div>
+  <h3>管理商品</h3>
+</div>
+<div class="PageBox" style="padding: 50px 0px 0px 0px;"> 
+  <!--管理商品-->
+  <div class="IssueBox">
+    <form id="form1" runat="server" enctype="">
+      <div class="page_box">
+        <div class="content content2" id="wrapper">
+          <div id="scroller"> 
+            <!--容器内容开始-->
+            <div class="edit_product_box">
+              <div class="edit_product_form">
+              <h3>商品图</h3>
+                <div class="edit_product_pic"> <span class="u_uploadBtn add_pic">
+                  <button>+<img src="images/list.jpg"></button>
+                  <input type="file" name="fileToUpload" accept="image/*" capture="camera" filename="" onchange="previewImage(this)" id="File0" />
+                  </span> <span class="u_uploadBtn add_pic">
+                  <button>+<img src="images/list.jpg"></button>
+                  <input type="file" name="fileToUpload" accept="image/*" capture="camera" filename="" onchange="previewImage(this)" id="File1" />
+                  </span> <span class="u_uploadBtn add_pic">
+                  <button>+<img src="images/list.jpg"></button>
+                  <input type="file" name="fileToUpload" accept="image/*" capture="camera" filename="" onchange="previewImage(this)" id="File2" />
+                  </span> <span class="u_uploadBtn add_pic">
+                  <button>+<img src="images/list.jpg"></button>
+                  <input type="file" name="fileToUpload" accept="image/*" capture="camera" filename="" onchange="previewImage(this)" id="File3" />
+                  </span> <span class="u_uploadBtn add_pic">
+                  <button>+<img src="images/list.jpg"></button>
+                  <input type="file" name="fileToUpload" accept="image/*" capture="camera" filename="" onchange="previewImage(this)" id="File4" />
+                  </span> </div>
+                <h3>平面图</h3>
+                <div class="edit_product_pic"> <span class="u_uploadBtn add_pic">
+                  <button>+<img src="images/deta.jpg"></button>
+                  <input type="file" name="planeToUpload" accept="image/*" capture="camera" filename="" onchange="previewImage(this)" id="File5" />
+                  </span> </div>
+                <div class="ipt_row">
+                  <label class="f_fl">规划业态：</label>
+                  <div class="rel_fill f_pr">
+                    <select name="industry">
+                      <option>规划业态1</option>
+                      <option>规划业态2</option>
+                      <option selected>规划业态3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="ipt_row">
+                  <label class="f_fl">是否下架：</label>
+                  <div class="rel_fill f_pr">
+                    <input name="isdel" type="radio" value="True" />
+                    是
+                    <input name="isdel" type="radio" value="False" checked />
+                    否 </div>
+                </div>
+                <div class="ipt_row">
+                  <label class="f_fl">商铺名称：</label>
+                  <div class="rel_fill f_pr">
+                    <input type="text" name="name" class="ipt" value="都荟城" />
+                  </div>
+                </div>
+                <div class="ipt_row">
+                  <label class="f_fl">面积：</label>
+                  <div class="rel_fill f_pr">
+                    <input type="text" name="area" class="ipt" value="250M" />
+                  </div>
+                </div>
+                <div class="ipt_row">
+                  <label class="f_fl">租金：</label>
+                  <div class="rel_fill f_pr">
+                    <input type="text" name="rent" class="ipt" value="10000元" />
+                  </div>
+                </div>
+                <div class="ipt_row">
+                  <label class="f_fl">铺号：</label>
+                  <div class="rel_fill f_pr">
+                    <input type="text" name="shopno" class="ipt" value="100-1号"/>
+                  </div>
+                </div>
+                <div class="ipt_row">
+                  <label class="f_fl">楼层：</label>
+                  <div class="rel_fill f_pr">
+                    <input type="text" name="floor" class="ipt" value="一层" />
+                  </div>
+                </div>
+                <div class="ipt_row">
+                  <label class="f_fl">实用率：</label>
+                  <div class="rel_fill f_pr">
+                    <input type="text" name="utilityrate" class="ipt" value="70%" />
+                  </div>
+                </div>
+                <div class="ipt_row">
+                  <label class="f_fl">周边客户：</label>
+                  <div class="rel_fill f_pr">
+                    <input type="text" name="peripheral" class="ipt" value="KFC、麦当劳" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--容器内容结束--> 
+          </div>
+        </div>
+        <div class="guide_language" >
+          <input id="Button1" type="button" value="提交" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

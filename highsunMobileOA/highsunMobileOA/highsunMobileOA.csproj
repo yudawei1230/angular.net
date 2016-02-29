@@ -1,0 +1,940 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{38160299-32D8-4008-A968-8F87E49E071C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>highsunMobileOA</RootNamespace>
+    <AssemblyName>highsunMobileOA</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="baihuoFloorDetailMonthReport.aspx" />
+    <Content Include="baihuoFloorDetailReport.aspx" />
+    <Content Include="baihuoFloorMonthReport.aspx" />
+    <Content Include="baihuoFloorReport.aspx" />
+    <Content Include="baihuoMonthReport.aspx" />
+    <Content Include="baihuoReport.aspx" />
+    <Content Include="baihuoSeasonReport.aspx" />
+    <Content Include="baihuoTrend.aspx" />
+    <Content Include="baihuoYearReport.aspx" />
+    <Content Include="bin\highsunMobileOA.dll" />
+    <Content Include="bin\highsunMobileOA.pdb" />
+    <Content Include="canyinSeasonReport.aspx" />
+    <Content Include="complain.aspx" />
+    <Content Include="css\default.css" />
+    <Content Include="css\jqm-docs.css" />
+    <Content Include="css\jquery.fullPage.css" />
+    <Content Include="css\themes\default\images\ajax-loader.gif" />
+    <Content Include="css\themes\default\images\icons-18-black.png" />
+    <Content Include="css\themes\default\images\icons-18-white.png" />
+    <Content Include="css\themes\default\images\icons-36-black.png" />
+    <Content Include="css\themes\default\images\icons-36-white.png" />
+    <Content Include="css\themes\default\jquery.mobile-1.3.0-beta.1.css" />
+    <Content Include="css\themes\default\jquery.mobile-1.3.0-beta.1.min.css" />
+    <Content Include="css\themes\default\jquery.mobile.structure-1.3.0-beta.1.css" />
+    <Content Include="css\themes\default\jquery.mobile.structure-1.3.0-beta.1.min.css" />
+    <Content Include="css\themes\default\jquery.mobile.theme-1.3.0-beta.1.css" />
+    <Content Include="css\themes\default\jquery.mobile.theme-1.3.0-beta.1.min.css" />
+    <Content Include="DWYXReceiveWeekReport.aspx" />
+    <Content Include="ERPComCompleteReport.aspx" />
+    <Content Include="ERPComExecReport.aspx" />
+    <Content Include="ERPPrjCompleteReport.aspx" />
+    <Content Include="ERPPrjExecReport.aspx" />
+    <Content Include="ERPSellHouseBuildingReport.aspx" />
+    <Content Include="ERPSellHouseClueAnalysisDetailReport.aspx" />
+    <Content Include="ERPSellHouseClueAnalysisReport.aspx" />
+    <Content Include="ERPSellHouseClueDayReport.aspx" />
+    <Content Include="ERPSellHouseClueDetailDayReport.aspx" />
+    <Content Include="ERPSellHouseCWAnalysisReport.aspx" />
+    <Content Include="ERPSellHouseCWReport.aspx" />
+    <Content Include="ERPSellHousePurchaseDateDetailReport.aspx" />
+    <Content Include="ERPSellHousePurchaseDateReport.aspx" />
+    <Content Include="ERPSellHouseReport.aspx" />
+    <Content Include="ERPSellHouseSignedAnlysisReport.aspx" />
+    <Content Include="images\delico.png" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\redo_square.png" />
+    <Content Include="IndustrialMaterialPrices.aspx" />
+    <Content Include="IndustrialPricing.aspx" />
+    <Content Include="js\ajaxfileupload.js" />
+    <Content Include="js\highcharts-more.js" />
+    <Content Include="js\highcharts.js" />
+    <Content Include="js\jgcharts.js" />
+    <Content Include="js\jquery.confirm.js" />
+    <Content Include="baihuoPanelChart.aspx" />
+    <Content Include="js\jquery.fullPage.js" />
+    <Content Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <Content Include="SLreport.aspx" />
+    <Content Include="SLTradingWaterMonthReport.aspx" />
+    <Content Include="SLTradingWaterSeasonReport.aspx" />
+    <Content Include="SLTradingWaterYearReport.aspx" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\cammber.jpg" />
+    <Content Include="js\add_product.js" />
+    <Content Include="js\common.js" />
+    <Content Include="js\cookies_oper.js" />
+    <Content Include="js\fullcalendar-2.2.3\changelog.txt" />
+    <Content Include="js\fullcalendar-2.2.3\demos\agenda-views.html" />
+    <Content Include="js\fullcalendar-2.2.3\demos\background-events.html" />
+    <Content Include="js\fullcalendar-2.2.3\demos\basic-views.html" />
+    <Content Include="js\fullcalendar-2.2.3\demos\default.html" />
+    <Content Include="js\fullcalendar-2.2.3\demos\external-dragging.html" />
+    <Content Include="js\fullcalendar-2.2.3\demos\gcal.html" />
+    <Content Include="js\fullcalendar-2.2.3\demos\json.html" />
+    <Content Include="js\fullcalendar-2.2.3\demos\languages.html" />
+    <Content Include="js\fullcalendar-2.2.3\demos\selectable.html" />
+    <Content Include="js\fullcalendar-2.2.3\demos\theme.html" />
+    <Content Include="js\fullcalendar-2.2.3\demos\timezones.html" />
+    <Content Include="js\fullcalendar-2.2.3\fullcalendar.css" />
+    <Content Include="js\fullcalendar-2.2.3\fullcalendar.js" />
+    <Content Include="js\fullcalendar-2.2.3\fullcalendar.min.css" />
+    <Content Include="js\fullcalendar-2.2.3\fullcalendar.min.js" />
+    <Content Include="js\fullcalendar-2.2.3\fullcalendar.print.css" />
+    <Content Include="js\fullcalendar-2.2.3\gcal.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang-all.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\ar-ma.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\ar-sa.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\ar.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\bg.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\ca.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\cs.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\da.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\de-at.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\de.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\el.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\en-au.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\en-ca.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\en-gb.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\es.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\fa.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\fi.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\fr-ca.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\fr.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\hi.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\hr.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\hu.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\id.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\is.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\it.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\ja.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\ko.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\lt.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\lv.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\nl.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\pl.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\pt-br.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\pt.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\ro.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\ru.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\sk.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\sl.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\sr-cyrl.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\sr.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\sv.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\th.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\tr.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\uk.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\vi.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\zh-cn.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\zh-tw.js" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\animated-overlay.gif" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\jquery-ui.min.css" />
+    <Content Include="js\fullcalendar-2.2.3\lib\jquery-ui.custom.min.js" />
+    <Content Include="js\fullcalendar-2.2.3\lib\jquery.min.js" />
+    <Content Include="js\fullcalendar-2.2.3\lib\moment.min.js" />
+    <Content Include="js\fullcalendar-2.2.3\license.txt" />
+    <Content Include="js\jqm-docs.js" />
+    <Content Include="js\jquery.iosslider.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.mobile-1.3.0-beta.1.js" />
+    <Content Include="js\jquery.mobile-1.3.0-beta.1.min.js" />
+    <Content Include="news_detail.aspx" />
+    <Content Include="news_list.aspx" />
+    <Content Include="Properties\DataSources\System.Xml.Linq.XElement.datasource" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="attendance.aspx" />
+    <Content Include="js\fullcalendar-2.2.3\demos\json\events.json" />
+    <Content Include="js\fullcalendar-2.2.3\demos\php\get-events.php" />
+    <Content Include="js\fullcalendar-2.2.3\demos\php\get-timezones.php" />
+    <Content Include="js\fullcalendar-2.2.3\demos\php\utils.php" />
+    <Content Include="json\PublicHandler.ashx" />
+    <Content Include="canyinChart.aspx" />
+    <Content Include="tiyuhuiReport.aspx" />
+    <Content Include="tiyuhuiWeekReport.aspx" />
+    <Content Include="trendtest.aspx" />
+    <Content Include="ValidCode.aspx" />
+    <Content Include="wage.aspx" />
+    <Content Include="buy.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="canyinReport.aspx" />
+    <Content Include="canyinYearReport.aspx" />
+    <Content Include="canyinMonthReport.aspx" />
+    <Content Include="json\PublicExtendHandler.ashx" />
+    <Content Include="SLTradingWaterReport.aspx" />
+    <Content Include="ERPAIM2DynCostReport.aspx" />
+    <Content Include="ERPAIM2DynCost4ProjectReport.aspx" />
+    <Content Include="baihuoVIPDayReport.aspx" />
+    <Content Include="ydmh\css\css.css" />
+    <Content Include="ydmh\css\lanrenzhijia.css" />
+    <Content Include="ydmh\css\newstab.css" />
+    <Content Include="ydmh\css\scrollbar.css" />
+    <Content Include="ydmh\images\02.png" />
+    <Content Include="ydmh\images\03.png" />
+    <Content Include="ydmh\images\04.png" />
+    <Content Include="ydmh\images\pull-icon%402x.png" />
+    <Content Include="ydmh\images\scrollbar.png" />
+    <Content Include="ydmh\images\sy_01.png" />
+    <Content Include="ydmh\images\sy_02.png" />
+    <Content Include="ydmh\images\sy_03.png" />
+    <Content Include="ydmh\images\sy_04.png" />
+    <Content Include="ydmh\images\tx.png" />
+    <Content Include="ydmh\index.html" />
+    <Content Include="ydmh\index.aspx" />
+    <Content Include="ydmh\js\idangerous.swiper.min.js" />
+    <Content Include="ydmh\js\iscroll.js" />
+    <Content Include="ydmh\js\jquery-1.10.1.min.js" />
+    <Content Include="ydmh\new.html" />
+    <Content Include="ydmh\newsDetail.html" />
+    <Content Include="ydmh\new_nr.html" />
+    <None Include="Web References\com.hiooy.baihuoTest\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.hiooy.baihuoTest\WS_BaiHuoAnalysis.wsdl" />
+    <None Include="Web References\com.hiooy.baihuo\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.hiooy.baihuo\WS_BaiHuoAnalysis.disco" />
+    <None Include="Web References\com.hiooy.ERPpromise\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.hiooy.ERPpromise\WS_ERPPromiseCostAnalysis.disco" />
+    <None Include="Web References\com.hiooy.baihuoTest\WS_BaiHuoAnalysis.disco" />
+    <None Include="Web References\com.hiooy.ERPhouse\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.hiooy.ERPhouse\WS_ERPSellHouseAnalysis.disco" />
+    <None Include="Properties\PublishProfiles\MobileOa.pubxml" />
+    <None Include="Web References\com.hiooy.baihuo\WS_BaiHuoAnalysis.wsdl" />
+    <None Include="Web References\com.hiooy.canyin\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.hiooy.canyin\WS_CanYingAnalysis.wsdl" />
+    <None Include="Web References\com.hiooy.ERPhouse\WS_ERPSellHouseAnalysis.wsdl" />
+    <None Include="Web References\com.hiooy.dsp\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.hiooy.dsp\WS_HighsunPortal1.disco" />
+    <None Include="Web References\com.hiooy.canyin\WS_CanYingAnalysis.disco" />
+    <Content Include="Web References\com.hiooy.industry\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\com.hiooy.industry\WS_IndustryAnalysis.wsdl" />
+    <None Include="Web References\com.hiooy.SLtest\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.hiooy.SLtest\WS_SLTradingWaterAnalysis.disco" />
+    <Content Include="Web References\com.hiooy.industry\WS_IndustryAnalysis.disco" />
+    <Content Include="Web References\com.hiooy.SL\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\com.hiooy.SL\WS_SLTradingWaterAnalysis.disco" />
+    <None Include="Web References\com.hiooy.tiyuhui\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.hiooy.tiyuhui\WS_TiyuhuiAnalysis.disco" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="baihuoFloorDetailMonthReport.aspx.cs">
+      <DependentUpon>baihuoFloorDetailMonthReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="baihuoFloorDetailMonthReport.aspx.designer.cs">
+      <DependentUpon>baihuoFloorDetailMonthReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="baihuoFloorDetailReport.aspx.cs">
+      <DependentUpon>baihuoFloorDetailReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="baihuoFloorDetailReport.aspx.designer.cs">
+      <DependentUpon>baihuoFloorDetailReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="baihuoFloorMonthReport.aspx.cs">
+      <DependentUpon>baihuoFloorMonthReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="baihuoFloorMonthReport.aspx.designer.cs">
+      <DependentUpon>baihuoFloorMonthReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="baihuoFloorReport.aspx.cs">
+      <DependentUpon>baihuoFloorReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="baihuoFloorReport.aspx.designer.cs">
+      <DependentUpon>baihuoFloorReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="baihuoMonthReport.aspx.cs">
+      <DependentUpon>baihuoMonthReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="baihuoMonthReport.aspx.designer.cs">
+      <DependentUpon>baihuoMonthReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="baihuoReport.aspx.cs">
+      <DependentUpon>baihuoReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="baihuoReport.aspx.designer.cs">
+      <DependentUpon>baihuoReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="baihuoSeasonReport.aspx.cs">
+      <DependentUpon>baihuoSeasonReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="baihuoSeasonReport.aspx.designer.cs">
+      <DependentUpon>baihuoSeasonReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="baihuoTrend.aspx.cs">
+      <DependentUpon>baihuoTrend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="baihuoTrend.aspx.designer.cs">
+      <DependentUpon>baihuoTrend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="baihuoYearReport.aspx.cs">
+      <DependentUpon>baihuoYearReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="baihuoYearReport.aspx.designer.cs">
+      <DependentUpon>baihuoYearReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="canyinSeasonReport.aspx.cs">
+      <DependentUpon>canyinSeasonReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="canyinSeasonReport.aspx.designer.cs">
+      <DependentUpon>canyinSeasonReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="complain.aspx.cs">
+      <DependentUpon>complain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="complain.aspx.designer.cs">
+      <DependentUpon>complain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DWYXReceiveWeekReport.aspx.cs">
+      <DependentUpon>DWYXReceiveWeekReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DWYXReceiveWeekReport.aspx.designer.cs">
+      <DependentUpon>DWYXReceiveWeekReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERPComCompleteReport.aspx.cs">
+      <DependentUpon>ERPComCompleteReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPComCompleteReport.aspx.designer.cs">
+      <DependentUpon>ERPComCompleteReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERPComExecReport.aspx.cs">
+      <DependentUpon>ERPComExecReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPComExecReport.aspx.designer.cs">
+      <DependentUpon>ERPComExecReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERPPrjCompleteReport.aspx.cs">
+      <DependentUpon>ERPPrjCompleteReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPPrjCompleteReport.aspx.designer.cs">
+      <DependentUpon>ERPPrjCompleteReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERPPrjExecReport.aspx.cs">
+      <DependentUpon>ERPPrjExecReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPPrjExecReport.aspx.designer.cs">
+      <DependentUpon>ERPPrjExecReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERPSellHouseBuildingReport.aspx.cs">
+      <DependentUpon>ERPSellHouseBuildingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPSellHouseBuildingReport.aspx.designer.cs">
+      <DependentUpon>ERPSellHouseBuildingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERPSellHouseClueAnalysisDetailReport.aspx.cs">
+      <DependentUpon>ERPSellHouseClueAnalysisDetailReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPSellHouseClueAnalysisDetailReport.aspx.designer.cs">
+      <DependentUpon>ERPSellHouseClueAnalysisDetailReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERPSellHouseClueAnalysisReport.aspx.cs">
+      <DependentUpon>ERPSellHouseClueAnalysisReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPSellHouseClueAnalysisReport.aspx.designer.cs">
+      <DependentUpon>ERPSellHouseClueAnalysisReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERPSellHouseClueDayReport.aspx.cs">
+      <DependentUpon>ERPSellHouseClueDayReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPSellHouseClueDayReport.aspx.designer.cs">
+      <DependentUpon>ERPSellHouseClueDayReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERPSellHouseClueDetailDayReport.aspx.cs">
+      <DependentUpon>ERPSellHouseClueDetailDayReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPSellHouseClueDetailDayReport.aspx.designer.cs">
+      <DependentUpon>ERPSellHouseClueDetailDayReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERPSellHouseCWAnalysisReport.aspx.cs">
+      <DependentUpon>ERPSellHouseCWAnalysisReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPSellHouseCWAnalysisReport.aspx.designer.cs">
+      <DependentUpon>ERPSellHouseCWAnalysisReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERPSellHouseCWReport.aspx.cs">
+      <DependentUpon>ERPSellHouseCWReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPSellHouseCWReport.aspx.designer.cs">
+      <DependentUpon>ERPSellHouseCWReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERPSellHousePurchaseDateDetailReport.aspx.cs">
+      <DependentUpon>ERPSellHousePurchaseDateDetailReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPSellHousePurchaseDateDetailReport.aspx.designer.cs">
+      <DependentUpon>ERPSellHousePurchaseDateDetailReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERPSellHousePurchaseDateReport.aspx.cs">
+      <DependentUpon>ERPSellHousePurchaseDateReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPSellHousePurchaseDateReport.aspx.designer.cs">
+      <DependentUpon>ERPSellHousePurchaseDateReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERPSellHouseReport.aspx.cs">
+      <DependentUpon>ERPSellHouseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPSellHouseReport.aspx.designer.cs">
+      <DependentUpon>ERPSellHouseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERPSellHouseSignedAnlysisReport.aspx.cs">
+      <DependentUpon>ERPSellHouseSignedAnlysisReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPSellHouseSignedAnlysisReport.aspx.designer.cs">
+      <DependentUpon>ERPSellHouseSignedAnlysisReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndustrialMaterialPrices.aspx.cs">
+      <DependentUpon>IndustrialMaterialPrices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndustrialMaterialPrices.aspx.designer.cs">
+      <DependentUpon>IndustrialMaterialPrices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndustrialPricing.aspx.cs">
+      <DependentUpon>IndustrialPricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndustrialPricing.aspx.designer.cs">
+      <DependentUpon>IndustrialPricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="json\PublicHandler.ashx.cs">
+      <DependentUpon>PublicHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="json\PublicExtendHandler.ashx.cs">
+      <DependentUpon>PublicExtendHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="news_detail.aspx.cs">
+      <DependentUpon>news_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="news_detail.aspx.designer.cs">
+      <DependentUpon>news_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="news_list.aspx.cs">
+      <DependentUpon>news_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="news_list.aspx.designer.cs">
+      <DependentUpon>news_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="baihuoPanelChart.aspx.cs">
+      <DependentUpon>baihuoPanelChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="baihuoPanelChart.aspx.designer.cs">
+      <DependentUpon>baihuoPanelChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="attendance.aspx.cs">
+      <DependentUpon>attendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="attendance.aspx.designer.cs">
+      <DependentUpon>attendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="canyinChart.aspx.cs">
+      <DependentUpon>canyinChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="canyinChart.aspx.designer.cs">
+      <DependentUpon>canyinChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SLreport.aspx.cs">
+      <DependentUpon>SLreport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SLreport.aspx.designer.cs">
+      <DependentUpon>SLreport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SLTradingWaterMonthReport.aspx.cs">
+      <DependentUpon>SLTradingWaterMonthReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SLTradingWaterMonthReport.aspx.designer.cs">
+      <DependentUpon>SLTradingWaterMonthReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SLTradingWaterSeasonReport.aspx.cs">
+      <DependentUpon>SLTradingWaterSeasonReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SLTradingWaterSeasonReport.aspx.designer.cs">
+      <DependentUpon>SLTradingWaterSeasonReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SLTradingWaterYearReport.aspx.cs">
+      <DependentUpon>SLTradingWaterYearReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SLTradingWaterYearReport.aspx.designer.cs">
+      <DependentUpon>SLTradingWaterYearReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tiyuhuiReport.aspx.cs">
+      <DependentUpon>tiyuhuiReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tiyuhuiReport.aspx.designer.cs">
+      <DependentUpon>tiyuhuiReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tiyuhuiWeekReport.aspx.cs">
+      <DependentUpon>tiyuhuiWeekReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tiyuhuiWeekReport.aspx.designer.cs">
+      <DependentUpon>tiyuhuiWeekReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trendtest.aspx.cs">
+      <DependentUpon>trendtest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trendtest.aspx.designer.cs">
+      <DependentUpon>trendtest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValidCode.aspx.cs">
+      <DependentUpon>ValidCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValidCode.aspx.designer.cs">
+      <DependentUpon>ValidCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wage.aspx.cs">
+      <DependentUpon>wage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wage.aspx.designer.cs">
+      <DependentUpon>wage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="buy.aspx.cs">
+      <DependentUpon>buy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buy.aspx.designer.cs">
+      <DependentUpon>buy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.hiooy.baihuoTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.hiooy.baihuo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.hiooy.canyin\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.hiooy.ERPpromise\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.hiooy.ERPhouse\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.hiooy.dsp\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="canyinReport.aspx.cs">
+      <DependentUpon>canyinReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="canyinReport.aspx.designer.cs">
+      <DependentUpon>canyinReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="canyinYearReport.aspx.cs">
+      <DependentUpon>canyinYearReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="canyinYearReport.aspx.designer.cs">
+      <DependentUpon>canyinYearReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="canyinMonthReport.aspx.cs">
+      <DependentUpon>canyinMonthReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="canyinMonthReport.aspx.designer.cs">
+      <DependentUpon>canyinMonthReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SLTradingWaterReport.aspx.cs">
+      <DependentUpon>SLTradingWaterReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SLTradingWaterReport.aspx.designer.cs">
+      <DependentUpon>SLTradingWaterReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.hiooy.industry\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.hiooy.SLtest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.hiooy.SL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="ERPAIM2DynCostReport.aspx.cs">
+      <DependentUpon>ERPAIM2DynCostReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPAIM2DynCostReport.aspx.designer.cs">
+      <DependentUpon>ERPAIM2DynCostReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERPAIM2DynCost4ProjectReport.aspx.cs">
+      <DependentUpon>ERPAIM2DynCost4ProjectReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERPAIM2DynCost4ProjectReport.aspx.designer.cs">
+      <DependentUpon>ERPAIM2DynCost4ProjectReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.hiooy.tiyuhui\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="baihuoVIPDayReport.aspx.cs">
+      <DependentUpon>baihuoVIPDayReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="baihuoVIPDayReport.aspx.designer.cs">
+      <DependentUpon>baihuoVIPDayReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ydmh\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ydmh\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\com.hiooy.dsp\WS_HighsunPortal1.wsdl" />
+    <None Include="Web References\com.hiooy.ERPpromise\WS_ERPPromiseCostAnalysis.wsdl" />
+    <Content Include="Web References\com.hiooy.SL\WS_SLTradingWaterAnalysis.wsdl" />
+    <None Include="Web References\com.hiooy.SLtest\WS_SLTradingWaterAnalysis.wsdl" />
+    <None Include="Web References\com.hiooy.tiyuhui\WS_TiyuhuiAnalysis.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebSite.BLL\WebSite.BLL.csproj">
+      <Project>{28555831-307e-401e-98d5-d892b3cedcdd}</Project>
+      <Name>WebSite.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebSite.Comman\WebSite.Comman.csproj">
+      <Project>{40b64b97-15ab-46e2-b9a4-f37ca820925c}</Project>
+      <Name>WebSite.Comman</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebSite.Model\WebSite.Model.csproj">
+      <Project>{09e44c1a-2265-423a-8c5d-54a60d926f5d}</Project>
+      <Name>WebSite.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://192.168.2.217:8200/WebServices/WS_CanYingAnalysis.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.hiooy.canyin\</RelPath>
+      <UpdateFromURL>http://192.168.2.217:8200/WebServices/WS_CanYingAnalysis.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>highsunMobileOA_com_hiooy_canyin_WS_CanYingAnalysis</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://dsp.hiooy.com:8200/WebServices/WS_BaiHuoAnalysis.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.hiooy.baihuo\</RelPath>
+      <UpdateFromURL>http://dsp.hiooy.com:8200/WebServices/WS_BaiHuoAnalysis.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>highsunMobileOA_com_hiooy_baihuo_WS_BaiHuoAnalysis</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://dsp.hiooy.com:8200/WebServices/WS_ERPPromiseCostAnalysis.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.hiooy.ERPpromise\</RelPath>
+      <UpdateFromURL>http://dsp.hiooy.com:8200/WebServices/WS_ERPPromiseCostAnalysis.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>highsunMobileOA_com_hiooy_ERPpromise_WS_ERPPromiseCostAnalysis</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://dsp.hiooy.com:8200/WebServices/WS_ERPSellHouseAnalysis.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.hiooy.ERPhouse\</RelPath>
+      <UpdateFromURL>http://dsp.hiooy.com:8200/WebServices/WS_ERPSellHouseAnalysis.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>highsunMobileOA_com_hiooy_dsp_fangdichan_WS_ERPSellHouseAnalysis</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://dsp.hiooy.com:8200/WebServices/WS_HighsunPortal1.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.hiooy.dsp\</RelPath>
+      <UpdateFromURL>http://dsp.hiooy.com:8200/WebServices/WS_HighsunPortal1.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>highsunMobileOA_com_hiooy_dsp_WS_HighsunPortal1</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://dsp.hiooy.com:8200/WebServices/WS_IndustryAnalysis.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.hiooy.industry\</RelPath>
+      <UpdateFromURL>http://dsp.hiooy.com:8200/WebServices/WS_IndustryAnalysis.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>highsunMobileOA_com_hiooy_industry_WS_IndustryAnalysis</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://dsp.hiooy.com:8200/WebServices/WS_SLTradingWaterAnalysis.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.hiooy.SL\</RelPath>
+      <UpdateFromURL>http://dsp.hiooy.com:8200/WebServices/WS_SLTradingWaterAnalysis.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>highsunMobileOA_com_hiooy_SL_WS_SLTradingWaterAnalysis</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://dsp.hiooy.com:8200/WebServices/WS_TiyuhuiAnalysis.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.hiooy.tiyuhui\</RelPath>
+      <UpdateFromURL>http://dsp.hiooy.com:8200/WebServices/WS_TiyuhuiAnalysis.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>highsunMobileOA_com_hiooy_tiyuhui_WS_TiyuhuiAnalysis</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://dsp.hiooy.com:8201/WebServices/WS_BaiHuoAnalysis.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.hiooy.baihuoTest\</RelPath>
+      <UpdateFromURL>http://dsp.hiooy.com:8201/WebServices/WS_BaiHuoAnalysis.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>highsunMobileOA_com_hiooy_baihuoTest_WS_BaiHuoAnalysis</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://dsp.hiooy.com:8201/WebServices/WS_SLTradingWaterAnalysis.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.hiooy.SLtest\</RelPath>
+      <UpdateFromURL>http://dsp.hiooy.com:8201/WebServices/WS_SLTradingWaterAnalysis.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>highsunMobileOA_com_hiooy_SLtest_WS_SLTradingWaterAnalysis</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2345</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:16922/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

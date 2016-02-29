@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=yes">
+<title>租商铺就选海商通</title>
+<link rel="stylesheet" type="text/css" href="css/common.css?ver=989141811">
+<script type="text/javascript" src="js/jquery.1.4.2-min.js"></script>
+<script type="text/javascript" src="js/common.js?ver=5678"></script>
+<script type="text/javascript" src="js/jquery.iosslider.js"></script>
+<script>
+$(document).ready(function() {
+	//礼包滑动adimg jquery
+	$('.iosSlider').iosSlider({
+		snapToChildren: true,
+		desktopClickDrag: true,
+		keyboardControls: true,
+		autoSlide:true,
+		infiniteSlider:true,
+		navNextSelector: $('.next'),
+		navPrevSelector: $('.prev'),
+		navSlideSelector: $('.selectors .item'),
+		onSlideChange: slideChange
+	});
+
+}); 
+function slideChange(args) {
+	
+	$('.selectors .item').removeClass('selected');
+	$('.selectors .item:eq(' + (args.currentSlideNumber - 1) + ')').addClass('selected');
+	
+}
+</script>
+</head>
+<body>
+<div class="topBox">
+  <div class="topLogo"><img alt="" src="images/logo.png"></div>
+  <h3>最新商铺</h3>
+  <div class="topLogin"><a href="login.html">登录</a></div>
+</div>
+<div class="PageBox" style="padding: 50px 0px 0px 0px;">  
+  <!--轮播图-->
+  <div class="homeAdimg">
+    <div class="iosSlider">
+      <div class="slider">
+        <div class="item"> <a title="" href=""><img src="images/indeximg.jpg" alt=""> </a> </div>
+        <div class="item"> <a title="" href=""><img src="images/indeximg.jpg" alt=""> </a> </div>
+      </div>
+      <div class = "selectorsBlock">
+        <div class = "selectors">
+          <div class = "item"></div>
+          <div class = "item"></div>
+        </div>
+      </div>
+      <div class="prevContainer">
+        <div class="prev"> </div>
+      </div>
+      <div class="nextContainer">
+        <div class="next"> </div>
+      </div>
+    </div>
+  </div>
+  <!--列表-->
+  <div class="listBox">
+    <ul>
+      <li><a href="list_page.html">
+      <div class="listImg"><img src="images/list.jpg"></div>
+      <h3>流行前线</h3>
+      <span>面积：15,000平方米</span>
+      <p>汇聚了全国乃至世界各地高档零售、餐饮、娱乐、艺术与文化于一体</p>
+      </a></li>
+      <li><a href="list_page.html">
+      <div class="listImg"><img src="images/list.jpg"></div>
+      <h3>流行前线</h3>
+      <span>面积：15,000平方米</span>
+      <p>汇聚了全国乃至世界各地高档零售、餐饮、娱乐、艺术与文化于一体</p>
+      </a></li>
+      <li><a href="list_page.html">
+      <div class="listImg"><img src="images/list.jpg"></div>
+      <h3>流行前线</h3>
+      <span>面积：15,000平方米</span>
+      <p>汇聚了全国乃至世界各地高档零售、餐饮、娱乐、艺术与文化于一体</p>
+      </a></li>
+      <li><a href="list_page.html">
+      <div class="listImg"><img src="images/list.jpg"></div>
+      <h3>流行前线</h3>
+      <span>面积：15,000平方米</span>
+      <p>汇聚了全国乃至世界各地高档零售、餐饮、娱乐、艺术与文化于一体</p>
+      </a></li>
+      <li><a href="list_page.html">
+      <div class="listImg"><img src="images/list.jpg"></div>
+      <h3>流行前线</h3>
+      <span>面积：15,000平方米</span>
+      <p>汇聚了全国乃至世界各地高档零售、餐饮、娱乐、艺术与文化于一体</p>
+      </a></li>
+      <li><a href="list_page.html">
+      <div class="listImg"><img src="images/list.jpg"></div>
+      <h3>流行前线</h3>
+      <span>面积：15,000平方米</span>
+      <p>汇聚了全国乃至世界各地高档零售、餐饮、娱乐、艺术与文化于一体</p>
+      </a></li>
+      <li><a href="list_page.html">
+      <div class="listImg"><img src="images/list.jpg"></div>
+      <h3>流行前线</h3>
+      <span>面积：15,000平方米</span>
+      <p>汇聚了全国乃至世界各地高档零售、餐饮、娱乐、艺术与文化于一体</p>
+      </a></li>
+    </ul>
+    <div class="allUrl"><a>查看全部</a></div>
+  </div>
+</div>
+</body>
+</html>

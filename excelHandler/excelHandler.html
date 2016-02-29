@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html class="ng-app:hh" ng-app="hh" id="ng-app">
+ <HEAD>
+  <TITLE> New Document </TITLE>
+	<meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/excelHandler.css">
+  <script src="html5shiv.js"></script>
+  <script src="json2.js"></script>
+  <script src="angular.min.js"></script>
+  <script src="excelHandler.js"></script>
+    <script src="loadExcel.js"></script>
+ </HEAD>
+ <BODY ng-controller="mymodule">
+    <h1 ng-bind="title"></h1>
+  <div ng-hide="codeInput">
+    <div class="code">
+      <p>关键字代码:</p> 
+      <input type="text"   ng-model="keyCode">
+      <p>机构类代码:</p> 
+      <input type="text"  ng-model="organizationCode">
+      <p>地区代码:</p> 
+      <input type="text"  ng-model="areaCode">
+    </div>
+    <div>
+      <p>年度:</p> 
+      <input type="date" ng-model="date"  />
+      <p>频度:</p> 
+      <input type="date" ng-model="times" />
+      <p>选择文件</p>
+      <input type="file" id="filePath">
+      <input type="button" value="读取Excel" ng-click="loadData()">
+    </div>
+  </div>
+  <div ng-hide="fileAction">
+    <input type="button" value="生成文件" ng-click="createFile()" />
+  </div>
+<!--   <div>
+     <a href="D:\Yu\excelHandler\BIJDj02044010412016131411/BJj02044010412016131411.DAT" download="data.DAT">点击下载</a>
+</div> -->
+  <div ng-hide="ExcelChart" class="chart">
+    <table>
+      <thead>
+        <tr>
+          <th colspan="3">指标数据</th>
+        </tr>
+        <tr>
+          <th>指标名称</th>
+          <th>指标代码</th>
+          <th>指标值</th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="x in ChartData">
+        <td ng-bind="x.DataName"></td>
+        <td ng-bind="x.DataCode"></td>
+        <td><input type="text" ng-model="x.DataValue" /></td>
+      </tbody>
+    </table>
+  </div>
+ </BODY>
+<html>

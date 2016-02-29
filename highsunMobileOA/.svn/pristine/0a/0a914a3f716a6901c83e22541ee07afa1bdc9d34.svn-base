@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
+  <defaultTemplate path="..\..\CodeSmithTemplate\DAL.cst" />
+  <variables>
+    <add key="ConnectionString" value="Data Source=.;Initial Catalog=HighSunBroker;User ID=sa;Password=963" />
+  </variables>
+  <defaultProperties>
+    <property name="ModelsNamespace">WebSite.Models</property>
+    <property name="DALNamespace">WebSite.DAL</property>
+    <property name="DALClassNameSurfix">DAL</property>
+  </defaultProperties>
+  <propertySets>
+    <propertySet name="IndexImgDAL">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>IndexImg</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="IndustryDAL">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>Industry</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="MarketDAL">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>Market</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="MemberDAL">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>Member</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="ShopDAL">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>Shop</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="ShopImgDAL">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>ShopImg</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="AdvertDAL">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>Advert</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="AdvertImgDAL">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>AdvertImg</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="MediaSourceDAL">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>MediaSource</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="ComplaintDAL">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>Complaint</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="OldProductDAL">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>OldProduct</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="OldProduct_CategoryDAL">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>OldProduct_Category</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="OldProduct_ImgDAL">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>OldProduct_Img</name>
+        </table>
+      </property>
+    </propertySet>
+  </propertySets>
+</codeSmith>

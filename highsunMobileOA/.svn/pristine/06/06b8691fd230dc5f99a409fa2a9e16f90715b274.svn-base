@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://dsp.hiooy.com:8200/WebServices" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://dsp.hiooy.com:8200/WebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://dsp.hiooy.com:8200/WebServices">
+      <s:element name="BHAnalysisDayReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHAnalysisDayReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BHAnalysisDayReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHAnalysisMonthReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="month" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHAnalysisMonthReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BHAnalysisMonthReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHAnalysisYearReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHAnalysisYearReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BHAnalysisYearReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHAnalysisSeasonReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="season" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHAnalysisSeasonReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BHAnalysisSeasonReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHAnalysis4FloorReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHAnalysis4FloorReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BHAnalysis4FloorReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHAnalysisByFloorDetailReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="floor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHAnalysisByFloorDetailReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BHAnalysisByFloorDetailReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHAnalysis4FloorMonthReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHAnalysis4FloorMonthReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BHAnalysis4FloorMonthReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHAnalysisByFloorDetailMonthReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="floor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHAnalysisByFloorDetailMonthReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BHAnalysisByFloorDetailMonthReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHTaskAnalysis4Month">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHTaskAnalysis4MonthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BHTaskAnalysis4MonthResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHTaskAnalysis4Season">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHTaskAnalysis4SeasonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BHTaskAnalysis4SeasonResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHTaskAnalysis4Year">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHTaskAnalysis4YearResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BHTaskAnalysis4YearResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHTrendAnalysis4Month">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="anyMonthDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHTrendAnalysis4MonthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BHTrendAnalysis4MonthResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHTrendAnalysis4Floor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="anyMonthDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHTrendAnalysis4FloorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BHTrendAnalysis4FloorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHAnalysisVIPDayReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dateStart" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dateEnd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BHAnalysisVIPDayReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BHAnalysisVIPDayReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="BHAnalysisDayReportSoapIn">
+    <wsdl:part name="parameters" element="tns:BHAnalysisDayReport" />
+  </wsdl:message>
+  <wsdl:message name="BHAnalysisDayReportSoapOut">
+    <wsdl:part name="parameters" element="tns:BHAnalysisDayReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="BHAnalysisMonthReportSoapIn">
+    <wsdl:part name="parameters" element="tns:BHAnalysisMonthReport" />
+  </wsdl:message>
+  <wsdl:message name="BHAnalysisMonthReportSoapOut">
+    <wsdl:part name="parameters" element="tns:BHAnalysisMonthReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="BHAnalysisYearReportSoapIn">
+    <wsdl:part name="parameters" element="tns:BHAnalysisYearReport" />
+  </wsdl:message>
+  <wsdl:message name="BHAnalysisYearReportSoapOut">
+    <wsdl:part name="parameters" element="tns:BHAnalysisYearReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="BHAnalysisSeasonReportSoapIn">
+    <wsdl:part name="parameters" element="tns:BHAnalysisSeasonReport" />
+  </wsdl:message>
+  <wsdl:message name="BHAnalysisSeasonReportSoapOut">
+    <wsdl:part name="parameters" element="tns:BHAnalysisSeasonReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="BHAnalysis4FloorReportSoapIn">
+    <wsdl:part name="parameters" element="tns:BHAnalysis4FloorReport" />
+  </wsdl:message>
+  <wsdl:message name="BHAnalysis4FloorReportSoapOut">
+    <wsdl:part name="parameters" element="tns:BHAnalysis4FloorReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="BHAnalysisByFloorDetailReportSoapIn">
+    <wsdl:part name="parameters" element="tns:BHAnalysisByFloorDetailReport" />
+  </wsdl:message>
+  <wsdl:message name="BHAnalysisByFloorDetailReportSoapOut">
+    <wsdl:part name="parameters" element="tns:BHAnalysisByFloorDetailReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="BHAnalysis4FloorMonthReportSoapIn">
+    <wsdl:part name="parameters" element="tns:BHAnalysis4FloorMonthReport" />
+  </wsdl:message>
+  <wsdl:message name="BHAnalysis4FloorMonthReportSoapOut">
+    <wsdl:part name="parameters" element="tns:BHAnalysis4FloorMonthReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="BHAnalysisByFloorDetailMonthReportSoapIn">
+    <wsdl:part name="parameters" element="tns:BHAnalysisByFloorDetailMonthReport" />
+  </wsdl:message>
+  <wsdl:message name="BHAnalysisByFloorDetailMonthReportSoapOut">
+    <wsdl:part name="parameters" element="tns:BHAnalysisByFloorDetailMonthReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="BHTaskAnalysis4MonthSoapIn">
+    <wsdl:part name="parameters" element="tns:BHTaskAnalysis4Month" />
+  </wsdl:message>
+  <wsdl:message name="BHTaskAnalysis4MonthSoapOut">
+    <wsdl:part name="parameters" element="tns:BHTaskAnalysis4MonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="BHTaskAnalysis4SeasonSoapIn">
+    <wsdl:part name="parameters" element="tns:BHTaskAnalysis4Season" />
+  </wsdl:message>
+  <wsdl:message name="BHTaskAnalysis4SeasonSoapOut">
+    <wsdl:part name="parameters" element="tns:BHTaskAnalysis4SeasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="BHTaskAnalysis4YearSoapIn">
+    <wsdl:part name="parameters" element="tns:BHTaskAnalysis4Year" />
+  </wsdl:message>
+  <wsdl:message name="BHTaskAnalysis4YearSoapOut">
+    <wsdl:part name="parameters" element="tns:BHTaskAnalysis4YearResponse" />
+  </wsdl:message>
+  <wsdl:message name="BHTrendAnalysis4MonthSoapIn">
+    <wsdl:part name="parameters" element="tns:BHTrendAnalysis4Month" />
+  </wsdl:message>
+  <wsdl:message name="BHTrendAnalysis4MonthSoapOut">
+    <wsdl:part name="parameters" element="tns:BHTrendAnalysis4MonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="BHTrendAnalysis4FloorSoapIn">
+    <wsdl:part name="parameters" element="tns:BHTrendAnalysis4Floor" />
+  </wsdl:message>
+  <wsdl:message name="BHTrendAnalysis4FloorSoapOut">
+    <wsdl:part name="parameters" element="tns:BHTrendAnalysis4FloorResponse" />
+  </wsdl:message>
+  <wsdl:message name="BHAnalysisVIPDayReportSoapIn">
+    <wsdl:part name="parameters" element="tns:BHAnalysisVIPDayReport" />
+  </wsdl:message>
+  <wsdl:message name="BHAnalysisVIPDayReportSoapOut">
+    <wsdl:part name="parameters" element="tns:BHAnalysisVIPDayReportResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS_BaiHuoAnalysisSoap">
+    <wsdl:operation name="BHAnalysisDayReport">
+      <wsdl:input message="tns:BHAnalysisDayReportSoapIn" />
+      <wsdl:output message="tns:BHAnalysisDayReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysisMonthReport">
+      <wsdl:input message="tns:BHAnalysisMonthReportSoapIn" />
+      <wsdl:output message="tns:BHAnalysisMonthReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysisYearReport">
+      <wsdl:input message="tns:BHAnalysisYearReportSoapIn" />
+      <wsdl:output message="tns:BHAnalysisYearReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysisSeasonReport">
+      <wsdl:input message="tns:BHAnalysisSeasonReportSoapIn" />
+      <wsdl:output message="tns:BHAnalysisSeasonReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysis4FloorReport">
+      <wsdl:input message="tns:BHAnalysis4FloorReportSoapIn" />
+      <wsdl:output message="tns:BHAnalysis4FloorReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysisByFloorDetailReport">
+      <wsdl:input message="tns:BHAnalysisByFloorDetailReportSoapIn" />
+      <wsdl:output message="tns:BHAnalysisByFloorDetailReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysis4FloorMonthReport">
+      <wsdl:input message="tns:BHAnalysis4FloorMonthReportSoapIn" />
+      <wsdl:output message="tns:BHAnalysis4FloorMonthReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysisByFloorDetailMonthReport">
+      <wsdl:input message="tns:BHAnalysisByFloorDetailMonthReportSoapIn" />
+      <wsdl:output message="tns:BHAnalysisByFloorDetailMonthReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BHTaskAnalysis4Month">
+      <wsdl:input message="tns:BHTaskAnalysis4MonthSoapIn" />
+      <wsdl:output message="tns:BHTaskAnalysis4MonthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BHTaskAnalysis4Season">
+      <wsdl:input message="tns:BHTaskAnalysis4SeasonSoapIn" />
+      <wsdl:output message="tns:BHTaskAnalysis4SeasonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BHTaskAnalysis4Year">
+      <wsdl:input message="tns:BHTaskAnalysis4YearSoapIn" />
+      <wsdl:output message="tns:BHTaskAnalysis4YearSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BHTrendAnalysis4Month">
+      <wsdl:input message="tns:BHTrendAnalysis4MonthSoapIn" />
+      <wsdl:output message="tns:BHTrendAnalysis4MonthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BHTrendAnalysis4Floor">
+      <wsdl:input message="tns:BHTrendAnalysis4FloorSoapIn" />
+      <wsdl:output message="tns:BHTrendAnalysis4FloorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysisVIPDayReport">
+      <wsdl:input message="tns:BHAnalysisVIPDayReportSoapIn" />
+      <wsdl:output message="tns:BHAnalysisVIPDayReportSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_BaiHuoAnalysisSoap" type="tns:WS_BaiHuoAnalysisSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BHAnalysisDayReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHAnalysisDayReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysisMonthReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHAnalysisMonthReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysisYearReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHAnalysisYearReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysisSeasonReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHAnalysisSeasonReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysis4FloorReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHAnalysis4FloorReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysisByFloorDetailReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHAnalysisByFloorDetailReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysis4FloorMonthReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHAnalysis4FloorMonthReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysisByFloorDetailMonthReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHAnalysisByFloorDetailMonthReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHTaskAnalysis4Month">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHTaskAnalysis4Month" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHTaskAnalysis4Season">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHTaskAnalysis4Season" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHTaskAnalysis4Year">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHTaskAnalysis4Year" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHTrendAnalysis4Month">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHTrendAnalysis4Month" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHTrendAnalysis4Floor">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHTrendAnalysis4Floor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysisVIPDayReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHAnalysisVIPDayReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_BaiHuoAnalysisSoap12" type="tns:WS_BaiHuoAnalysisSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BHAnalysisDayReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHAnalysisDayReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysisMonthReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHAnalysisMonthReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysisYearReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHAnalysisYearReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysisSeasonReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHAnalysisSeasonReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysis4FloorReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHAnalysis4FloorReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysisByFloorDetailReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHAnalysisByFloorDetailReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysis4FloorMonthReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHAnalysis4FloorMonthReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysisByFloorDetailMonthReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHAnalysisByFloorDetailMonthReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHTaskAnalysis4Month">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHTaskAnalysis4Month" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHTaskAnalysis4Season">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHTaskAnalysis4Season" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHTaskAnalysis4Year">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHTaskAnalysis4Year" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHTrendAnalysis4Month">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHTrendAnalysis4Month" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHTrendAnalysis4Floor">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHTrendAnalysis4Floor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BHAnalysisVIPDayReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/BHAnalysisVIPDayReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_BaiHuoAnalysis">
+    <wsdl:port name="WS_BaiHuoAnalysisSoap" binding="tns:WS_BaiHuoAnalysisSoap">
+      <soap:address location="http://dsp.hiooy.com:8200/WebServices/WS_BaiHuoAnalysis.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_BaiHuoAnalysisSoap12" binding="tns:WS_BaiHuoAnalysisSoap12">
+      <soap12:address location="http://dsp.hiooy.com:8200/WebServices/WS_BaiHuoAnalysis.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

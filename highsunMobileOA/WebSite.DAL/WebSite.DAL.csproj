@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C01CD6CD-4C48-4781-9531-F7FA125DAD67}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebSite.DAL</RootNamespace>
+    <AssemblyName>WebSite.DAL</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Generate\AdvertDAL.cs" />
+    <Compile Include="Generate\AdvertImgDAL.cs" />
+    <Compile Include="Generate\ComplaintDAL.cs" />
+    <Compile Include="Generate\IndexImgDAL.cs" />
+    <Compile Include="Generate\IndustryDAL.cs" />
+    <Compile Include="Generate\MarketDAL.cs" />
+    <Compile Include="Generate\MediaSourceDAL.cs" />
+    <Compile Include="Generate\MemberDAL.cs" />
+    <Compile Include="Generate\OldProductDAL.cs" />
+    <Compile Include="Generate\OldProduct_CategoryDAL.cs" />
+    <Compile Include="Generate\OldProduct_ImgDAL.cs" />
+    <Compile Include="Generate\ShopDAL.cs" />
+    <Compile Include="Generate\ShopImgDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Generate\DalTemplate.csp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebSite.Comman\WebSite.Comman.csproj">
+      <Project>{40b64b97-15ab-46e2-b9a4-f37ca820925c}</Project>
+      <Name>WebSite.Comman</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebSite.DbProxy\WebSite.DbProxy.csproj">
+      <Project>{7fcbee02-d375-4bfc-b32b-9a158cb0faf1}</Project>
+      <Name>WebSite.DbProxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebSite.Model\WebSite.Model.csproj">
+      <Project>{09e44c1a-2265-423a-8c5d-54a60d926f5d}</Project>
+      <Name>WebSite.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

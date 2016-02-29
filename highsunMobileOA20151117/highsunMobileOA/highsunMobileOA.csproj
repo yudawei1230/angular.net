@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{38160299-32D8-4008-A968-8F87E49E071C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>highsunMobileOA</RootNamespace>
+    <AssemblyName>highsunMobileOA</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="complain.aspx" />
+    <Content Include="css\default.css" />
+    <Content Include="css\jqm-docs.css" />
+    <Content Include="css\themes\default\images\ajax-loader.gif" />
+    <Content Include="css\themes\default\images\icons-18-black.png" />
+    <Content Include="css\themes\default\images\icons-18-white.png" />
+    <Content Include="css\themes\default\images\icons-36-black.png" />
+    <Content Include="css\themes\default\images\icons-36-white.png" />
+    <Content Include="css\themes\default\jquery.mobile-1.3.0-beta.1.css" />
+    <Content Include="css\themes\default\jquery.mobile-1.3.0-beta.1.min.css" />
+    <Content Include="css\themes\default\jquery.mobile.structure-1.3.0-beta.1.css" />
+    <Content Include="css\themes\default\jquery.mobile.structure-1.3.0-beta.1.min.css" />
+    <Content Include="css\themes\default\jquery.mobile.theme-1.3.0-beta.1.css" />
+    <Content Include="css\themes\default\jquery.mobile.theme-1.3.0-beta.1.min.css" />
+    <Content Include="images\delico.png" />
+    <Content Include="js\ajaxfileupload.js" />
+    <Content Include="js\jquery.confirm.js" />
+    <Content Include="js\jquery.form.js" />
+    <Content Include="t.html" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\cammber.jpg" />
+    <Content Include="js\add_product.js" />
+    <Content Include="js\common.js" />
+    <Content Include="js\cookies_oper.js" />
+    <Content Include="js\fullcalendar-2.2.3\changelog.txt" />
+    <Content Include="js\fullcalendar-2.2.3\demos\agenda-views.html" />
+    <Content Include="js\fullcalendar-2.2.3\demos\background-events.html" />
+    <Content Include="js\fullcalendar-2.2.3\demos\basic-views.html" />
+    <Content Include="js\fullcalendar-2.2.3\demos\default.html" />
+    <Content Include="js\fullcalendar-2.2.3\demos\external-dragging.html" />
+    <Content Include="js\fullcalendar-2.2.3\demos\gcal.html" />
+    <Content Include="js\fullcalendar-2.2.3\demos\json.html" />
+    <Content Include="js\fullcalendar-2.2.3\demos\languages.html" />
+    <Content Include="js\fullcalendar-2.2.3\demos\selectable.html" />
+    <Content Include="js\fullcalendar-2.2.3\demos\theme.html" />
+    <Content Include="js\fullcalendar-2.2.3\demos\timezones.html" />
+    <Content Include="js\fullcalendar-2.2.3\fullcalendar.css" />
+    <Content Include="js\fullcalendar-2.2.3\fullcalendar.js" />
+    <Content Include="js\fullcalendar-2.2.3\fullcalendar.min.css" />
+    <Content Include="js\fullcalendar-2.2.3\fullcalendar.min.js" />
+    <Content Include="js\fullcalendar-2.2.3\fullcalendar.print.css" />
+    <Content Include="js\fullcalendar-2.2.3\gcal.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang-all.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\ar-ma.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\ar-sa.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\ar.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\bg.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\ca.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\cs.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\da.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\de-at.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\de.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\el.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\en-au.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\en-ca.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\en-gb.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\es.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\fa.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\fi.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\fr-ca.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\fr.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\hi.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\hr.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\hu.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\id.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\is.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\it.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\ja.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\ko.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\lt.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\lv.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\nl.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\pl.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\pt-br.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\pt.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\ro.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\ru.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\sk.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\sl.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\sr-cyrl.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\sr.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\sv.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\th.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\tr.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\uk.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\vi.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\zh-cn.js" />
+    <Content Include="js\fullcalendar-2.2.3\lang\zh-tw.js" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\animated-overlay.gif" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="js\fullcalendar-2.2.3\lib\cupertino\jquery-ui.min.css" />
+    <Content Include="js\fullcalendar-2.2.3\lib\jquery-ui.custom.min.js" />
+    <Content Include="js\fullcalendar-2.2.3\lib\jquery.min.js" />
+    <Content Include="js\fullcalendar-2.2.3\lib\moment.min.js" />
+    <Content Include="js\fullcalendar-2.2.3\license.txt" />
+    <Content Include="js\jqm-docs.js" />
+    <Content Include="js\jquery.iosslider.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.mobile-1.3.0-beta.1.js" />
+    <Content Include="js\jquery.mobile-1.3.0-beta.1.min.js" />
+    <Content Include="news_detail.aspx" />
+    <Content Include="news_list.aspx" />
+    <Content Include="Properties\DataSources\System.Xml.Linq.XElement.datasource" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="attendance.aspx" />
+    <Content Include="js\fullcalendar-2.2.3\demos\json\events.json" />
+    <Content Include="js\fullcalendar-2.2.3\demos\php\get-events.php" />
+    <Content Include="js\fullcalendar-2.2.3\demos\php\get-timezones.php" />
+    <Content Include="js\fullcalendar-2.2.3\demos\php\utils.php" />
+    <Content Include="json\PublicHandler.ashx" />
+    <Content Include="ValidCode.aspx" />
+    <Content Include="wage.aspx" />
+    <Content Include="buy.aspx" />
+    <Content Include="login.aspx" />
+    <None Include="Properties\PublishProfiles\MobileOa.pubxml" />
+    <None Include="Web References\com.hiooy.dsp\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.hiooy.dsp\WS_HighsunPortal1.disco" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="complain.aspx.cs">
+      <DependentUpon>complain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="complain.aspx.designer.cs">
+      <DependentUpon>complain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="json\PublicHandler.ashx.cs">
+      <DependentUpon>PublicHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="news_detail.aspx.cs">
+      <DependentUpon>news_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="news_detail.aspx.designer.cs">
+      <DependentUpon>news_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="news_list.aspx.cs">
+      <DependentUpon>news_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="news_list.aspx.designer.cs">
+      <DependentUpon>news_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="attendance.aspx.cs">
+      <DependentUpon>attendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="attendance.aspx.designer.cs">
+      <DependentUpon>attendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValidCode.aspx.cs">
+      <DependentUpon>ValidCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValidCode.aspx.designer.cs">
+      <DependentUpon>ValidCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wage.aspx.cs">
+      <DependentUpon>wage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wage.aspx.designer.cs">
+      <DependentUpon>wage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="buy.aspx.cs">
+      <DependentUpon>buy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buy.aspx.designer.cs">
+      <DependentUpon>buy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.hiooy.dsp\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\com.hiooy.dsp\WS_HighsunPortal1.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\WebApplication\WebSite.BLL\WebSite.BLL.csproj">
+      <Project>{28555831-307e-401e-98d5-d892b3cedcdd}</Project>
+      <Name>WebSite.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WebApplication\WebSite.Comman\WebSite.Comman.csproj">
+      <Project>{40b64b97-15ab-46e2-b9a4-f37ca820925c}</Project>
+      <Name>WebSite.Comman</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WebApplication\WebSite.Model\WebSite.Model.csproj">
+      <Project>{09e44c1a-2265-423a-8c5d-54a60d926f5d}</Project>
+      <Name>WebSite.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://dsp.hiooy.com:8200/WebServices/WS_HighsunPortal1.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.hiooy.dsp\</RelPath>
+      <UpdateFromURL>http://dsp.hiooy.com:8200/WebServices/WS_HighsunPortal1.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>highsunMobileOA_com_hiooy_dsp_WS_HighsunPortal1</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:16922/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="highsunMobileOA.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="highsunMobileOA_com_hiooy_dsp_WS_HighsunPortal1" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dsp.hiooy.com:8200/WebServices/WS_HighsunPortal1.asmx</Value>
+    </Setting>
+    <Setting Name="highsunMobileOA_com_hiooy_canyin_WS_CanYingAnalysis" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.2.217:8200/WebServices/WS_CanYingAnalysis.asmx</Value>
+    </Setting>
+    <Setting Name="highsunMobileOA_com_hiooy_baihuo_WS_BaiHuoAnalysis" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dsp.hiooy.com:8200/WebServices/WS_BaiHuoAnalysis.asmx</Value>
+    </Setting>
+    <Setting Name="highsunMobileOA_com_hiooy_dsp_fangdichan_WS_ERPSellHouseAnalysis" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dsp.hiooy.com:8200/WebServices/WS_ERPSellHouseAnalysis.asmx</Value>
+    </Setting>
+    <Setting Name="highsunMobileOA_com_hiooy_ERPpromise_WS_ERPPromiseCostAnalysis" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dsp.hiooy.com:8200/WebServices/WS_ERPPromiseCostAnalysis.asmx</Value>
+    </Setting>
+    <Setting Name="highsunMobileOA_com_hiooy_SL_WS_SLTradingWaterAnalysis" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dsp.hiooy.com:8200/WebServices/WS_SLTradingWaterAnalysis.asmx</Value>
+    </Setting>
+    <Setting Name="highsunMobileOA_com_hiooy_SLtest_WS_SLTradingWaterAnalysis" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dsp.hiooy.com:8201/WebServices/WS_SLTradingWaterAnalysis.asmx</Value>
+    </Setting>
+    <Setting Name="highsunMobileOA_com_hiooy_baihuoTest_WS_BaiHuoAnalysis" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dsp.hiooy.com:8201/WebServices/WS_BaiHuoAnalysis.asmx</Value>
+    </Setting>
+    <Setting Name="highsunMobileOA_com_hiooy_tiyuhui_WS_TiyuhuiAnalysis" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dsp.hiooy.com:8200/WebServices/WS_TiyuhuiAnalysis.asmx</Value>
+    </Setting>
+    <Setting Name="highsunMobileOA_com_hiooy_industry_WS_IndustryAnalysis" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dsp.hiooy.com:8200/WebServices/WS_IndustryAnalysis.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,833 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: #dddddd;
+}
+html, body {
+	display: block;
+	width: 100%;
+	height: 100%
+}
+ul {
+	list-style: none;
+}
+img {
+	border: none;
+	vertical-align: middle;
+}
+i, em {
+	font-style: normal;
+}
+/******************/
+.greetBg {
+	width: 100%;
+ height: 100%;  max-width:640px;
+	margin: 0px auto;
+	background: url(../images/bg.jpg) no-repeat center center;
+}
+/******/
+
+/******************/
+.topBox {
+	width: 100%;
+	height: 50px;
+	border-top: 1px solid #f00;
+	border-bottom: 1px solid #600;
+	background: url(../images/topBox_bg.png);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 99;
+}
+.topBox h3 {
+	font-size: 16px;
+	display: block;
+	padding: 0px 100px;
+	text-align: center;
+	position: relative;
+	line-height: 50px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	font-weight: normal;
+	color: #fff;
+}
+.topLogo {
+	width: 150px;
+	height: 50px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 9;
+}
+.topLogo img {
+	height: 40px;
+	margin: 5px 0px;
+}
+.topLogin {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	padding: 0px 0px 0px 0px;
+	top: 0px;
+	right: 0px;
+	z-index: 9;
+}
+.topLogin a {
+	display: block;
+	color: #fff;
+	font-size: 18px;
+	line-height: 50px;
+	text-decoration: none;
+	text-indent:-9999px;
+	background:url(../images/login.png) no-repeat center center;
+}
+.GoBack {
+	height: 30px;
+	position: absolute;
+	z-index: 9;
+	top: 9px;
+	left: 10px;
+	padding: 0px 0px 0px 20px;
+	background: url(../images/arrow_l_w.png) no-repeat center left;
+	background-size:15px;
+}
+.GoBack a {
+	color: #fff;
+	font-size: 16px;
+	display:block;
+	line-height: 30px;
+	cursor: pointer;
+	text-decoration: none;
+}
+/********/
+.PageBox {
+	overflow: hidden;
+	position: relative;
+	z-index: 0;
+}
+/********/
+.homeAdimg {
+	max-width:480px;
+	margin:0px auto;
+}
+.homeAdimg .iosSlider {
+	width: 100%;
+	height: 210px;
+}
+.homeAdimg .iosSlider .slider {
+	width: 100%;
+	height: 210px;
+}
+.homeAdimg .iosSlider .slider .item {
+	float: left;
+	width: 100%;
+	height: 210px;
+	cursor: e-resize;
+}
+.homeAdimg .iosSlider .slider .item img {
+	width: 100%;
+	height: 210px;
+}
+.homeAdimg .prevContainer {
+	position: absolute;
+	top: 90px;
+	left: 5px;
+	width: 20px;
+	padding: 0px;
+	z-index: 100;
+}
+.homeAdimg .prevContainer .prev {
+	width: 20px;
+	height: 30px;
+	opacity: .5;
+	background: url(../images/arrow_l_w.png) no-repeat center center;
+}
+.homeAdimg .nextContainer {
+	position: absolute;
+	top: 90px;
+	right: 5px;
+	width: 20px;
+	padding: 0px;
+	z-index: 100;
+}
+.homeAdimg .nextContainer .next {
+	width: 20px;
+	height: 30px;
+	opacity: .5;
+	background: url(../images/arrow_r_w.png) no-repeat center center;
+}
+.homeAdimg .selectorsBlock {
+	position: absolute;
+	left: 0px;
+	bottom: 5px;
+	width: 100%;
+	height: 10px;
+}
+.homeAdimg .selectorsBlock .selectors {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin: 0px;
+	width: 100%;
+	height: 20px;
+	text-align: center;
+	overflow: hidden;
+}
+.homeAdimg .selectorsBlock .selectors .item {
+	display: inline-block;
+	vertical-align: top;
+	width: 10px;
+	height: 10px;
+	margin: 0px 3px 0px 0px;
+	border-radius: 5px;
+	background: rgba(255,255,255,.5);
+}
+.homeAdimg .selectorsBlock .selectors .selected {
+	background: rgba(0,0,0,.3);
+}
+.homeAdimg .selectorsBlock .selectors .first {
+	margin-left: 0;
+}
+.homeAdimg .iosSlider .item a {
+	display: block;
+	position: relative;
+}
+.homeAdimg .iosSlider .item a p {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	height: 25px;
+	line-height: 25px;
+	width: 96%;
+	padding: 0px 2%;
+	background: rgba(0,0,0,.5);
+	color: #fff;
+	font-size: 14px;
+	z-index: 98;
+}
+.homeAdimg .iosSlider .item a img {
+	width: 100%;
+	height: 150px;
+	display: block;
+	margin: 0px auto;
+}
+/**********/
+.listBox,
+.listinfo {
+	margin: 5px;
+	padding: 0px 5px;
+	background: #fff;
+}
+
+.listBox li {
+	border-top: 1px solid #ddd;
+	padding: 5px 20px 5px 105px;
+	height: 80px;
+	overflow: hidden;
+	position: relative;
+	background: url(../images/arrow_r_b.png) no-repeat center right;
+	background-size: 15px;
+	zoom: 1;
+}
+.listinfo li {
+	border-top: 1px solid #ddd;
+	padding: 5px 65px 5px 105px;
+	height: 80px;
+	overflow: hidden;
+	position: relative;
+	background: url(../images/arrow_r_b.png) no-repeat center right;
+	background-size: 15px;
+	zoom: 1;
+}
+.listBox li .listImg,
+.listinfo li .listImg {
+	width: 100px;
+	height: 80px;
+	position: absolute;
+	top: 5px;
+	left: 0px;
+	z-index: 9;
+}
+.listBox li .listImg img,
+.listinfo li .listImg img {
+	width: 100px;
+	height: 80px;
+}
+.listBox li a,
+.listinfo li a {
+	text-decoration: none;
+	color: #333;
+	display: block;
+	cursor: pointer;
+	height: 80px;
+}
+.listBox li h3,
+.listinfo li h3 {
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+	color: #333;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.listBox li span,
+.listinfo li span {
+	display: block;
+	line-height: 18px;
+	font-size: 12px;
+	color: #999;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.listBox li p,
+.listinfo li p {
+	display: block;
+	height: 36px;
+	line-height: 18px;
+	font-size: 12px;
+	color: #999;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.listBox li b,
+.listinfo li b {
+	display: block;
+	z-index: 99;
+	font-size: 14px;
+	line-height:18px;
+	color: #c00;
+}
+.listBox li em,
+.listinfo li em {
+	font-size: 12px;
+	color: #999;
+	margin: 0px 10px 0px 0px;
+	line-height: 18px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.listBox li i,
+.listinfo li i {
+	display: block;
+	width: 60px;
+	height: 30px;
+	position: absolute;
+	top: 32px;
+	right: 0px;
+	background: #c00;
+	border: 1px solid #a00;
+	z-index: 99;
+	text-align: center;
+	line-height: 40px;
+	font-size: 16px;
+	border-radius: 3px;
+	color: #555;
+}
+.listBox li i a,
+.listinfo li i a {
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	text-decoration: none;
+}
+/**********/
+.screenBox {
+	width: 100%;
+	position: fixed;
+	height: 40px;
+	top: 52px;
+	left: 0px;
+	background: #fff;
+	z-index: 99;
+	border-bottom: 5px solid #dddddd;
+}
+.screenBox li {
+	width: 25%;
+	height: 40px;
+	float: left;
+	border-bottom: 1px solid #ccc;
+}
+.scrLink {
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	padding: 0px 5px 0px 0px;
+	border-right: 1px solid #ddd;
+}
+.scrLink a {
+	display: block;
+	font-size: 14px;
+	color: #333;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	background: url(../images/arrow_d_b.png) no-repeat center right;
+	background-size: 12px;
+	cursor: pointer;
+}
+.screenBox li .pupBox {
+	position: absolute;
+	top: 41px;
+	left: 0px;
+	width: 100%;
+	background: #fff;
+	padding: 5px 0px;
+	border-bottom: 5px solid #dddddd;
+	display: none;
+}
+.screenBox .screenUp .pupBox {
+	display: block;
+}
+.pupBox dl{
+	display:block;
+}
+.pupBox dt{
+	width:25%;
+	height:40px;
+	line-height:40px;
+	display:block;
+	margin:-1px 0px 0px 0px;
+	position:relative;
+	z-index:99;
+	text-align:center;
+	font-size:14px;
+	color:#555;
+	cursor:pointer;
+	background:#f5f5f5;
+}
+.pupBox dt span{
+	height:38px;
+	line-height:38px;
+	display:block;
+	background:#f5f5f5;
+	border-top:1px solid #ccc;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	margin:0px;
+	padding:0px;
+}
+.pupBox dd{
+	display:none;
+	position:absolute;
+	width:75%;
+	top:0px;
+	left:25%;
+	background:#f5f5f5;
+	margin:0px 0px 0px 1px
+}
+.pupBox .hovUp dd{
+	display:block;
+}
+.pupBox dl:hover dd{
+	display:block;
+}
+.pupBox dl:hover dt span{
+	background:#fff;
+	color:#c00;
+}
+.pupBox span {
+	display: inline-block;
+	font-size: 14px;
+	white-space: nowrap;
+	margin: 10px 15px;
+	color: #555;
+}
+.pupBox span a {
+	display: block;
+	color: #555;
+	text-decoration: none;
+	cursor: pointer;
+}
+.detaBox {
+	margin: 5px;
+	padding: 5px;
+	background: #fff;
+}
+.planImg {
+	width: 100%;
+	overflow: hidden;
+}
+.planImg img {
+	max-width: 100%;
+	display: block;
+	margin: 0px auto;
+}
+/********/
+.planTxt {
+	padding: 5px;
+}
+.planTxt p {
+	font-size: 14px;
+	color: #777;
+}
+.planTxt span {
+	font-size: 12px;
+	color: #999;
+}
+.intro {
+	padding: 5px;
+	border-top: 1px solid #ccc;
+}
+.intro td {
+	font-size: 14px;
+	color: #333;
+	padding: 5px 0px;
+}
+.intro td b {
+	color: #c00;
+}
+.intro td span {
+	color: #777;
+}
+.intro p {
+	font-size: 14px;
+	line-height: 25px;
+	color: #777;
+}
+.broker {
+	display: block;
+	padding: 5px 5px 5px 75px;
+	height: 90px;
+	overflow: hidden;
+	position: relative;
+	border-top: 1px solid #ccc;
+	zoom: 1;
+}
+.brokImg {
+	width: 70px;
+	height: 85px;
+	position: absolute;
+	top: 5px;
+	left: 0px;
+	z-index: 9;
+}
+.brokImg img {
+	display: block;
+	width: 70px;
+	height: 85px;
+}
+.broker h3 {
+	font-size: 18px;
+	color: #333;
+	display: block;
+	line-height: 25px;
+}
+.broker p {
+	font-size: 14px;
+	color: #555;
+	line-height: 20px;
+}
+.redBtn {
+	display: block;
+	width: 100%;
+	margin: 5px auto;
+	text-align: center;
+}
+.redBtn a {
+	width: 40%;
+	display: inline-block;
+	height: 40px;
+	border-radius: 5px;
+	margin: 0px 10px;
+	border: 1px solid #c00;
+}
+.iphone {
+	background: #cc3333 url(../images/iphone.png) no-repeat center center;
+}
+.navMap {
+	background: #cc3333 url(../images/navMap.png) no-repeat center center;
+}
+/******/
+.allUrl {
+	width: 100%;
+	margin: 0px auto;
+	padding: 5px 0px;
+	text-align: center;
+}
+.allUrl a {
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	text-align: center;
+	overflow: hidden;
+	color: #fff;
+	background: url(../images/topBox_bg.png) 0px 0px;
+	border-top: 1px solid #c00;
+	border-left: 1px solid #a00;
+	border-right: 1px solid #a00;
+	border-bottom: 1px solid #900;
+	margin: 0px auto;
+	border-radius: 5px;
+	cursor: pointer;
+}
+/*******/
+.loginBox {
+	margin: 10px;
+	background: #fff;
+	padding: 20px 10px;
+}
+.loginBox table {
+	width: 100%;
+	margin: 0px auto;
+}
+.loginBox table th {
+	width: 80px;
+	padding: 3px 0px;
+	text-align: right;
+	font-size: 14px;
+	color: #555;
+}
+.loginBox table td {
+	padding: 3px 0px;
+	text-align: left;
+	font-size: 14px;
+	color: #555;
+	width: 240px;
+}
+.loginBox table td input {
+	display: block;
+	padding: 0px 10px;
+	width: 90%;
+	line-height: 35px;
+	color: #555;
+	border: 1px solid #ccc;
+}
+.getBtn {
+	padding: 10px 0px 0px 0px;
+	text-align: center;
+}
+.inpBtn {
+	width: 100%;
+	line-height: 40px;
+	color: #fff;
+	background: url(../images/topBox_bg.png) 0px 0px;
+	border-top: 1px solid #c00;
+	border-left: 1px solid #a00;
+	border-right: 1px solid #a00;
+	border-bottom: 1px solid #900;
+	font-size: 18px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.inpBtn:hover {
+	opacity: 0.8;
+}
+.copy {
+	margin: 50px auto 10px auto;
+}
+.copy p {
+	display: block;
+	text-align: center;
+	font-size: 16px;
+	color: #777;
+}
+.userTxt {
+	background: #fff;
+	padding: 10px 10px 10px 90px;
+	overflow: hidden;
+	position: relative;
+	height: 90px;
+}
+.userImg {
+	width: 70px;
+	height: 90px;
+	position: absolute;
+	overflow: hidden;
+	top: 10px;
+	left: 10px;
+}
+.userImg img {
+	width: 70px;
+	height: 90px;
+}
+.userName h3 {
+	font-size: 16px;
+	color: #333;
+	line-height: 25px;
+}
+.userName p {
+	font-size: 14px;
+	color: #777;
+	line-height: 25px;
+}
+.newly {
+	padding: 10px 0px;
+}
+.newly a {
+	display: block;
+	line-height: 40px;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	background: url(../images/topBox_bg.png) 0px 0px;
+	border-top: 1px solid #c00;
+	border-left: 1px solid #a00;
+	border-right: 1px solid #a00;
+	border-bottom: 1px solid #900;
+	font-size: 18px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+/********/
+.IssueBox {
+	background: #fff;
+	margin: 10px;
+	padding: 10px;
+}
+.edit_product_form h3 {
+	display: block;
+	font-size: 16px;
+	color: #555;
+	line-height: 25px;
+	border-bottom: 1px solid #ccc;
+}
+.edit_product_pic {
+	width: 100%;
+	margin: 5px 0px;
+}
+.add_pic {
+	display: inline-block;
+	width: 65px;
+	height: 65px;
+	overflow: hidden;
+	position: relative;
+	margin: 0px 10px 0px 0px;
+	background: url(../images/cammber.jpg) no-repeat center center;
+	background-size: 65px;
+}
+.add_pic input {
+	display: block;
+	width: 65px;
+	height: 65px;
+	position: absolute;
+	top: 0;
+	right: -1px;
+	font-size: 32px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.add_pic button {
+	color: #d8d8d9;
+	height: 65px;
+	font-size: 0px;
+	border: none;
+	width: 65px;
+	background: none;
+	padding: 0 0 10px;
+}
+.add_pic button img{
+	width:65px;
+	height:65px;
+}
+.edit_product_form .ipt_row {
+	margin: -1px 0px;
+	background: #fff;
+	border: solid 1px #d1d1d1;
+	padding: 5px 5px;
+}
+.edit_product_form .ipt_row label {
+	font-weight: 700;
+	color: #595959;
+}
+.edit_product_form .ipt_row label {
+	width: 100px;
+	text-align: right;
+	font-size: 16px;
+	color: #555;
+	line-height: 35px;
+	height: 35px;
+}
+.f_fl {
+	display: inline;
+	float: left;
+}
+.edit_product_form .ipt_row .rel_fill {
+	margin-left: 105px;
+}
+.f_pr {
+	position: relative;
+	height: 35px;
+	line-height: 35px;
+}
+.ipt_row select {
+	border: none;
+	width: 100%;
+	padding: 0px;
+	line-height: 33px;
+	font-size: 16px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	background: url(../images/arrow_d_b.png) no-repeat center right;
+}
+input, textarea, select {
+	-webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+.edit_product_form .ipt_row .rel_fill input[type="text"] {
+	
+	border: solid 1px #ccc;
+	width: 90%;
+	background: #fff;
+	line-height: 33px;
+	padding: 0 5px;
+	font-size: 18px;
+	color: #555;
+}
+.edit_product_form .ipt_row .rel_fill input[type="radio"] {
+	vertical-align: middle;
+	margin: 0px 5px 0px 10px;
+	cursor: pointer;
+	width: 15px;
+	height: 15px;
+}
+
+.guide_language {
+	padding: 10px 0px;
+}
+#Button1 {
+	width:100%;
+	line-height: 40px;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	background: url(../images/topBox_bg.png) 0px 0px;
+	border-top: 1px solid #c00;
+	border-left: 1px solid #a00;
+	border-right: 1px solid #a00;
+	border-bottom: 1px solid #900;
+	font-size: 18px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+#shade
+        {
+            width: 400px;
+            height: 300px;
+            background-color: Gray;
+            z-index: 999;
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            -moz-opacity: 0.9; /*Firefox*/
+            opacity: 0.9; /*Opera*/
+            filter: alpha(opacity=90); /*IE*/
+            display: none;
+}

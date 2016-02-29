@@ -1,0 +1,112 @@
+﻿* { box-sizing: border-box; -moz-box-sizing: border-box; /* Firefox */ -webkit-box-sizing: border-box; /* Safari */ }
+html,body {
+	height:100%;
+}
+body { border: 0;margin:0 auto!important;
+	
+	position:relative;  background: #f9f9f9; 
+	/*overflow: hidden;*/  }
+
+.detail_box
+{
+	padding:5px; width:100%;
+}
+.detail_box img
+{
+	max-width:100%;height:auto;
+}
+.news_title
+{
+	font-size:16px; text-align:center;line-height:30px;
+}
+.news_subtit
+{
+	font-size:12px; margin:10px auto; padding:10px; border-bottom:1px solid #999; font-weight:normal; text-align:center;
+}
+.news_detail
+{
+	line-height:22px;
+}
+	.news_detail p
+	{
+		margin:0; padding:0; line-height:30px;font-size:16px; text-align:left;
+	}
+.treven
+{
+	border: 1px solid #c3ccd8; background-color: #c6d9f1;text-align:center; padding:3px 0;
+}
+.trodd
+{
+	border: 1px solid #c3ccd8; background-color: #f2f2f2;text-align:center; padding:3px 0;
+}
+.ask
+{
+
+}
+	.ask h3
+	{
+		font-size:12px; margin-bottom:5px; color:blue;
+	}
+.answer h3
+{
+	font-size:12px; margin-bottom:5px; color:red;
+}
+		.ask h3 span,.answer h3 span
+		{
+			font-weight:normal; font-weight:bold; margin-left:5px;
+		}
+	.complain_detail
+	{
+		max-width:100%;font-size:12px;font-weight:normal; 
+	}
+	.ask .imgArry
+	{
+		margin-bottom:5px; 
+	}
+	.ask .imgArry img
+	{
+		 margin-right:5px; max-height: 80px; max-width: 80px;
+	}
+.edit_product_pic {
+	width: 100%;
+	margin: 5px 0px;
+}
+.add_pic {
+	display: inline-block;
+	width: 65px;
+	height: 65px;
+	overflow: hidden;
+	position: relative;
+	margin: 0px 10px 0px 0px;
+	background: url(../images/cammber.jpg) no-repeat center center;
+	background-size: 65px;
+}
+.add_pic input {
+	display: block;
+	width: 65px;
+	height: 65px;
+	position: absolute;
+	top: 0;
+	right: -1px;
+	
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0); 
+}
+.add_pic a {
+	
+	height: 65px;
+	font-size: 0px;
+	border: none;
+	width: 65px;
+	background: none;
+	padding: 0 0 10px;
+}
+.add_pic a img{
+	width:65px;
+	height:65px;
+}
+.DelComplain
+{
+	position:absolute;top:5px; right:5px;
+}

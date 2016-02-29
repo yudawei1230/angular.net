@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=640;target-densitydpi=device-dpi;minimum-scale=0.5;maximum-scale=2.0,user-scalable=yes">
+<meta http-equiv="expires" content="-1">
+<meta name="viewport" content="width=640;target-densitydpi=device-dpi;minimum-scale=1;maximum-scale=1,user-scalable=yes">
+<title>租商铺就选海商通</title>
+<link rel="stylesheet" type="text/css" href="css/common.css?ver=1312">
+<script type="text/javascript" src="js/jquery.1.4.2-min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script>
+$(function($){
+	//欢迎页跳转
+	setTimeout(function(){window.location="home.html";},3000);
+	//*******
+	var v_h	= null;		//记录设备的高度
+	function init_pageH(){
+		var fn_h = function() {
+			var Node;
+			if(document.compatMode == "BackCompat")
+				Node = document.body;
+			else
+				Node = document.documentElement;
+			 return Math.max(Node.scrollHeight,Node.clientHeight);
+		};
+		var page_h = fn_h();
+		var m_h = $(".slider").height();
+		page_h >= m_h ? v_h = page_h : v_h = m_h ;
+		//alert(v_h);
+		$(".greetBg").height(v_h);
+		//设置各种模块页面的高度，扩展到整个屏幕高度
+	};
+	init_pageH();
+});
+</script>
+</head>
+
+<body>
+<!--欢迎页-->
+<div class="greetBg"></div>
+</body>
+</html>

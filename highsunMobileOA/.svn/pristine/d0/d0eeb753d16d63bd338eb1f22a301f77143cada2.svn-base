@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=yes">
+<title>租商铺就选海商通</title>
+<link rel="stylesheet" type="text/css" href="css/common.css?ver=989asd811">
+<script type="text/javascript" src="js/jquery.1.4.2-min.js"></script>
+<script type="text/javascript" src="js/common.js?ver=5678"></script>
+<script type="text/javascript" src="js/jquery.iosslider.js"></script>
+<script>
+$(document).ready(function() {
+	//礼包滑动adimg jquery
+	$('.iosSlider').iosSlider({
+		snapToChildren: true,
+		desktopClickDrag: true,
+		keyboardControls: true,
+		autoSlide:true,
+		infiniteSlider:true,
+		navNextSelector: $('.next'),
+		navPrevSelector: $('.prev'),
+		navSlideSelector: $('.selectors .item'),
+		onSlideChange: slideChange
+	});
+
+}); 
+function slideChange(args) {
+	
+	$('.selectors .item').removeClass('selected');
+	$('.selectors .item:eq(' + (args.currentSlideNumber - 1) + ')').addClass('selected');
+	
+}
+</script>
+</head>
+<body>
+<div class="topBox">
+  <div class="GoBack"><a href="javascript:history.go(-1);">返回</a></div>
+  <div class="topLogin"><a href="login.html">登录</a></div>
+</div>
+<div class="PageBox" style="padding: 50px 0px 0px 0px;"> 
+  <!--轮播图-->
+  <div class="homeAdimg">
+    <div class="iosSlider">
+      <div class="slider">
+        <div class="item"> <a title="" href=""><img src="images/pageimg.jpg" alt=""> </a> </div>
+        <div class="item"> <a title="" href=""><img src="images/pageimg.jpg" alt=""> </a> </div>
+      </div>
+      <div class = "selectorsBlock">
+        <div class = "selectors">
+          <div class = "item"></div>
+          <div class = "item"></div>
+        </div>
+      </div>
+      <div class="prevContainer">
+        <div class="prev"> </div>
+      </div>
+      <div class="nextContainer">
+        <div class="next"> </div>
+      </div>
+    </div>
+  </div>
+  <!--内页-->
+  <div class="detaBox">
+    <div class="planImg"><img src="images/deta.jpg"></div>
+    <div class="planTxt">
+      <p>出租 海珠区昌岗路晓港东--马路商场-10000元/月--海印商场</p>
+      <span>更新时间：9分钟前更新</span></div>
+    <div class="intro">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td colspan="2">租金：<b>20000元/月</b></td>
+          </tr>
+          <tr>
+            <td>铺号：<span>10000元/月</span></td>
+            <td>楼层：<span>1层</span></td>
+          </tr>
+          <tr>
+            <td>面积：<span>250M</span></td>
+            <td>使用率：<span>70%</span></td>
+          </tr>
+          <tr>
+            <td colspan="2">招租行业：<span>港式茶餐厅</span></td>
+          </tr>
+          <tr>
+            <td colspan="2">周边客户：<span>KFC</span></td>
+          </tr>
+        </table>
+    </div>
+    <div class="intro">
+    	<p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
+    </div>
+    <div class="broker">
+    	<div class="brokImg"><img src="images/brokImg.jpg"></div>
+        <h3>经纪人</h3>
+        <p>都荟城</p>
+        <p>张三</p>
+    </div>
+    <div class="redBtn"><a class="iphone" href="tel:114"></a><a class="navMap" href=""></a></div>
+  </div>
+</div>
+</body>
+</html>

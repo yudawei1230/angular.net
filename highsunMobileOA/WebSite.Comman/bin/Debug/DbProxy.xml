@@ -1,0 +1,333 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DbProxy</name>
+    </assembly>
+    <members>
+        <member name="T:Eagle.Data.ColumnAttribute">
+            <summary>
+            自定义特性，用于映射SQL列于实体列的映射
+            </summary>
+        </member>
+        <member name="M:Eagle.Data.ColumnAttribute.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Eagle.Data.ColumnAttribute.ColumnName">
+            <summary>
+            列的GET/SET访问
+            </summary>
+        </member>
+        <member name="T:Eagle.Data.Config.CommandFactory">
+            <summary>
+            CommandFactory用于初始化构造查询条件
+            </summary>
+        </member>
+        <member name="F:Eagle.Data.Config.CommandFactory.parameters">
+            <summary>
+            用于缓存存储过程信息,如该存储过程的参数个数，类型等
+            </summary>
+        </member>
+        <member name="M:Eagle.Data.Config.CommandFactory.GetCommand(System.String,System.Object[])">
+            <summary>
+            创建用于执行指定存储过程的ProcedureCommand
+            </summary>
+            <param name="procedureName">存储过程名</param>
+            <param name="values">参数的值</param>
+            <returns>ProcedureCommand</returns>
+            
+        </member>
+        <member name="M:Eagle.Data.Config.CommandFactory.GetParameters(System.String)">
+            <summary>
+            从数据库获取指定存储过程的参数列表。
+            </summary>
+            <param name="procedureName">存储过程名</param>
+            <returns>参数列表</returns>
+        </member>
+        <member name="M:Eagle.Data.Config.CommandFactory.GetGetSQLCommand(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            分配SqlCommand内容(SQL)
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="values">参数</param>
+            <returns>返回ProcedureCommand对象</returns>
+        </member>
+        <member name="T:Eagle.Data.Config.Configuration">
+            <summary>
+            配置类
+            </summary>
+        </member>
+        <member name="F:Eagle.Data.Config.Configuration.connString">
+            <summary>
+            当前连接字符串（首次加载对字符串进行解密）
+            </summary>
+        </member>
+        <member name="P:Eagle.Data.Config.Configuration.ConnectionString">
+            <summary>
+            获取当前连接字符串（已解密）
+            </summary>
+        </member>
+        <member name="P:Eagle.Data.Config.Configuration.Connection">
+            <summary>
+            获取Connection连接
+            </summary>
+        </member>
+        <member name="T:Eagle.Data.Config.DESHelper">
+            <summary>
+            对称加密类
+            </summary>
+        </member>
+        <member name="M:Eagle.Data.Config.DESHelper.EncryptDES(System.String,System.String)">
+            <summary>
+            DES加密字符串
+            </summary>
+            <param name="encryptString">待加密的字符串</param>
+            <param name="encryptKey">加密密钥,要求为8位</param>
+            <returns>加密成功返回加密后的字符串，失败返回源串</returns>
+        </member>
+        <member name="M:Eagle.Data.Config.DESHelper.DecryptDES(System.String,System.String)">
+            <summary>
+            DES解密字符串
+            </summary>
+            <param name="decryptString">待解密的字符串</param>
+            <param name="decryptKey">解密密钥,要求为8位,和加密密钥相同</param>
+            <returns>解密成功返回解密后的字符串，失败返源串</returns>
+        </member>
+        <member name="T:Eagle.Data.Config.ObjectBuilder">
+            <summary>
+            动态创建对象
+            </summary>
+        </member>
+        <member name="F:Eagle.Data.Config.ObjectBuilder._types">
+            <summary>
+            用户缓存实体类型映射
+            </summary>
+        </member>
+        <member name="M:Eagle.Data.Config.ObjectBuilder.Build``1(System.Data.SqlClient.SqlDataReader)">
+            <summary>
+            根据数据动态返回对象
+            </summary>
+            <typeparam name="T">T类型</typeparam>
+            <param name="reader">SqlDataReader对象</param>
+            <returns>返回T类型</returns>
+        </member>
+        <member name="M:Eagle.Data.Config.ObjectBuilder.GetValue(System.Data.SqlClient.SqlDataReader,System.Int32,System.Type)">
+            <summary>
+            根据数据库列获取对象
+            </summary>
+            <param name="reader">SqlDataReader对象</param>
+            <param name="colIndex">列索引</param>
+            <param name="colType">列类型</param>
+            <returns>返回object对象</returns>
+        </member>
+        <member name="M:Eagle.Data.Config.ObjectBuilder.GetProperties(System.Type)">
+            <summary>
+            用于匹配实体属性类型
+            </summary>
+            <param name="targetType">当前类型</param>
+            <returns>返回匹配属性信息</returns>
+        </member>
+        <member name="T:Eagle.Data.Config.ObjectProperty">
+            <summary>
+            配置类
+            </summary>
+        </member>
+        <member name="P:Eagle.Data.Config.ObjectProperty.Property">
+            <summary>
+            发现属性 (Property) 的属性 (Attribute) 并提供对属性 (Property) 元数据的访问。
+            </summary>
+        </member>
+        <member name="P:Eagle.Data.Config.ObjectProperty.ColumnName">
+            <summary>
+            列名
+            </summary>
+        </member>
+        <member name="T:Eagle.Data.Config.ProcedureCommand">
+            <summary>
+            程序命令
+            </summary>
+        </member>
+        <member name="P:Eagle.Data.Config.ProcedureCommand.Command">
+            <summary>
+            表示要对 SQL Server 数据库执行的一个 Transact-SQL 语句或存储过程。无法继承此类。
+            </summary>
+        </member>
+        <member name="P:Eagle.Data.Config.ProcedureCommand.OutParameter">
+            <summary>
+            输出参数
+            </summary>
+        </member>
+        <member name="P:Eagle.Data.Config.ProcedureCommand.ReturnParameter">
+            <summary>
+            影响行数
+            </summary>
+        </member>
+        <member name="T:Eagle.Data.Config.TypeMapping">
+            <summary>
+            C#类型与SQL数据库类型的匹配
+            </summary>
+        </member>
+        <member name="M:Eagle.Data.Config.TypeMapping.GetType(System.String)">
+            <summary>
+            根据C#类型返回数据库类型
+            </summary>
+            <param name="typeName">C#类型</param>
+            <returns>数据库类型</returns>
+        </member>
+        <member name="T:Eagle.Data.Config.ParameterInfo">
+            <summary>
+            存储过程参数信息
+            </summary>
+        </member>
+        <member name="P:Eagle.Data.Config.ParameterInfo.Name">
+            <summary>
+            存储过程名称
+            </summary>
+        </member>
+        <member name="P:Eagle.Data.Config.ParameterInfo.Type">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="P:Eagle.Data.Config.ParameterInfo.Length">
+            <summary>
+            长度
+            </summary>
+        </member>
+        <member name="P:Eagle.Data.Config.ParameterInfo.IsOutput">
+            <summary>
+            是都有输出参数
+            </summary>
+        </member>
+        <!-- 对于成员“T:Eagle.Data.Database”忽略有格式错误的 XML 注释 -->
+        <member name="F:Eagle.Data.Database.cmd">
+            <summary>
+            程序命令
+            </summary>
+        </member>
+        <member name="M:Eagle.Data.Database.#ctor(System.String,System.Object[])">
+            <summary>
+            构造函数（存储过程）
+            </summary>
+            <param name="procedureName">存储过程名称</param>
+            <param name="values">参数（没有参数可以忽略）</param>
+        </member>
+        <member name="M:Eagle.Data.Database.#ctor(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            构造函数（SQL语句）
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="para">参数（没有参数可以忽略）</param>
+        </member>
+        <member name="M:Eagle.Data.Database.ExecuteReader">
+            <summary>
+            查询数据库，返回结果集。<br/>
+            当结果集使用完后必须关闭，结果集所依赖的连接将自动关闭。
+            </summary>
+            <returns>结果集</returns>
+        </member>
+        <member name="M:Eagle.Data.Database.GetSingle">
+            <summary>
+            执行一条计算查询结果语句，返回查询结果（object）。
+            </summary>
+            <param name="SQLString">计算查询结果语句</param>
+            <returns>查询结果（object）</returns>
+        </member>
+        <member name="M:Eagle.Data.Database.HaveExecuteReader">
+            <summary>
+             查询数据库，是否存在该记录<br/>
+            </summary>
+            <returns>返回true有该记录存在 false没有该记录存在</returns>
+        </member>
+        <member name="M:Eagle.Data.Database.ExecuteDataTable">
+            <summary>
+            查询数据库,返回DataTable结果集合。<br/>
+             当结果集使用完后必须关闭，结果集所依赖的连接将自动关闭。
+            </summary>
+            <returns>返回DataTable</returns>
+        </member>
+        <member name="M:Eagle.Data.Database.ExecuteNoQuery">
+            <summary>
+            执行更新（增、删、改）
+            </summary>
+            <returns>影响的行数</returns>
+        </member>
+        <member name="M:Eagle.Data.Database.ExecuteNoQuery(System.Collections.ArrayList)">
+            <summary>
+            执行更新（增、删、改）
+            </summary>
+            <returns>是否成功提交</returns>
+        </member>
+        <member name="M:Eagle.Data.Database.ExecuteQuery``1">
+            <summary>
+            强类型列表查詢(存储过程)
+            </summary>
+            <typeparam name="T">T类型</typeparam>
+            <returns>返回T类型列表</returns>
+        </member>
+        <member name="M:Eagle.Data.Database.ExecuteScalar``1">
+            <summary>
+            强类型查询
+            </summary>
+            <typeparam name="T">T类型</typeparam>
+            <returns>返回T类型列表</returns>
+        </member>
+        <member name="M:Eagle.Data.Database.ExecuteIntScalar">
+            <summary>
+            执行查询，并返回查询所返回的结果集中第一行的第一列。忽略其他列或行。
+            </summary>
+            <returns>返回影响行数</returns>
+        </member>
+        <member name="M:Eagle.Data.Database.ExecuteFill(System.String,System.Collections.Generic.List{System.Data.SqlClient.SqlParameter},System.Data.CommandType)">
+            <summary>
+            执行参数化存储过程
+            </summary>
+            <param name="sqlStr"></param>
+            <param name="listParam"></param>
+            <param name="cmdType"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Eagle.Data.Database.OutputValue">
+            <summary>
+            输出参数
+            </summary>
+        </member>
+        <member name="P:Eagle.Data.Database.ReturnValue">
+            <summary>
+            返回影响行数
+            </summary>
+        </member>
+        <member name="T:Eagle.Data.SQLResource">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:Eagle.Data.SQLResource.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:Eagle.Data.SQLResource.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:Eagle.Data.SQLResource.SPParameters">
+             <summary>
+               查找类似 SELECT
+            param.name AS [Name],
+            ISNULL(baset.name, N&apos;&apos;) AS [SystemType],
+            CAST(CASE WHEN baset.name IN (N&apos;nchar&apos;, N&apos;nvarchar&apos;) AND param.max_length &lt;&gt; -1 THEN param.max_length/2 ELSE param.max_length END AS int) AS [Length],
+            param.is_output AS [IsOutputParameter]
+            FROM
+            sys.all_objects AS sp
+            INNER JOIN sys.all_parameters AS param ON param.object_id=sp.object_id
+            LEFT OUTER JOIN sys.types AS baset ON baset.user_type_id = param.system_type_id and baset.user_type_id = baset.system_type_id
+            WHERE
+            (sp.type = N&apos;P&apos; OR sp. [字符串的其余部分被截断]&quot;; 的本地化字符串。
+             </summary>
+        </member>
+    </members>
+</doc>

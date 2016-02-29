@@ -1,0 +1,379 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="css/css.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/scrollbar.css">
+<script type="application/javascript" src="js/iscroll.js"></script>
+<link rel="stylesheet" type="text/css" href="css/newstab.css" />
+<title>海印移动门户</title>
+    <style>
+        #wrapper {
+            position:absolute; z-index:1;
+	top:0.1px; bottom:48px; left:0;
+	width:100%;
+	background:white;
+	overflow:auto;
+      margin-top: 30px;
+
+}
+#scroller {
+	position:relative;
+/*	-webkit-touch-callout:none;*/
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+
+	float:left;
+	width:100%;
+	padding:0;
+    
+}
+        .newsCenter-con {
+          width: 33.3%;
+        }
+        .everyNewsContent {          
+          clear:both;
+          width:100%;
+          padding-top:5px
+        }
+        div.newsImg {
+            float:left;
+            margin-left:5px;
+            margin-top:5px;
+        }
+        div.newsImg img {
+            width:80px;
+            height:80px;
+        }
+        div.newsCon {
+            width:70%;float:left; padding-top:5px; padding-left:10px;
+        }
+        div.newsTitle {
+             color:#333333;font-size:16px;
+        }
+        div.newsAuthor {
+            color:#C35586;float:left
+        }
+        div.newsDate {
+            color:#C35586;float:left
+        }
+        .swiper-wrapper {
+        height:auto!important;
+        }
+        .swiper-slide {
+         height:auto!important;
+        }
+    </style>
+    <script type="text/javascript">
+                function forward(obj) {
+                    URL = "newsDetail.html?newsID="+obj.id;
+                    location.href = URL;
+                }
+    </script>
+</head>
+
+<body>
+<div style=" width:100%; height:50px; color:#fff; background:#C35586"><div class="back"><a href="javascript:history.go(-1)">返回</a></div><div style="font-size:18px; line-height:50px;" align="center">最新动态</div></div>
+
+<div class="wrap">
+    <div class="tabs">
+        <a href="#" hidefocus="true" class="active">新闻中心</a>
+        <a href="#" hidefocus="true">行政办公</a>
+        <a href="#" hidefocus="true">人力资源</a>
+
+    </div>    
+    <div style=" width:100%; height:5px; background:#C35586"></div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+
+        <div class="swiper-slide">
+            <section class="container">  
+   <div class="newsType-tab">  
+     <input type="radio" class="switch-input" name="newsType" value="1" id="newstype1" checked>  
+     <label for="week" class="switch-label switch-label-off">内部新闻</label>  
+     <input type="radio" class="switch-input" name="newsType" value="5" id="newstype2">  
+     <label for="month" class="switch-label switch-label-on">会议纪要</label>
+     <input type="radio" class="switch-input" name="newsType" value="6" id="newstype3">  
+     <label for="day" class="switch-label switch-label-otherone">企业动态</label> 
+     <input type="radio" class="switch-input" name="newsType" value="8" id="newstype4">  
+     <label for="second" class="switch-label switch-label-othertow">服务监督</label> 
+     <span class="switch-selection"></span>  
+   </div>  
+                </section>
+
+                        <div id="wrapper">
+    <div id="scroller">
+        <div id="pullDown">
+            <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+        </div>
+        <div id="newsCenter-con-type">
+        <div class="newsCenter-con" id="NBXW"></div>
+        <div class="newsCenter-con" id="HYJY" style="display:none">HYJY</div>
+        <div class="newsCenter-con" id="QYDT" style="display:none">QYDT</div>
+        <div class="newsCenter-con" id="FWJD" style="display:none">FYJD</div>
+            </div>
+        
+                  <div id="pullUp">
+            <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+        </div>
+        </div>
+                            </div>
+          </div>
+          
+          
+        <div class="swiper-slide" style="position:relative;left:33.3%;">
+          <iframe src="../">
+
+          </iframe>
+          </div>
+       
+        <div class="swiper-slide" style="position:relative;left:66.6%;">
+           <div class="content-slide"> <a href="new_nr.html"> 
+             <div style="float:left;"><img width="80px" height="80px" src="images/03.png"></div>
+             <div style=" width:70%;float:left; padding-top:5px; padding-left:10px;">
+              <div style=" color:#333333;font-size:16px;">关于2014年度商业板块先进员工评选结果的公示</div>
+              <div style=" color:#C35586;float:left">创建者：郑映乔</div><div style=" color:#C35586;float:right">2015-02-03</div>
+             </div>
+            </a>
+          </div>
+          <div style="clear:both;"></div>
+           <div class="content-slide"> <a href="new_nr.html"> 
+             <div style="float:left;"><img width="80px" height="80px" src="images/03.png"></div>
+             <div style=" width:70%;float:left; padding-top:5px; padding-left:10px;">
+              <div style=" color:#333333;font-size:16px;">关于2014年度商业板块先进员工评选结果的公示</div>
+              <div style=" color:#C35586;float:left">创建者：郑映乔</div><div style=" color:#C35586;float:right">2015-02-03</div>
+             </div>
+            </a>
+          </div>
+           <div style="clear:both;"></div>
+           <div class="content-slide"> <a href="new_nr.html"> 
+             <div style="float:left;"><img width="80px" height="80px" src="images/03.png"></div>
+             <div style=" width:70%;float:left; padding-top:5px; padding-left:10px;">
+              <div style=" color:#333333;font-size:16px;">关于2014年度商业板块先进员工评选结果的公示</div>
+              <div style=" color:#C35586;float:left">创建者：郑映乔</div><div style=" color:#C35586;float:right">2015-02-03</div>
+             </div>
+            </a>
+          </div>
+           <div style="clear:both;"></div>
+           <div class="content-slide"> <a href="new_nr.html"> 
+             <div style="float:left;"><img width="80px" height="80px" src="images/03.png"></div>
+             <div style=" width:70%;float:left; padding-top:5px; padding-left:10px;">
+              <div style=" color:#333333;font-size:16px;">关于2014年度商业板块先进员工评选结果的公示</div>
+              <div style=" color:#C35586;float:left">创建者：郑映乔</div><div style=" color:#C35586;float:right">2015-02-03</div>
+             </div>
+            </a>
+          </div>
+           <div style="clear:both;"></div>
+           <div class="content-slide"> <a href="new_nr.html"> 
+             <div style="float:left;"><img width="80px" height="80px" src="images/03.png"></div>
+             <div style=" width:70%;float:left; padding-top:5px; padding-left:10px;">
+              <div style=" color:#333333;font-size:16px;">关于2014年度商业板块先进员工评选结果的公示</div>
+              <div style=" color:#C35586;float:left">创建者：郑映乔</div><div style=" color:#C35586;float:right">2015-02-03</div>
+             </div>
+            </a>
+          </div>
+          
+          </div>
+       
+      </div>
+   </div>
+</div>
+<script src="js/jquery-1.10.1.min.js"></script> 
+<script src="js/idangerous.swiper.min.js"></script> 
+<script>
+var tabsSwiper = new Swiper('.swiper-container',{
+	speed:200,
+	onSlideChangeStart: function(){
+		$(".tabs .active").removeClass('active');
+		$(".tabs a").eq(tabsSwiper.activeIndex).addClass('active');
+	}
+});
+
+$(".tabs a").on('touchstart mousedown',function(e){
+	e.preventDefault()
+	$(".tabs .active").removeClass('active');
+	$(this).addClass('active');
+	tabsSwiper.swipeTo($(this).index());
+});
+
+$(".tabs a").click(function(e){
+	e.preventDefault();
+});
+</script>
+<!-- 代码部分end -->
+
+
+
+    <script defer="defer">
+        function post(newsType, newsSum, newsCon) {   //封装的初始页面post方法
+            $.post('../json/PublicHandler.ashx?Method=HighsunPortal_GetCenterNews&newsType='+newsType+'&newsSum='+ newsSum, function (item) {
+                var result = item[0];
+                var text = "";
+                if (result.length != 0) {
+                    for (var i = 0; i < result.length; i++) {
+                        text = text + result[i];
+                    }
+                };
+                $(newsCon).html(text);
+            }, "json");
+        };
+        function pullDownPost(newsType, newsSum, newsCon) {
+            setTimeout(function () {    // 封装的下拉刷新（上拉加载）的post方法
+                $.post('../json/PublicHandler.ashx?Method=HighsunPortal_GetCenterNews&newsType=' + newsType + '&newsSum=' + newsSum, function (item) {
+                    var result = item[0];
+                    var text = "";
+                    if (result.length != 0) {
+                        for (var i = 0; i < result.length; i++) {
+                            text = text + result[i];
+                        }
+                    };
+                    $('#NBXW').html(text);
+                }, "json");
+                myScroll.refresh();     //数据加载完成后，调用界面更新方法
+            }, 100); 
+        }
+
+
+        $(document).ready(function () {         //一开始加载新闻中心列表
+            post(1, 20, '#NBXW');
+            post(5, 20, '#HYJY');
+            post(6, 20, '#QYDT');
+            post(8, 20, '#FWJD');
+
+
+            $('.newsType-tab').on('click', 'label', function () {           //新闻列表的tab选项卡；其中服务监督的类型为：8，内部新闻：1，会议纪要：5 企业动态：6
+                $(".newsType-tab input").removeAttr("checked");
+                $(".newsType-tab input").eq((($(this).index() + 1) / 2) - 1).prop("checked", true);
+                var left = (((($(this).index() + 1) / 2) - 1) * 8.33).toString()+"%";
+                $(".switch-selection").css("left", left);
+                $("#newsCenter-con-type .newsCenter-con").eq((($(this).index() + 1) / 2) - 1).siblings().css("display", "none").end().css("display", "block");
+                $('#wrapper').get(0).scrollTop=0;           //无法实现iscroll的定位。
+
+            })
+
+        });
+
+        var myScroll,
+            pullDownEl, pullDownOffset,
+            pullUpEl, pullUpOffset,
+            generatedCount1 = 20; generatedCount2 = 20; generatedCount3 = 20; generatedCount4 = 20;
+
+        /**
+         * 下拉刷新 （自定义实现此方法）
+         */
+        function pullDownAction() {
+            setTimeout(function () {
+                var newsType = $('.newsType-tab input[name="newsType"]:checked').val();
+                if (newsType == 1) {
+                    generatedCount1 = 10;
+                    post(1, generatedCount1, '#NBXW');
+                } else if (newsType == 5) {
+                    generatedCount2 = 10;
+                    post(5, generatedCount2, '#HYJY');
+                } else if (newsType == 6) {
+                    generatedCount3 = 10;
+                    post(6, generatedCount3, '#QYDT');
+                } else if (newsType == 8) {
+                    generatedCount4 = 10;
+                    post(8, generatedCount4, '#FWJD');
+                }
+                myScroll.refresh();     // 数据加载完成后，调用界面更新方法
+            }, 100);
+        }
+
+        /**
+         * 滚动翻页 （自定义实现此方法）
+         */
+        function pullUpAction() {
+           
+            setTimeout(function () {              
+            /*    var newsType = $('.newsType-tab input[name="newsType"]:checked').val();
+                if (newsType == 1) {
+                    generatedCount1 += 10;
+                    post(1, generatedCount1, '#NBXW');
+                } else if (newsType == 5) {
+                    generatedCount2 += 10;
+                    post(5, generatedCount2, '#HYJY');
+                } else if (newsType == 6) {
+                    generatedCount3 += 10;
+                    post(6, generatedCount3, '#QYDT');
+                } else if (newsType == 8) {
+                    generatedCount4 += 10;
+                    post(8, generatedCount4, '#FWJD');
+                }*/
+                generatedCount1 += 10;
+                post(1, generatedCount1, '#NBXW');
+                post(5, generatedCount1, '#HYJY');
+                post(6, generatedCount1, '#QYDT');
+                post(8, generatedCount1, '#FWJD');
+                myScroll.refresh();     // 数据加载完成后，调用界面更新方法
+            }, 1000);
+        }
+
+        /**
+         * 初始化iScroll控件
+         */
+        function loaded() {
+            pullDownEl = document.getElementById('pullDown');
+            pullDownOffset = pullDownEl.offsetHeight;
+            pullUpEl = document.getElementById('pullUp');
+            pullUpOffset = pullUpEl.offsetHeight;
+            var wrapper = document.getElementById('wrapper');
+            console.log(document.getElementById("wrapper").offsetHeight);
+
+            myScroll = new iScroll('wrapper', {
+                scrollbarClass: 'myScrollbar', /* 样式 */
+                useTransition: false,
+                topOffset: pullDownOffset,
+                onRefresh: function () {
+                    if (pullDownEl.className.match('loading')) {
+                        pullDownEl.className = '';
+                        pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+                    } else if (pullUpEl.className.match('loading')) {
+                        pullUpEl.className = '';
+                        pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+                    }
+                },
+                onScrollMove: function () {
+                    if (this.y > 5 && !pullDownEl.className.match('flip')) {
+                        pullDownEl.className = 'flip';
+                        pullDownEl.querySelector('.pullDownLabel').innerHTML = '松手开始更新...';
+                        this.minScrollY = 0;
+                    } else if (this.y < 5 && pullDownEl.className.match('flip')) {
+                        pullDownEl.className = '';
+                        pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+                        this.minScrollY = -pullDownOffset;
+                    } else if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+                        pullUpEl.className = 'flip';
+                        pullUpEl.querySelector('.pullUpLabel').innerHTML = '松手开始更新...';
+                        this.maxScrollY = this.maxScrollY;
+                    } else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+                        pullUpEl.className = '';
+                        pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+                        this.maxScrollY = pullUpOffset;
+                    }
+                },
+                onScrollEnd: function () {
+                    if (pullDownEl.className.match('flip')) {
+                        pullDownEl.className = 'loading';
+                        pullDownEl.querySelector('.pullDownLabel').innerHTML = '加载中...';
+                        pullDownAction();   // Execute custom function (ajax call?)
+                    } else if (pullUpEl.className.match('flip')) {
+                        pullUpEl.className = 'loading';
+                        pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载中...';
+                        pullUpAction(); // Execute custom function (ajax call?)
+                    }
+                }
+            });
+            
+            setTimeout(function () { wrapper.style.left = '0'; }, 100);
+        }
+
+        //初始化绑定iScroll控件 
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+        document.addEventListener('DOMContentLoaded', loaded, false);
+
+</script>
+</body>
+</html>

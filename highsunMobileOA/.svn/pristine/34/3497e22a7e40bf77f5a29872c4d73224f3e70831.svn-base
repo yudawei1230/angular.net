@@ -1,0 +1,135 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using WebSite.Comman;
+
+namespace highsunMobileOA
+{
+    public partial class complain : System.Web.UI.Page
+    {
+        protected int complaintId = WebSite.Comman.SRequest.GetQueryInt("complaintid", 0);
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            Button1.Click += new EventHandler(btnAdd_Click);
+            if (!IsPostBack)
+            {
+                
+                if (string.IsNullOrEmpty(WebSite.Comman.CookieSession.GetCookie("LoginName")))
+                {
+                    Response.Redirect("login.aspx");
+                }
+            }
+        }
+
+        protected string ComplainList(string AskPerson, string Range, string Category, int Top)
+        {
+            string str = string.Empty;
+            IList<WebSite.Models.Complaint> list;
+            if (string.IsNullOrEmpty(Category))
+            {
+                list = new WebSite.BLL.PublicHandler().GetAllEntities(AskPerson, Top, Range);
+            }
+            else
+            {
+                list = new WebSite.BLL.PublicHandler().GetAllEntitiesByCategory(Category, Top);
+            }
+            str += "<ul";
+            if (Range == "My")
+            {
+                str += "  id=\"myList\" ";
+            }
+            str += " data-role=\"listview\">\n";
+            foreach (var i in list)
+            {
+                str += "<li data-icon=\"false\">\n";
+                str += "<div class=\"ask\">\n";
+                str += "<h3>" +WebSite.Comman.StringHelper.subName(i.Ask) + "<span>" + i.AskTime.ToShortDateString() + "</span></h3>\n";
+                str += "<div class=\"imgArry\">\n";
+                if (!string.IsNullOrEmpty(i.Img0))
+                {
+                    str += "<a href=\"#popup" + Range + "0" + i.ID + "\" data-rel=\"popup\" data-position-to=\"window\" data-transition=\"fade\">\n";
+                    str += "<img src=\"" + i.Img0 + "\" style=\"width: 30%\" /></a>\n";
+                    str += "<div data-role=\"popup\" id=\"popup" + Range + "0" + i.ID + "\" data-overlay-theme=\"b\" data-theme=\"b\" data-corners=\"false\">\n";
+                    str += "<a href=\"#\" data-rel=\"back\" class=\"ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right\"></a>\n";
+                    str += "<img class=\"popphoto\" src=\"" + i.Img0 + "\" />\n";
+                    str += "</div>\n";
+                }
+                if (!string.IsNullOrEmpty(i.Img1))
+                {
+                    str += "<a href=\"#popup" + Range + "1" + i.ID + "\" data-rel=\"popup\" data-position-to=\"window\" data-transition=\"fade\">\n";
+                    str += "<img src=\"" + i.Img1 + "\" style=\"width: 30%\" /></a>\n";
+                    str += "<div data-role=\"popup\" id=\"popup" + Range + "1" + i.ID + "\" data-overlay-theme=\"b\" data-theme=\"b\" data-corners=\"false\">\n";
+                    str += "<a href=\"#\" data-rel=\"back\" class=\"ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right\"></a>\n";
+                    str += "<img class=\"popphoto\" src=\"" + i.Img1 + "\" />\n";
+                    str += "</div>\n";
+                }
+                if (!string.IsNullOrEmpty(i.Img2))
+                {
+                    str += "<a href=\"#popup" + Range + "2" + i.ID + "\" data-rel=\"popup\" data-position-to=\"window\" data-transition=\"fade\">\n";
+                    str += "<img src=\"" + i.Img2 + "\" style=\"width: 30%\" /></a>\n";
+                    str += "<div data-role=\"popup\" id=\"popup" + Range + "2" + i.ID + "\" data-overlay-theme=\"b\" data-theme=\"b\" data-corners=\"false\">\n";
+                    str += "<a href=\"#\" data-rel=\"back\" class=\"ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right\"></a>\n";
+                    str += "<img class=\"popphoto\" src=\"" + i.Img2 + "\" />\n";
+                    str += "</div>\n";
+                }
+                str += "</div>\n";
+                str += "<div class=\"complain_detail\">" + i.AskDetail + "</div>\n";
+                str += "</div>\n";
+                str += "<div class=\"answer\">\n";
+                str += "<h3>回复<span>" + i.AnswerTime.ToShortDateString() + "</span></h3>\n";
+                str += "<div class=\"complain_detail\">" + i.AnswerDetail + "</div>\n";
+                str += "</div>\n";
+                if (!string.IsNullOrEmpty(AskPerson) && Range == "My" && i.IsExamine == false)
+                {
+                    str += "<h class=\"DelComplain\" id=\"" + i.ID + "\"><img data-role=\"none\" src=\"images/delico.png\" /></h>";
+                }
+                str += "</li>\n";
+                
+            }
+            str += "</ul>\n";
+            return str;
+        }
+
+        protected void btnAdd_Click(object sender, EventArgs e)
+        {            
+            HttpFileCollection files = HttpContext.Current.Request.Files;
+            WebSite.Models.Complaint complaint = complaintId > 0 ? new WebSite.BLL.ComplaintBLL().FetchEntityByKey(complaintId) : new WebSite.Models.Complaint();
+            complaint.Ask = WebSite.Comman.CookieSession.GetCookie("LoginName");
+            complaint.Category = SRequest.GetFormString("complain_type");
+            complaint.AskDetail = SRequest.GetFormString("askdetail");
+            complaint.AskTime = DateTime.Now;
+            complaint.IsDel = false;
+            complaint.IsExamine = false;
+            HttpPostedFile img0 = files["fileToUpload0"];
+            if (img0.FileName != string.Empty)
+            {
+                complaint.Img0 = Upload.UploadProductImg(img0, 1);
+            }
+            HttpPostedFile img1 = files["fileToUpload1"];
+            if (img1.FileName != string.Empty)
+            {
+                complaint.Img1 = Upload.UploadProductImg(img1, 1);
+            }
+            HttpPostedFile img2 = files["fileToUpload2"];
+            if (img2.FileName != string.Empty)
+            {
+                complaint.Img2 = Upload.UploadProductImg(img2, 1);
+            }
+            int result;
+            if (complaintId > 0)
+            {
+
+                new WebSite.BLL.ComplaintBLL().UpdateEntity(complaint);
+                result = complaintId;
+            }
+            else
+            {
+                result = new WebSite.BLL.PublicHandler().InsertAsk(complaint);
+            }           
+            MessageBox.Show(this, "投诉已提交，请等待管理员审核!");
+        }
+    }
+}

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://dsp.hiooy.com:8200/WebServices" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://dsp.hiooy.com:8200/WebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://dsp.hiooy.com:8200/WebServices">
+      <s:element name="MaterialPriceAndOutputAnylysisTrend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dateStart" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dateEnd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="materialNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaterialPriceAndOutputAnylysisTrendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaterialPriceAndOutputAnylysisTrendResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaterialInfomationsByFnumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fnumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaterialInfomationsByFnumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaterialInfomationsByFnumberResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaterialInfomationsByName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaterialInfomationsByNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaterialInfomationsByNameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaterialInfomationsByFmodel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fmodel" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaterialInfomationsByFmodelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaterialInfomationsByFmodelResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MaterialPriceAndOutputAnylysisTrendSoapIn">
+    <wsdl:part name="parameters" element="tns:MaterialPriceAndOutputAnylysisTrend" />
+  </wsdl:message>
+  <wsdl:message name="MaterialPriceAndOutputAnylysisTrendSoapOut">
+    <wsdl:part name="parameters" element="tns:MaterialPriceAndOutputAnylysisTrendResponse" />
+  </wsdl:message>
+  <wsdl:message name="MaterialInfomationsByFnumberSoapIn">
+    <wsdl:part name="parameters" element="tns:MaterialInfomationsByFnumber" />
+  </wsdl:message>
+  <wsdl:message name="MaterialInfomationsByFnumberSoapOut">
+    <wsdl:part name="parameters" element="tns:MaterialInfomationsByFnumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="MaterialInfomationsByNameSoapIn">
+    <wsdl:part name="parameters" element="tns:MaterialInfomationsByName" />
+  </wsdl:message>
+  <wsdl:message name="MaterialInfomationsByNameSoapOut">
+    <wsdl:part name="parameters" element="tns:MaterialInfomationsByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="MaterialInfomationsByFmodelSoapIn">
+    <wsdl:part name="parameters" element="tns:MaterialInfomationsByFmodel" />
+  </wsdl:message>
+  <wsdl:message name="MaterialInfomationsByFmodelSoapOut">
+    <wsdl:part name="parameters" element="tns:MaterialInfomationsByFmodelResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS_IndustryAnalysisSoap">
+    <wsdl:operation name="MaterialPriceAndOutputAnylysisTrend">
+      <wsdl:input message="tns:MaterialPriceAndOutputAnylysisTrendSoapIn" />
+      <wsdl:output message="tns:MaterialPriceAndOutputAnylysisTrendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaterialInfomationsByFnumber">
+      <wsdl:input message="tns:MaterialInfomationsByFnumberSoapIn" />
+      <wsdl:output message="tns:MaterialInfomationsByFnumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaterialInfomationsByName">
+      <wsdl:input message="tns:MaterialInfomationsByNameSoapIn" />
+      <wsdl:output message="tns:MaterialInfomationsByNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaterialInfomationsByFmodel">
+      <wsdl:input message="tns:MaterialInfomationsByFmodelSoapIn" />
+      <wsdl:output message="tns:MaterialInfomationsByFmodelSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_IndustryAnalysisSoap" type="tns:WS_IndustryAnalysisSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MaterialPriceAndOutputAnylysisTrend">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/MaterialPriceAndOutputAnylysisTrend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaterialInfomationsByFnumber">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/MaterialInfomationsByFnumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaterialInfomationsByName">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/MaterialInfomationsByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaterialInfomationsByFmodel">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/MaterialInfomationsByFmodel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_IndustryAnalysisSoap12" type="tns:WS_IndustryAnalysisSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MaterialPriceAndOutputAnylysisTrend">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/MaterialPriceAndOutputAnylysisTrend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaterialInfomationsByFnumber">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/MaterialInfomationsByFnumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaterialInfomationsByName">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/MaterialInfomationsByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaterialInfomationsByFmodel">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/MaterialInfomationsByFmodel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_IndustryAnalysis">
+    <wsdl:port name="WS_IndustryAnalysisSoap" binding="tns:WS_IndustryAnalysisSoap">
+      <soap:address location="http://dsp.hiooy.com:8200/WebServices/WS_IndustryAnalysis.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_IndustryAnalysisSoap12" binding="tns:WS_IndustryAnalysisSoap12">
+      <soap12:address location="http://dsp.hiooy.com:8200/WebServices/WS_IndustryAnalysis.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

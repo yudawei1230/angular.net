@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://192.168.2.217:8201/WebServices/WS_TiyuhuiAnalysis.asmx?wsdl" docRef="http://192.168.2.217:8201/WebServices/WS_TiyuhuiAnalysis.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://192.168.2.217:8201/WebServices/WS_TiyuhuiAnalysis.asmx" xmlns:q1="http://dsp.hiooy.com:8201/WebServices" binding="q1:WS_TiyuhuiAnalysisSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://192.168.2.217:8201/WebServices/WS_TiyuhuiAnalysis.asmx" xmlns:q2="http://dsp.hiooy.com:8201/WebServices" binding="q2:WS_TiyuhuiAnalysisSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

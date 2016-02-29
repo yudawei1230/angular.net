@@ -1,0 +1,22 @@
+/* line 2, ../sass/excelHandler.sass */
+body h1 {
+  padding: 15px auto;
+  text-align: center; }
+/* line 5, ../sass/excelHandler.sass */
+body p, body input {
+  display: inline; }
+/* line 7, ../sass/excelHandler.sass */
+body .code {
+  padding-bottom: 40px; }
+/* line 9, ../sass/excelHandler.sass */
+body .chart {
+  margin: 50px auto;
+  text-align: center; }
+  /* line 12, ../sass/excelHandler.sass */
+  body .chart table {
+    margin: 0 auto; }
+    /* line 14, ../sass/excelHandler.sass */
+    body .chart table th, body .chart table td {
+      text-align: center;
+      border: 1px solid #DDD;
+      padding: 3px; }

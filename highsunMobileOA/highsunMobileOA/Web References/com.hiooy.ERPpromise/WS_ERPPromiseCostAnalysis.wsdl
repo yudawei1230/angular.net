@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://dsp.hiooy.com:8200/WebServices" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://dsp.hiooy.com:8200/WebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://dsp.hiooy.com:8200/WebServices">
+      <s:element name="ERPCOSTComConCompleteReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPCOSTComConCompleteReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERPCOSTComConCompleteReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPCOSTComPrjConCompleteReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="companyID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPCOSTComPrjConCompleteReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERPCOSTComPrjConCompleteReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPCOSTComConExecReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="companyID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPCOSTComConExecReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERPCOSTComConExecReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPCOSTPrjConExecReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="companyID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPCOSTPrjConExecReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERPCOSTPrjConExecReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPCOSTAllPrjConExecReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPCOSTAllPrjConExecReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERPCOSTAllPrjConExecReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPCOSTAIM2DynCost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="companyID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPCOSTAIM2DynCostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERPCOSTAIM2DynCostResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPTOTALCost2TotalDynCost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPTOTALCost2TotalDynCostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERPTOTALCost2TotalDynCostResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ERPCOSTComConCompleteReportSoapIn">
+    <wsdl:part name="parameters" element="tns:ERPCOSTComConCompleteReport" />
+  </wsdl:message>
+  <wsdl:message name="ERPCOSTComConCompleteReportSoapOut">
+    <wsdl:part name="parameters" element="tns:ERPCOSTComConCompleteReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ERPCOSTComPrjConCompleteReportSoapIn">
+    <wsdl:part name="parameters" element="tns:ERPCOSTComPrjConCompleteReport" />
+  </wsdl:message>
+  <wsdl:message name="ERPCOSTComPrjConCompleteReportSoapOut">
+    <wsdl:part name="parameters" element="tns:ERPCOSTComPrjConCompleteReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ERPCOSTComConExecReportSoapIn">
+    <wsdl:part name="parameters" element="tns:ERPCOSTComConExecReport" />
+  </wsdl:message>
+  <wsdl:message name="ERPCOSTComConExecReportSoapOut">
+    <wsdl:part name="parameters" element="tns:ERPCOSTComConExecReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ERPCOSTPrjConExecReportSoapIn">
+    <wsdl:part name="parameters" element="tns:ERPCOSTPrjConExecReport" />
+  </wsdl:message>
+  <wsdl:message name="ERPCOSTPrjConExecReportSoapOut">
+    <wsdl:part name="parameters" element="tns:ERPCOSTPrjConExecReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ERPCOSTAllPrjConExecReportSoapIn">
+    <wsdl:part name="parameters" element="tns:ERPCOSTAllPrjConExecReport" />
+  </wsdl:message>
+  <wsdl:message name="ERPCOSTAllPrjConExecReportSoapOut">
+    <wsdl:part name="parameters" element="tns:ERPCOSTAllPrjConExecReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ERPCOSTAIM2DynCostSoapIn">
+    <wsdl:part name="parameters" element="tns:ERPCOSTAIM2DynCost" />
+  </wsdl:message>
+  <wsdl:message name="ERPCOSTAIM2DynCostSoapOut">
+    <wsdl:part name="parameters" element="tns:ERPCOSTAIM2DynCostResponse" />
+  </wsdl:message>
+  <wsdl:message name="ERPTOTALCost2TotalDynCostSoapIn">
+    <wsdl:part name="parameters" element="tns:ERPTOTALCost2TotalDynCost" />
+  </wsdl:message>
+  <wsdl:message name="ERPTOTALCost2TotalDynCostSoapOut">
+    <wsdl:part name="parameters" element="tns:ERPTOTALCost2TotalDynCostResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS_ERPPromiseCostAnalysisSoap">
+    <wsdl:operation name="ERPCOSTComConCompleteReport">
+      <wsdl:input message="tns:ERPCOSTComConCompleteReportSoapIn" />
+      <wsdl:output message="tns:ERPCOSTComConCompleteReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ERPCOSTComPrjConCompleteReport">
+      <wsdl:input message="tns:ERPCOSTComPrjConCompleteReportSoapIn" />
+      <wsdl:output message="tns:ERPCOSTComPrjConCompleteReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ERPCOSTComConExecReport">
+      <wsdl:input message="tns:ERPCOSTComConExecReportSoapIn" />
+      <wsdl:output message="tns:ERPCOSTComConExecReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ERPCOSTPrjConExecReport">
+      <wsdl:input message="tns:ERPCOSTPrjConExecReportSoapIn" />
+      <wsdl:output message="tns:ERPCOSTPrjConExecReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ERPCOSTAllPrjConExecReport">
+      <wsdl:input message="tns:ERPCOSTAllPrjConExecReportSoapIn" />
+      <wsdl:output message="tns:ERPCOSTAllPrjConExecReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ERPCOSTAIM2DynCost">
+      <wsdl:input message="tns:ERPCOSTAIM2DynCostSoapIn" />
+      <wsdl:output message="tns:ERPCOSTAIM2DynCostSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ERPTOTALCost2TotalDynCost">
+      <wsdl:input message="tns:ERPTOTALCost2TotalDynCostSoapIn" />
+      <wsdl:output message="tns:ERPTOTALCost2TotalDynCostSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_ERPPromiseCostAnalysisSoap" type="tns:WS_ERPPromiseCostAnalysisSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ERPCOSTComConCompleteReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPCOSTComConCompleteReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPCOSTComPrjConCompleteReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPCOSTComPrjConCompleteReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPCOSTComConExecReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPCOSTComConExecReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPCOSTPrjConExecReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPCOSTPrjConExecReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPCOSTAllPrjConExecReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPCOSTAllPrjConExecReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPCOSTAIM2DynCost">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPCOSTAIM2DynCost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPTOTALCost2TotalDynCost">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPTOTALCost2TotalDynCost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_ERPPromiseCostAnalysisSoap12" type="tns:WS_ERPPromiseCostAnalysisSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ERPCOSTComConCompleteReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPCOSTComConCompleteReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPCOSTComPrjConCompleteReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPCOSTComPrjConCompleteReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPCOSTComConExecReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPCOSTComConExecReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPCOSTPrjConExecReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPCOSTPrjConExecReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPCOSTAllPrjConExecReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPCOSTAllPrjConExecReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPCOSTAIM2DynCost">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPCOSTAIM2DynCost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPTOTALCost2TotalDynCost">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPTOTALCost2TotalDynCost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_ERPPromiseCostAnalysis">
+    <wsdl:port name="WS_ERPPromiseCostAnalysisSoap" binding="tns:WS_ERPPromiseCostAnalysisSoap">
+      <soap:address location="http://dsp.hiooy.com:8200/WebServices/WS_ERPPromiseCostAnalysis.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_ERPPromiseCostAnalysisSoap12" binding="tns:WS_ERPPromiseCostAnalysisSoap12">
+      <soap12:address location="http://dsp.hiooy.com:8200/WebServices/WS_ERPPromiseCostAnalysis.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

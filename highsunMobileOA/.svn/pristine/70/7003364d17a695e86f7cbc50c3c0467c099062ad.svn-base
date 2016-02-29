@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://dsp.hiooy.com:8201/WebServices" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://dsp.hiooy.com:8201/WebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://dsp.hiooy.com:8201/WebServices">
+      <s:element name="CYAnalysisDayReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CYAnalysisDayReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CYAnalysisDayReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CYAnalysisMonthReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="month" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CYAnalysisMonthReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CYAnalysisMonthReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CYAnalysisYearReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CYAnalysisYearReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CYAnalysisYearReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CYAnalysisSeasonReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="season" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CYAnalysisSeasonReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CYAnalysisSeasonReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CYAnalysisDayReportSoapIn">
+    <wsdl:part name="parameters" element="tns:CYAnalysisDayReport" />
+  </wsdl:message>
+  <wsdl:message name="CYAnalysisDayReportSoapOut">
+    <wsdl:part name="parameters" element="tns:CYAnalysisDayReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="CYAnalysisMonthReportSoapIn">
+    <wsdl:part name="parameters" element="tns:CYAnalysisMonthReport" />
+  </wsdl:message>
+  <wsdl:message name="CYAnalysisMonthReportSoapOut">
+    <wsdl:part name="parameters" element="tns:CYAnalysisMonthReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="CYAnalysisYearReportSoapIn">
+    <wsdl:part name="parameters" element="tns:CYAnalysisYearReport" />
+  </wsdl:message>
+  <wsdl:message name="CYAnalysisYearReportSoapOut">
+    <wsdl:part name="parameters" element="tns:CYAnalysisYearReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="CYAnalysisSeasonReportSoapIn">
+    <wsdl:part name="parameters" element="tns:CYAnalysisSeasonReport" />
+  </wsdl:message>
+  <wsdl:message name="CYAnalysisSeasonReportSoapOut">
+    <wsdl:part name="parameters" element="tns:CYAnalysisSeasonReportResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS_CanYingAnalysisSoap">
+    <wsdl:operation name="CYAnalysisDayReport">
+      <wsdl:input message="tns:CYAnalysisDayReportSoapIn" />
+      <wsdl:output message="tns:CYAnalysisDayReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CYAnalysisMonthReport">
+      <wsdl:input message="tns:CYAnalysisMonthReportSoapIn" />
+      <wsdl:output message="tns:CYAnalysisMonthReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CYAnalysisYearReport">
+      <wsdl:input message="tns:CYAnalysisYearReportSoapIn" />
+      <wsdl:output message="tns:CYAnalysisYearReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CYAnalysisSeasonReport">
+      <wsdl:input message="tns:CYAnalysisSeasonReportSoapIn" />
+      <wsdl:output message="tns:CYAnalysisSeasonReportSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_CanYingAnalysisSoap" type="tns:WS_CanYingAnalysisSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CYAnalysisDayReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8201/WebServices/CYAnalysisDayReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CYAnalysisMonthReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8201/WebServices/CYAnalysisMonthReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CYAnalysisYearReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8201/WebServices/CYAnalysisYearReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CYAnalysisSeasonReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8201/WebServices/CYAnalysisSeasonReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_CanYingAnalysisSoap12" type="tns:WS_CanYingAnalysisSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CYAnalysisDayReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8201/WebServices/CYAnalysisDayReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CYAnalysisMonthReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8201/WebServices/CYAnalysisMonthReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CYAnalysisYearReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8201/WebServices/CYAnalysisYearReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CYAnalysisSeasonReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8201/WebServices/CYAnalysisSeasonReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_CanYingAnalysis">
+    <wsdl:port name="WS_CanYingAnalysisSoap" binding="tns:WS_CanYingAnalysisSoap">
+      <soap:address location="http://192.168.2.217:8201/WebServices/WS_CanYingAnalysis.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_CanYingAnalysisSoap12" binding="tns:WS_CanYingAnalysisSoap12">
+      <soap12:address location="http://192.168.2.217:8201/WebServices/WS_CanYingAnalysis.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

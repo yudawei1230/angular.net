@@ -1,0 +1,773 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="attendance.aspx">
+      <publishTime>07/02/2015 16:50:42</publishTime>
+    </File>
+    <File Include="baihuoFloorDetailMonthReport.aspx">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="baihuoFloorDetailReport.aspx">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="baihuoFloorMonthReport.aspx">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="baihuoFloorReport.aspx">
+      <publishTime>07/02/2015 16:50:42</publishTime>
+    </File>
+    <File Include="baihuoMonthReport.aspx">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="baihuoPanelChart.aspx">
+      <publishTime>07/02/2015 16:50:42</publishTime>
+    </File>
+    <File Include="baihuoReport.aspx">
+      <publishTime>07/02/2015 16:50:42</publishTime>
+    </File>
+    <File Include="baihuoSeasonReport.aspx">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="baihuoTrend.aspx">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="baihuoVIPDayReport.aspx">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="baihuoYearReport.aspx">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="bin/DiffieHellman.dll">
+      <publishTime>07/02/2015 16:50:36</publishTime>
+    </File>
+    <File Include="bin/highsunMobileOA.dll">
+      <publishTime>09/02/2015 17:52:23</publishTime>
+    </File>
+    <File Include="bin/highsunMobileOA.pdb">
+      <publishTime>09/02/2015 17:52:23</publishTime>
+    </File>
+    <File Include="bin/highsunMobileOA.XmlSerializers.dll">
+      <publishTime>05/19/2015 16:12:55</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>07/02/2015 16:50:36</publishTime>
+    </File>
+    <File Include="bin/Org.Mentalis.Security.dll">
+      <publishTime>07/02/2015 16:50:36</publishTime>
+    </File>
+    <File Include="bin/Tamir.SharpSSH.dll">
+      <publishTime>07/02/2015 16:50:36</publishTime>
+    </File>
+    <File Include="bin/WebSite.BLL.dll">
+      <publishTime>09/02/2015 16:48:54</publishTime>
+    </File>
+    <File Include="bin/WebSite.BLL.pdb">
+      <publishTime>09/02/2015 16:48:53</publishTime>
+    </File>
+    <File Include="bin/WebSite.Comman.dll">
+      <publishTime>07/16/2015 10:14:43</publishTime>
+    </File>
+    <File Include="bin/WebSite.Comman.pdb">
+      <publishTime>07/16/2015 10:14:43</publishTime>
+    </File>
+    <File Include="bin/WebSite.DAL.dll">
+      <publishTime>09/02/2015 16:48:52</publishTime>
+    </File>
+    <File Include="bin/WebSite.DAL.pdb">
+      <publishTime>09/02/2015 16:48:52</publishTime>
+    </File>
+    <File Include="bin/WebSite.DbProxy.dll">
+      <publishTime>07/16/2015 10:14:42</publishTime>
+    </File>
+    <File Include="bin/WebSite.DbProxy.pdb">
+      <publishTime>07/16/2015 10:14:42</publishTime>
+    </File>
+    <File Include="bin/WebSite.Model.dll">
+      <publishTime>09/02/2015 16:48:51</publishTime>
+    </File>
+    <File Include="bin/WebSite.Model.pdb">
+      <publishTime>09/02/2015 16:48:51</publishTime>
+    </File>
+    <File Include="buy.aspx">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="canyinChart.aspx">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="canyinMonthReport.aspx">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="canyinQuarterReport.aspx">
+      <publishTime>04/15/2015 10:42:20</publishTime>
+    </File>
+    <File Include="canyinReport.aspx">
+      <publishTime>08/17/2015 11:37:20</publishTime>
+    </File>
+    <File Include="canyinSeasonReport.aspx">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="canyinYearReport.aspx">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="complain.aspx">
+      <publishTime>09/02/2015 14:19:15</publishTime>
+    </File>
+    <File Include="css/default.css">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="css/jqm-docs.css">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="css/jquery.fullPage.css">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="css/themes/default/images/ajax-loader.gif">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="css/themes/default/images/icons-18-black.png">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="css/themes/default/images/icons-18-white.png">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="css/themes/default/images/icons-36-black.png">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="css/themes/default/images/icons-36-white.png">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="css/themes/default/jquery.mobile-1.3.0-beta.1.css">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="css/themes/default/jquery.mobile-1.3.0-beta.1.min.css">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="css/themes/default/jquery.mobile.structure-1.3.0-beta.1.css">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="css/themes/default/jquery.mobile.structure-1.3.0-beta.1.min.css">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="css/themes/default/jquery.mobile.theme-1.3.0-beta.1.css">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="css/themes/default/jquery.mobile.theme-1.3.0-beta.1.min.css">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="DWYXReceiveWeekReport.aspx">
+      <publishTime>07/10/2015 10:42:58</publishTime>
+    </File>
+    <File Include="ERPAIM2DynCost4ProjectReport.aspx">
+      <publishTime>07/02/2015 16:50:42</publishTime>
+    </File>
+    <File Include="ERPAIM2DynCostReport.aspx">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="ERPComCompleteReport.aspx">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="ERPComExecReport.aspx">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="ERPPrjCompleteReport.aspx">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="ERPPrjExecReport.aspx">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="ERPSellHouseBuildingReport.aspx">
+      <publishTime>07/02/2015 16:50:42</publishTime>
+    </File>
+    <File Include="ERPSellHouseClueAnalysisDetailReport.aspx">
+      <publishTime>07/20/2015 14:22:36</publishTime>
+    </File>
+    <File Include="ERPSellHouseClueAnalysisReport.aspx">
+      <publishTime>07/29/2015 17:56:23</publishTime>
+    </File>
+    <File Include="ERPSellHouseClueDayReport.aspx">
+      <publishTime>07/17/2015 15:46:53</publishTime>
+    </File>
+    <File Include="ERPSellHouseClueDetailDayReport.aspx">
+      <publishTime>07/24/2015 16:34:12</publishTime>
+    </File>
+    <File Include="ERPSellHouseCWAnalysisReport.aspx">
+      <publishTime>07/20/2015 14:57:04</publishTime>
+    </File>
+    <File Include="ERPSellHouseCWReport.aspx">
+      <publishTime>08/20/2015 16:33:36</publishTime>
+    </File>
+    <File Include="ERPSellHousePurchaseDateDetailReport.aspx">
+      <publishTime>07/24/2015 16:54:49</publishTime>
+    </File>
+    <File Include="ERPSellHousePurchaseDateReport.aspx">
+      <publishTime>07/24/2015 17:43:45</publishTime>
+    </File>
+    <File Include="ERPSellHouseReport.aspx">
+      <publishTime>07/02/2015 16:50:42</publishTime>
+    </File>
+    <File Include="ERPSellHouseSignedAnlysisReport.aspx">
+      <publishTime>07/20/2015 14:57:58</publishTime>
+    </File>
+    <File Include="HtmlPage1.html">
+      <publishTime>01/11/2015 11:22:35</publishTime>
+    </File>
+    <File Include="images/1.jpg">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="images/cammber.jpg">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="images/delico.png">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="images/loading.gif">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="images/redo_square.png">
+      <publishTime>07/17/2015 11:39:49</publishTime>
+    </File>
+    <File Include="IndustrialMaterialPrices.aspx">
+      <publishTime>09/02/2015 15:57:42</publishTime>
+    </File>
+    <File Include="IndustrialPricing.aspx">
+      <publishTime>08/13/2015 22:05:04</publishTime>
+    </File>
+    <File Include="js/add_product.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/ajaxfileupload.js">
+      <publishTime>09/02/2015 14:22:52</publishTime>
+    </File>
+    <File Include="js/common.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/cookies_oper.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/changelog.txt">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/demos/agenda-views.html">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/demos/background-events.html">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/demos/basic-views.html">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/demos/default.html">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/demos/external-dragging.html">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/demos/gcal.html">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/demos/json.html">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/demos/json/events.json">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/demos/languages.html">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/demos/php/get-events.php">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/demos/php/get-timezones.php">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/demos/php/utils.php">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/demos/selectable.html">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/demos/theme.html">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/demos/timezones.html">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/fullcalendar.css">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/fullcalendar.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/fullcalendar.min.css">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/fullcalendar.min.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/fullcalendar.print.css">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/gcal.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang-all.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/ar-ma.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/ar-sa.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/ar.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/bg.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/ca.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/cs.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/da.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/de-at.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/de.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/el.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/en-au.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/en-ca.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/en-gb.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/es.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/fa.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/fi.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/fr-ca.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/fr.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/hi.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/hr.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/hu.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/id.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/is.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/it.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/ja.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/ko.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/lt.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/lv.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/nl.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/pl.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/pt-br.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/pt.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/ro.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/ru.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/sk.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/sl.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/sr-cyrl.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/sr.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/sv.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/th.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/tr.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/uk.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/vi.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/zh-cn.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lang/zh-tw.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lib/cupertino/images/animated-overlay.gif">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lib/cupertino/images/ui-bg_diagonals-thick_90_eeeeee_40x40.png">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lib/cupertino/images/ui-bg_flat_15_cd0a0a_40x100.png">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lib/cupertino/images/ui-bg_glass_100_e4f1fb_1x400.png">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lib/cupertino/images/ui-bg_glass_50_3baae3_1x400.png">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lib/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lib/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lib/cupertino/images/ui-bg_highlight-hard_70_000000_1x100.png">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lib/cupertino/images/ui-bg_highlight-soft_100_deedf7_1x100.png">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lib/cupertino/images/ui-bg_highlight-soft_25_ffef8f_1x100.png">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lib/cupertino/images/ui-icons_2694e8_256x240.png">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lib/cupertino/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lib/cupertino/images/ui-icons_3d80b3_256x240.png">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lib/cupertino/images/ui-icons_72a7cf_256x240.png">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lib/cupertino/images/ui-icons_ffffff_256x240.png">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lib/cupertino/jquery-ui.min.css">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lib/jquery-ui.custom.min.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lib/jquery.min.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/lib/moment.min.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/fullcalendar-2.2.3/license.txt">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/highcharts-more.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/highcharts.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/jgcharts.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/jqm-docs.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/jquery.confirm.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/jquery.fullPage.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/jquery.iosslider.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/jquery.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/jquery.mobile-1.3.0-beta.1.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="js/jquery.mobile-1.3.0-beta.1.min.js">
+      <publishTime>07/02/2015 16:50:39</publishTime>
+    </File>
+    <File Include="json/PublicExtendHandler.ashx">
+      <publishTime>09/02/2015 14:17:14</publishTime>
+    </File>
+    <File Include="json/PublicHandler.ashx">
+      <publishTime>09/02/2015 14:17:15</publishTime>
+    </File>
+    <File Include="login.aspx">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="news_detail.aspx">
+      <publishTime>07/02/2015 16:50:42</publishTime>
+    </File>
+    <File Include="news_list.aspx">
+      <publishTime>07/02/2015 16:50:38</publishTime>
+    </File>
+    <File Include="Properties/DataSources/System.Data.DataTable.datasource">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="Properties/DataSources/System.Xml.Linq.XElement.datasource">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="Properties/Settings.settings">
+      <publishTime>07/29/2015 15:02:14</publishTime>
+    </File>
+    <File Include="SLreport.aspx">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="SLTradingWaterMonthReport.aspx">
+      <publishTime>07/02/2015 16:50:42</publishTime>
+    </File>
+    <File Include="SLTradingWaterReport.aspx">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="SLTradingWaterSeasonReport.aspx">
+      <publishTime>07/02/2015 16:50:42</publishTime>
+    </File>
+    <File Include="SLTradingWaterYearReport.aspx">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="t.html">
+      <publishTime>01/24/2015 22:43:06</publishTime>
+    </File>
+    <File Include="tiyuhuiReport.aspx">
+      <publishTime>07/02/2015 16:50:42</publishTime>
+    </File>
+    <File Include="tiyuhuiWeekReport.aspx">
+      <publishTime>07/02/2015 16:50:42</publishTime>
+    </File>
+    <File Include="trendtest.aspx">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="ValidCode.aspx">
+      <publishTime>09/02/2015 14:19:15</publishTime>
+    </File>
+    <File Include="wage.aspx">
+      <publishTime>07/02/2015 16:50:42</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.baihuo/Reference.map">
+      <publishTime>04/17/2015 09:32:10</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.baihuo/WS_BaiHuoAnalysis.disco">
+      <publishTime>04/17/2015 09:32:10</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.baihuo/WS_BaiHuoAnalysis.wsdl">
+      <publishTime>04/17/2015 09:32:10</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.canyintest/Reference.map">
+      <publishTime>04/10/2015 15:18:59</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.canyintest/WS_CanYingAnalysis.disco">
+      <publishTime>04/10/2015 15:18:59</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.canyintest/WS_CanYingAnalysis.wsdl">
+      <publishTime>04/10/2015 15:18:59</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.dsp/Reference.map">
+      <publishTime>12/11/2014 17:02:24</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.dsp/WS_HighsunPortal1.disco">
+      <publishTime>12/11/2014 17:02:24</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.dsp/WS_HighsunPortal1.wsdl">
+      <publishTime>12/11/2014 17:02:24</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.ERPhouse/Reference.map">
+      <publishTime>05/25/2015 14:26:37</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.ERPhouse/WS_ERPSellHouseAnalysis.disco">
+      <publishTime>05/25/2015 14:26:37</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.ERPhouse/WS_ERPSellHouseAnalysis.wsdl">
+      <publishTime>05/25/2015 14:26:37</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.ERPpromise/Reference.map">
+      <publishTime>05/26/2015 10:11:51</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.ERPpromise/WS_ERPPromiseCostAnalysis.disco">
+      <publishTime>05/26/2015 10:11:51</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.ERPpromise/WS_ERPPromiseCostAnalysis.wsdl">
+      <publishTime>05/26/2015 10:11:51</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.ERPtest/Reference.map">
+      <publishTime>05/27/2015 11:47:03</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.ERPtest/WS_ERPPromiseCostAnalysis.disco">
+      <publishTime>05/27/2015 11:47:02</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.ERPtest/WS_ERPPromiseCostAnalysis.wsdl">
+      <publishTime>05/27/2015 11:47:02</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.industry/Reference.map">
+      <publishTime>07/29/2015 15:02:13</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.industry/WS_IndustryAnalysis.disco">
+      <publishTime>07/29/2015 15:02:13</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.industry/WS_IndustryAnalysis.wsdl">
+      <publishTime>07/29/2015 15:02:13</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.SL/Reference.map">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.SL/WS_SLTradingWaterAnalysis.disco">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.SL/WS_SLTradingWaterAnalysis.wsdl">
+      <publishTime>07/02/2015 16:50:41</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.SLtest/Reference.map">
+      <publishTime>06/09/2015 15:17:35</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.SLtest/WS_SLTradingWaterAnalysis.disco">
+      <publishTime>06/09/2015 15:17:35</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.SLtest/WS_SLTradingWaterAnalysis.wsdl">
+      <publishTime>06/09/2015 15:17:35</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.tiyuhui/Reference.map">
+      <publishTime>06/15/2015 16:20:50</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.tiyuhui/WS_TiyuhuiAnalysis.disco">
+      <publishTime>06/15/2015 16:20:50</publishTime>
+    </File>
+    <File Include="Web References/com.hiooy.tiyuhui/WS_TiyuhuiAnalysis.wsdl">
+      <publishTime>06/15/2015 16:20:49</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/02/2015 17:52:34</publishTime>
+    </File>
+    <File Include="WebForm1.aspx">
+      <publishTime>04/15/2015 10:29:44</publishTime>
+    </File>
+    <File Include="XMLFile1.xml">
+      <publishTime>11/05/2014 21:16:04</publishTime>
+    </File>
+    <File Include="ydmh/css/css.css">
+      <publishTime>07/10/2015 14:05:22</publishTime>
+    </File>
+    <File Include="ydmh/css/lanrenzhijia.css">
+      <publishTime>08/26/2015 16:03:54</publishTime>
+    </File>
+    <File Include="ydmh/css/newstab.css">
+      <publishTime>08/26/2015 15:43:33</publishTime>
+    </File>
+    <File Include="ydmh/css/scrollbar.css">
+      <publishTime>08/26/2015 15:54:55</publishTime>
+    </File>
+    <File Include="ydmh/images/02.png">
+      <publishTime>08/26/2015 15:48:13</publishTime>
+    </File>
+    <File Include="ydmh/images/03.png">
+      <publishTime>08/26/2015 15:48:13</publishTime>
+    </File>
+    <File Include="ydmh/images/04.png">
+      <publishTime>08/26/2015 15:48:13</publishTime>
+    </File>
+    <File Include="ydmh/images/pull-icon%402x.png">
+      <publishTime>08/26/2015 15:48:13</publishTime>
+    </File>
+    <File Include="ydmh/images/scrollbar.png">
+      <publishTime>08/26/2015 15:48:13</publishTime>
+    </File>
+    <File Include="ydmh/images/sy_01.png">
+      <publishTime>08/26/2015 15:48:13</publishTime>
+    </File>
+    <File Include="ydmh/images/sy_02.png">
+      <publishTime>08/26/2015 15:48:13</publishTime>
+    </File>
+    <File Include="ydmh/images/sy_03.png">
+      <publishTime>08/26/2015 15:48:13</publishTime>
+    </File>
+    <File Include="ydmh/images/sy_04.png">
+      <publishTime>08/26/2015 15:48:13</publishTime>
+    </File>
+    <File Include="ydmh/images/tx.png">
+      <publishTime>08/26/2015 15:48:13</publishTime>
+    </File>
+    <File Include="ydmh/index.aspx">
+      <publishTime>08/20/2015 14:42:45</publishTime>
+    </File>
+    <File Include="ydmh/index.html">
+      <publishTime>08/26/2015 15:48:39</publishTime>
+    </File>
+    <File Include="ydmh/js/idangerous.swiper.min.js">
+      <publishTime>08/26/2015 15:48:51</publishTime>
+    </File>
+    <File Include="ydmh/js/iscroll.js">
+      <publishTime>08/26/2015 15:48:51</publishTime>
+    </File>
+    <File Include="ydmh/js/jquery-1.10.1.min.js">
+      <publishTime>08/26/2015 15:48:51</publishTime>
+    </File>
+    <File Include="ydmh/new.html">
+      <publishTime>08/27/2015 17:35:25</publishTime>
+    </File>
+    <File Include="ydmh/newsDetail.html">
+      <publishTime>08/26/2015 15:48:39</publishTime>
+    </File>
+    <File Include="ydmh/new_nr.html">
+      <publishTime>08/26/2015 15:48:39</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

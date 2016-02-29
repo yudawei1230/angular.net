@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://dsp.hiooy.com:8200/WebServices" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://dsp.hiooy.com:8200/WebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://dsp.hiooy.com:8200/WebServices">
+      <s:element name="ERPSellHouseAnalysisReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHouseAnalysisReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERPSellHouseAnalysisReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHouseAnlysisByProject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="projectNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHouseAnlysisByProjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERPSellHouseAnlysisByProjectResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHouseAnlysisBuildingReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="projectNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHouseAnlysisBuildingReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERPSellHouseAnlysisBuildingReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHouseCWAnlysisiReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHouseCWAnlysisiReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERPSellHouseCWAnlysisiReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHouseSignedAnlysisReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHouseSignedAnlysisReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERPSellHouseSignedAnlysisReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHousePurchaseDateReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dateStart" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dateEnd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHousePurchaseDateReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERPSellHousePurchaseDateReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHousePurchaseDateDetailReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="projectID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dateStart" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dateEnd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHousePurchaseDateDetailReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERPSellHousePurchaseDateDetailReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHouseClueAnalysisReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHouseClueAnalysisReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERPSellHouseClueAnalysisReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHouseClueDetailAnalysisReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="projectID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dateStart" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dateEnd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHouseClueDetailAnalysisReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERPSellHouseClueDetailAnalysisReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHouseClueDayReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHouseClueDayReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERPSellHouseClueDayReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHouseClueDetailDayReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="projectID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ERPSellHouseClueDetailDayReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ERPSellHouseClueDetailDayReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ERPSellHouseAnalysisReportSoapIn">
+    <wsdl:part name="parameters" element="tns:ERPSellHouseAnalysisReport" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHouseAnalysisReportSoapOut">
+    <wsdl:part name="parameters" element="tns:ERPSellHouseAnalysisReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHouseAnlysisByProjectSoapIn">
+    <wsdl:part name="parameters" element="tns:ERPSellHouseAnlysisByProject" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHouseAnlysisByProjectSoapOut">
+    <wsdl:part name="parameters" element="tns:ERPSellHouseAnlysisByProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHouseAnlysisBuildingReportSoapIn">
+    <wsdl:part name="parameters" element="tns:ERPSellHouseAnlysisBuildingReport" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHouseAnlysisBuildingReportSoapOut">
+    <wsdl:part name="parameters" element="tns:ERPSellHouseAnlysisBuildingReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHouseCWAnlysisiReportSoapIn">
+    <wsdl:part name="parameters" element="tns:ERPSellHouseCWAnlysisiReport" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHouseCWAnlysisiReportSoapOut">
+    <wsdl:part name="parameters" element="tns:ERPSellHouseCWAnlysisiReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHouseSignedAnlysisReportSoapIn">
+    <wsdl:part name="parameters" element="tns:ERPSellHouseSignedAnlysisReport" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHouseSignedAnlysisReportSoapOut">
+    <wsdl:part name="parameters" element="tns:ERPSellHouseSignedAnlysisReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHousePurchaseDateReportSoapIn">
+    <wsdl:part name="parameters" element="tns:ERPSellHousePurchaseDateReport" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHousePurchaseDateReportSoapOut">
+    <wsdl:part name="parameters" element="tns:ERPSellHousePurchaseDateReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHousePurchaseDateDetailReportSoapIn">
+    <wsdl:part name="parameters" element="tns:ERPSellHousePurchaseDateDetailReport" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHousePurchaseDateDetailReportSoapOut">
+    <wsdl:part name="parameters" element="tns:ERPSellHousePurchaseDateDetailReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHouseClueAnalysisReportSoapIn">
+    <wsdl:part name="parameters" element="tns:ERPSellHouseClueAnalysisReport" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHouseClueAnalysisReportSoapOut">
+    <wsdl:part name="parameters" element="tns:ERPSellHouseClueAnalysisReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHouseClueDetailAnalysisReportSoapIn">
+    <wsdl:part name="parameters" element="tns:ERPSellHouseClueDetailAnalysisReport" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHouseClueDetailAnalysisReportSoapOut">
+    <wsdl:part name="parameters" element="tns:ERPSellHouseClueDetailAnalysisReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHouseClueDayReportSoapIn">
+    <wsdl:part name="parameters" element="tns:ERPSellHouseClueDayReport" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHouseClueDayReportSoapOut">
+    <wsdl:part name="parameters" element="tns:ERPSellHouseClueDayReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHouseClueDetailDayReportSoapIn">
+    <wsdl:part name="parameters" element="tns:ERPSellHouseClueDetailDayReport" />
+  </wsdl:message>
+  <wsdl:message name="ERPSellHouseClueDetailDayReportSoapOut">
+    <wsdl:part name="parameters" element="tns:ERPSellHouseClueDetailDayReportResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS_ERPSellHouseAnalysisSoap">
+    <wsdl:operation name="ERPSellHouseAnalysisReport">
+      <wsdl:input message="tns:ERPSellHouseAnalysisReportSoapIn" />
+      <wsdl:output message="tns:ERPSellHouseAnalysisReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseAnlysisByProject">
+      <wsdl:input message="tns:ERPSellHouseAnlysisByProjectSoapIn" />
+      <wsdl:output message="tns:ERPSellHouseAnlysisByProjectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseAnlysisBuildingReport">
+      <wsdl:input message="tns:ERPSellHouseAnlysisBuildingReportSoapIn" />
+      <wsdl:output message="tns:ERPSellHouseAnlysisBuildingReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseCWAnlysisiReport">
+      <wsdl:input message="tns:ERPSellHouseCWAnlysisiReportSoapIn" />
+      <wsdl:output message="tns:ERPSellHouseCWAnlysisiReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseSignedAnlysisReport">
+      <wsdl:input message="tns:ERPSellHouseSignedAnlysisReportSoapIn" />
+      <wsdl:output message="tns:ERPSellHouseSignedAnlysisReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHousePurchaseDateReport">
+      <wsdl:input message="tns:ERPSellHousePurchaseDateReportSoapIn" />
+      <wsdl:output message="tns:ERPSellHousePurchaseDateReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHousePurchaseDateDetailReport">
+      <wsdl:input message="tns:ERPSellHousePurchaseDateDetailReportSoapIn" />
+      <wsdl:output message="tns:ERPSellHousePurchaseDateDetailReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseClueAnalysisReport">
+      <wsdl:input message="tns:ERPSellHouseClueAnalysisReportSoapIn" />
+      <wsdl:output message="tns:ERPSellHouseClueAnalysisReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseClueDetailAnalysisReport">
+      <wsdl:input message="tns:ERPSellHouseClueDetailAnalysisReportSoapIn" />
+      <wsdl:output message="tns:ERPSellHouseClueDetailAnalysisReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseClueDayReport">
+      <wsdl:input message="tns:ERPSellHouseClueDayReportSoapIn" />
+      <wsdl:output message="tns:ERPSellHouseClueDayReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseClueDetailDayReport">
+      <wsdl:input message="tns:ERPSellHouseClueDetailDayReportSoapIn" />
+      <wsdl:output message="tns:ERPSellHouseClueDetailDayReportSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_ERPSellHouseAnalysisSoap" type="tns:WS_ERPSellHouseAnalysisSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ERPSellHouseAnalysisReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHouseAnalysisReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseAnlysisByProject">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHouseAnlysisByProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseAnlysisBuildingReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHouseAnlysisBuildingReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseCWAnlysisiReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHouseCWAnlysisiReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseSignedAnlysisReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHouseSignedAnlysisReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHousePurchaseDateReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHousePurchaseDateReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHousePurchaseDateDetailReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHousePurchaseDateDetailReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseClueAnalysisReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHouseClueAnalysisReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseClueDetailAnalysisReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHouseClueDetailAnalysisReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseClueDayReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHouseClueDayReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseClueDetailDayReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHouseClueDetailDayReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_ERPSellHouseAnalysisSoap12" type="tns:WS_ERPSellHouseAnalysisSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ERPSellHouseAnalysisReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHouseAnalysisReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseAnlysisByProject">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHouseAnlysisByProject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseAnlysisBuildingReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHouseAnlysisBuildingReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseCWAnlysisiReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHouseCWAnlysisiReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseSignedAnlysisReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHouseSignedAnlysisReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHousePurchaseDateReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHousePurchaseDateReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHousePurchaseDateDetailReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHousePurchaseDateDetailReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseClueAnalysisReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHouseClueAnalysisReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseClueDetailAnalysisReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHouseClueDetailAnalysisReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseClueDayReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHouseClueDayReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ERPSellHouseClueDetailDayReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/ERPSellHouseClueDetailDayReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_ERPSellHouseAnalysis">
+    <wsdl:port name="WS_ERPSellHouseAnalysisSoap" binding="tns:WS_ERPSellHouseAnalysisSoap">
+      <soap:address location="http://dsp.hiooy.com:8200/WebServices/WS_ERPSellHouseAnalysis.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_ERPSellHouseAnalysisSoap12" binding="tns:WS_ERPSellHouseAnalysisSoap12">
+      <soap12:address location="http://dsp.hiooy.com:8200/WebServices/WS_ERPSellHouseAnalysis.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

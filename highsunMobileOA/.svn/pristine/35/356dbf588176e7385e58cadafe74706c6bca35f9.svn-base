@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=yes">
+<title>租商铺就选海商通</title>
+<link rel="stylesheet" type="text/css" href="css/common.css?ver=2014333">
+<script type="text/javascript" src="js/jquery.1.4.2-min.js"></script>
+<script type="text/javascript" src="js/common.js?ver=5678"></script>
+<script type="text/javascript" src="js/jquery.iosslider.js"></script>
+</head>
+<body>
+<div class="topBox">
+  <div class="GoBack"><a href="javascript:history.go(-1);">返回</a></div>
+  <h3>海印商场</h3>
+  <div class="topLogin"><a href="login.html">登录</a></div>
+</div>
+<div class="screenBox">
+  <ul>
+    <li>
+      <div class="scrLink"><a>商场</a></div>
+      <div class="pupBox"> <span><a>商场商场</a></span><span><a>商场</a></span><span><a>商场商场</a></span><span><a>商场商场</a></span><span><a>商场</a></span><span><a>商场</a></span><span><a>商场</a></span> </div>
+    </li>
+    <li>
+      <div class="scrLink"><a>面积</a></div>
+      <div class="pupBox"> <span><a>面积面积</a></span><span><a>面积</a></span><span><a>面积面积</a></span><span><a>面积面积</a></span><span><a>面积</a></span><span><a>面积</a></span><span><a>商场</a></span> </div>
+    </li>
+    <li>
+      <div class="scrLink"><a>规划业态</a></div>
+      <div class="pupBox">
+        <dl>
+          <dt><span>中华美食</span></dt>
+          <dd style="display:block;"><span><a>面积面积</a></span><span><a>面积</a></span></dd>
+        </dl>
+        <dl>
+          <dt><span>中华美食1</span></dt>
+          <dd><span><a>面积面积</a></span><span><a>面342积</a></span></dd>
+        </dl>
+        <dl>
+          <dt><span>中华美食2</span></dt>
+          <dd><span><a>面积1面积</a></span><span><a>面1积</a></span><span><a>面积面积</a></span><span><a>面积面积</a></span><span><a>面积</a></span><span><a>面积</a></span><span><a>商场</a></span></dd>
+        </dl>
+        <dl>
+          <dt><span>中华美食</span></dt>
+          <dd><span><a>面积423面积</a></span><span><a>面积</a></span></dd>
+        </dl>
+        <dl>
+          <dt><span>中华美食1</span></dt>
+          <dd><span><a>面积面积</a></span><span><a>43面积</a></span></dd>
+        </dl>
+        <dl>
+          <dt><span>中华美食2</span></dt>
+          <dd><span><a>面积1面积</a></span><span><a>面积</a></span><span><a>面积面积</a></span><span><a>面积面积</a></span><span><a>面积</a></span><span><a>面积</a></span><span><a>商场</a></span></dd>
+        </dl>
+      </div>
+    </li>
+    <li>
+      <div class="scrLink"><a>租金单价</a></div>
+      <div class="pupBox"> <span><a>100</a></span><span><a>200</a></span><span><a>300</a></span><span><a>400</a></span><span><a>500</a></span><span><a>600</a></span><span><a>800</a></span> </div>
+    </li>
+  </ul>
+</div>
+<div class="PageBox" style="padding: 94px 0px 0px 0px;"> 
+  <!--列表-->
+  <div class="listBox">
+    <ul>
+      <li><a href="deta_page.html">
+        <div class="listImg"><img src="images/list.jpg"></div>
+        <h3>都荟城</h3>
+        <span>招租行业：港式茶餐厅</span> <em>400M</em><em>250/M</em> <b>10000元</b> </a></li>
+      <li><a href="deta_page.html">
+        <div class="listImg"><img src="images/list.jpg"></div>
+        <h3>都荟城</h3>
+        <span>招租行业：港式茶餐厅</span> <em>400M</em><em>250/M</em> <b>10000元</b> </a></li>
+      <li><a href="deta_page.html">
+        <div class="listImg"><img src="images/list.jpg"></div>
+        <h3>都荟城</h3>
+        <span>招租行业：港式茶餐厅</span> <em>400M</em><em>250/M</em> <b>10000元</b> </a></li>
+      <li><a href="deta_page.html">
+        <div class="listImg"><img src="images/list.jpg"></div>
+        <h3>都荟城</h3>
+        <span>招租行业：港式茶餐厅</span> <em>400M</em><em>250/M</em> <b>10000元</b> </a></li>
+      <li><a href="deta_page.html">
+        <div class="listImg"><img src="images/list.jpg"></div>
+        <h3>都荟城</h3>
+        <span>招租行业：港式茶餐厅</span> <em>400M</em><em>250/M</em> <b>10000元</b> </a></li>
+      <li><a href="deta_page.html">
+        <div class="listImg"><img src="images/list.jpg"></div>
+        <h3>都荟城</h3>
+        <span>招租行业：港式茶餐厅</span> <em>400M</em><em>250/M</em> <b>10000元</b> </a></li>
+      <li><a href="deta_page.html">
+        <div class="listImg"><img src="images/list.jpg"></div>
+        <h3>都荟城</h3>
+        <span>招租行业：港式茶餐厅</span> <em>400M</em><em>250/M</em> <b>10000元</b> </a></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

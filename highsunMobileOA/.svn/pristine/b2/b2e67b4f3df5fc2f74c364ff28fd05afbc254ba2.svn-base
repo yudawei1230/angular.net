@@ -1,0 +1,170 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Xml;
+
+namespace highsunMobileOA
+{
+    public partial class news_detail : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private string covdate(string date)
+        {
+            return string.IsNullOrEmpty(date) ? string.Empty : Convert.ToDateTime(date).ToLongDateString();
+        }
+
+        private string _str = string.Empty;
+
+
+
+        public string Str
+        {
+            get
+            {
+                int npid = WebSite.Comman.SRequest.GetQueryInt("npid", 1);
+                string id = WebSite.Comman.SRequest.GetQueryString("id");
+                switch (npid)
+                {
+                    case 0:
+                    case 1:
+                    case 5:
+                    case 6:
+                    case 7:
+                    case 8:
+                        //新闻
+                        string CenterNews = new com.hiooy.dsp.WS_HighsunPortal1().HighsunPortal_GetCenterNewsByID("VYbSBDuFOPVd3452222", id);
+                        string[] CenterNewsSinge = CenterNews.Split(new[] { "||" }, StringSplitOptions.None);
+                        _str += "<div class=\"detail_box\">\n";
+                        _str += "<h3 class=\"news_title\">" + CenterNewsSinge[1] + "</h3>\n";
+                        _str += "<h4 class=\"news_subtit\">创建人：" + CenterNewsSinge[4] + "&nbsp;&nbsp;&nbsp;&nbsp;发布日期：" + covdate(CenterNewsSinge[5]) + "</h4>\n";
+                        _str += "<div class=\"news_detail\">\n";
+                        _str += CenterNewsSinge[2].Replace("src=\"/images/", "src=\"http://portal.ehighsun.com/images/");
+                        _str += "</div>\n";
+                        _str += "</div>\n";
+                        break;
+                    //case 9:
+                    //case 21:
+                    //case 41:
+                    //case 7:
+                    //    //OA
+                    //    XmlNode OANotices = new com.hiooy.dsp.WS_HighsunPortal1().HighsunPortal_GetOANotices("VYbSBDuFOPVd3452222", parm.ToString());
+
+                    //    foreach (XmlNode node in OANotices.SelectNodes("item"))
+                    //    {
+                    //        _str += "<h3 class=\"news_title\">" + CenterNewsSinge[0] + "</h3>\n";
+                    //        _str += "<h4 class=\"news_subtit\">创建人：" + CenterNewsSinge[3] + "&nbsp;&nbsp;&nbsp;&nbsp;发布日期：" + CenterNewsSinge[4] + "</h4>\n";
+                    //        _str += "<div class=\"news_detail\">\n";
+                    //        _str += CenterNewsSinge[1];
+                    //        _str += "</div>\n";
+                    //        _str += "<li><a href=\"news_detail.aspx?id=" + node.SelectSingleNode("newsid").InnerText + "\">" + node.SelectSingleNode("title").InnerText + "</a></li>\n";
+                    //    }
+                    //    break;
+
+                    case 1000:
+                        string portalStr = new com.hiooy.dsp.WS_HighsunPortal1().HighsunPortal_GetInsideCompeteByID("VYbSBDuFOPVd3452222", int.Parse(id));
+                        string[] portalStrSinge = portalStr.Split(new[] { "||" }, StringSplitOptions.None);
+                        _str += "<div class=\"detail_box\">\n";
+                        _str += "<h3 class=\"news_title\">" + portalStrSinge[1] + "</h3>\n";
+                        _str += "<h4 class=\"news_subtit\">发布人：" + portalStrSinge[6] + "&nbsp;&nbsp;&nbsp;&nbsp;发布日期：" + covdate(portalStrSinge[3]) + "&nbsp;&nbsp;&nbsp;&nbsp;竞聘日期：" + covdate(portalStrSinge[4]) + "至" + covdate(portalStrSinge[5]) + "</h4>\n";
+                        _str += "<div class=\"news_detail\">\n";
+                        _str += portalStrSinge[2].Replace("src=\"/images/", "src=\"http://portal.ehighsun.com/images/");
+                        _str += "</div>\n";
+                        _str += "</div>\n";
+                        break;
+                    case 1001:
+                        string trainStr1 = new com.hiooy.dsp.WS_HighsunPortal1().HighsunPortal_GetTrainingInfoByID("VYbSBDuFOPVd3452222", id);
+                        string[] trainStrSinge1 = trainStr1.Split(new[] { "||" }, StringSplitOptions.None);
+                        _str += "<div class=\"detail_box\">\n";
+                        _str += "<h3 class=\"news_title\">" + trainStrSinge1[2] + "</h3>\n";
+                        _str += "<h4 class=\"news_subtit\">发布人：" + trainStrSinge1[4] + "&nbsp;&nbsp;&nbsp;&nbsp;发布日期：" + covdate(trainStrSinge1[5]) + "</h4>\n";
+                        _str += "<div class=\"news_detail\">\n";
+                        _str += trainStrSinge1[3].Replace("src=\"/images/", "src=\"http://portal.ehighsun.com/images/");
+                        _str += "</div>\n";
+                        _str += "</div>\n";
+                        break;
+                    case 1002:
+                        string trainStr2 = new com.hiooy.dsp.WS_HighsunPortal1().HighsunPortal_GetTrainingInfoByID("VYbSBDuFOPVd3452222", id);
+                        string[] trainStrSinge2 = trainStr2.Split(new[] { "||" }, StringSplitOptions.None);
+                        _str += "<div class=\"detail_box\">\n";
+                        _str += "<h3 class=\"news_title\">" + trainStrSinge2[2] + "</h3>\n";
+                        _str += "<h4 class=\"news_subtit\">发布人：" + trainStrSinge2[4] + "&nbsp;&nbsp;&nbsp;&nbsp;发布日期：" + covdate(trainStrSinge2[5]) + "</h4>\n";
+                        _str += "<div class=\"news_detail\">\n";
+                        _str += trainStrSinge2[3].Replace("src=\"/images/", "src=\"http://portal.ehighsun.com/images/");
+                        _str += "</div>\n";
+                        _str += "</div>\n";
+                        break;
+                    case 1003:
+                        string trainStr3 = new com.hiooy.dsp.WS_HighsunPortal1().HighsunPortal_GetTrainingInfoByID("VYbSBDuFOPVd3452222", id);
+                        string[] trainStrSinge3 = trainStr3.Split(new[] { "||" }, StringSplitOptions.None);
+                        _str += "<div class=\"detail_box\">\n";
+                        _str += "<h3 class=\"news_title\">" + trainStrSinge3[2] + "</h3>\n";
+                        _str += "<h4 class=\"news_subtit\">发布人：" + trainStrSinge3[4] + "&nbsp;&nbsp;&nbsp;&nbsp;发布日期：" + covdate(trainStrSinge3[5]) + "</h4>\n";
+                        _str += "<div class=\"news_detail\">\n";
+                        _str += trainStrSinge3[3].Replace("src=\"/images/", "src=\"http://portal.ehighsun.com/images/");
+                        _str += "</div>\n";
+                        _str += "</div>\n";
+                        break;
+                    case 1004:
+                        string itemsStr1 = new com.hiooy.dsp.WS_HighsunPortal1().HighsunPortal_GetChannelItemByID("VYbSBDuFOPVd3452222", id);
+                        string[] itemsStrSinge1 = itemsStr1.Split(new[] { "||" }, StringSplitOptions.None);
+                        _str += "<div class=\"detail_box\">\n";
+                        _str += "<h3 class=\"news_title\">" + itemsStrSinge1[1] + "</h3>\n";
+                        _str += "<h4 class=\"news_subtit\">发布人：" + itemsStrSinge1[4] + "&nbsp;&nbsp;&nbsp;&nbsp;发布日期：" + covdate(itemsStrSinge1[5]) + "</h4>\n";
+                        _str += "<div class=\"news_detail\">\n";
+                        _str += itemsStrSinge1[2].Replace("src=\"/images/", "src=\"http://portal.ehighsun.com/images/");
+                        _str += "</div>\n";
+                        _str += "</div>\n";
+                        break;
+                    case 1005:
+                        string itemsStr2 = new com.hiooy.dsp.WS_HighsunPortal1().HighsunPortal_GetChannelItemByID("VYbSBDuFOPVd3452222", id);
+                        string[] itemsStrSinge2 = itemsStr2.Split(new[] { "||" }, StringSplitOptions.None);
+                        _str += "<div class=\"detail_box\">\n";
+                        _str += "<h3 class=\"news_title\">" + itemsStrSinge2[1] + "</h3>\n";
+                        _str += "<h4 class=\"news_subtit\">发布人：" + itemsStrSinge2[4] + "&nbsp;&nbsp;&nbsp;&nbsp;发布日期：" + covdate(itemsStrSinge2[5]) + "</h4>\n";
+                        _str += "<div class=\"news_detail\">\n";
+                        _str += itemsStrSinge2[2].Replace("src=\"/images/", "src=\"http://portal.ehighsun.com/images/");
+                        _str += "</div>\n";
+                        _str += "</div>\n";
+                        break;
+                    case 1006:
+                        string itemsStr3 = new com.hiooy.dsp.WS_HighsunPortal1().HighsunPortal_GetChannelItemByID("VYbSBDuFOPVd3452222", id);
+                        string[] itemsStrSinge3 = itemsStr3.Split(new[] { "||" }, StringSplitOptions.None);
+                        _str += "<div class=\"detail_box\">\n";
+                        _str += "<h3 class=\"news_title\">" + itemsStrSinge3[1] + "</h3>\n";
+                        _str += "<h4 class=\"news_subtit\">发布人：" + itemsStrSinge3[4] + "&nbsp;&nbsp;&nbsp;&nbsp;发布日期：" + covdate(itemsStrSinge3[5]) + "</h4>\n";
+                        _str += "<div class=\"news_detail\">\n";
+                        _str += itemsStrSinge3[2].Replace("src=\"/images/", "src=\"http://portal.ehighsun.com/images/");
+                        _str += "</div>\n";
+                        _str += "</div>\n";
+                        break;
+                    case 1007:
+                        string ceoStr = new com.hiooy.dsp.WS_HighsunPortal1().HighsunPortal_GetCEOSpeaking("VYbSBDuFOPVd3452222", id);
+                        string[] ceoStrSinge3 = ceoStr.Split(new[] { "||" }, StringSplitOptions.None);
+                        _str += "<div class=\"detail_box\">\n";
+                        _str += "<h3 class=\"news_title\">" + ceoStrSinge3[1] + "</h3>\n";
+                        _str += "<h4 class=\"news_subtit\">发布人：" + ceoStrSinge3[5] + "&nbsp;&nbsp;&nbsp;&nbsp;发布日期：" + covdate(ceoStrSinge3[6]) + "</h4>\n";
+                        _str += "<div class=\"news_detail\">\n";
+                        _str += "<object id=\"MediaPlayer\" width=\"100%\" height=\"190\" classid=\"CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95\" standby=\"" + ceoStrSinge3[3] + "\" type=\"application/x-oleobject\">\n";
+                        _str += "<param name=\"FileName\" value=\"http://portal.ehighsun.com" + ceoStrSinge3[2].Remove(0,2) + "\">\n";
+                        _str += "<param name=\"ShowControls\" value=\"true\">\n";
+                        _str += "<param name=\"ShowStatusBar\" value=\"false\">\n";
+                        _str += "<param name=\"ShowDisplay\" value=\"false\">\n";
+                        _str += "<param name=\"autostart\" value=\"false\">\n";
+                        _str += "<embed type=\"application/x-mplayer2\" src=\"http://portal.ehighsun.com" + ceoStrSinge3[2].Remove(0, 2) + "\" name=\"MediaPlayer\" width=\"100%\" height=\"190\" showcontrols=\"1\" showstatusbar=\"0\" showdisplay=\"0\" autostart=\"0\"> </embed>\n";
+                        _str += "</object>\n";
+                        _str += "</div>\n";
+                        _str += "</div>\n";
+                        break;
+                }
+                return _str;
+            }
+        }
+    }
+}

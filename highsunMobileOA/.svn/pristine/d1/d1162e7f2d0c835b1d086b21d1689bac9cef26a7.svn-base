@@ -1,0 +1,785 @@
+﻿<%@ CodeTemplate Language="C#"  TargetLanguage="C#" ResponseEncoding="UTF-8" Description="Generates a very simple business object." %>
+<%@ Property Name="TargetTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="TargetTable that the object is based on." %>
+<%@ Property Name="ModelsNamespace" Default="WebSite.Models" Type="System.String" Category="Context" Description="TargetTable that the object is based on." %>
+<%@ Property Name="DALNamespace" Default="WebSite.DAL" Type="System.String" Category="Context" Description="TargetTable that the object is based on." %>
+<%@ Property Name="DALClassNameSurfix" Default="DAL" Type="System.String" Category="Context" Description="TargetTable that the object is based on." %>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="System.Data" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Text.RegularExpressions" %>
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Collections;
+using System.Data.SqlClient;
+using System.Data;
+using WebSite.DbProxy;
+using <%= ModelsNamespace %>;
+
+
+namespace <%= DALNamespace %>
+{
+	/// <summary>
+	/// <%=GetStringSub(TargetTable.Description,"表")%>业务逻辑类
+	/// </summary>
+	public class <%= GetDALClassName() %>
+	{	
+		/// <summary>
+        /// 得到最大ID
+        /// </summary>
+        public int GetMaxID()
+        {
+            string sql = "select max(<%= GetPKPropertyName() %>)+1 from <%= TargetTable.Name %>";
+            Database db = new Database(sql, null);
+            object obj = db.ExecuteReader();
+            if (obj != null && obj != DBNull.Value)
+            {
+                return int.Parse(obj.ToString());
+            }
+            return 1;
+        }
+		
+		/// <summary>
+        /// 得到记录总和
+        /// </summary>
+        public int GetCount(string strWhere)
+        {
+            string sql = "select count(<%= GetPKPropertyName() %>) from <%= TargetTable.Name %>";
+            if (strWhere.Trim() != "")
+            {
+                sql += " where " + strWhere;
+            }
+            Database db = new Database(sql, null);
+            object obj = db.ExecuteIntScalar();
+            if (obj != null && obj != DBNull.Value)
+            {
+                return int.Parse(obj.ToString());
+            }
+            return 1;
+        }
+		
+		/// <summary>
+		/// 查询<%=GetStringSub(TargetTable.Description,"表")%>实体是否存在
+		/// <param name="<%= GetPKParamName() %>">键值</param>
+		/// <returns>返回该键值实体</returns>
+		/// </summary>
+        public bool IsHaveEntityByKey(<%= GetPKPropertyType() %> <%= GetPKParamName() %>)
+        {
+			string sql = "SELECT <%= GetPKName() %> FROM [<%= TargetTable.Name %>] WHERE <%= GetPKPropertyName() %> = @<%= GetPKPropertyName() %>";
+			SqlParameter[] para = new SqlParameter[]
+			{
+				new SqlParameter("@<%= GetPKName() %>", <%= GetPKParamName() %>)
+			};
+			Database db = new Database(sql,para);
+			return  db.HaveExecuteReader();			
+        }
+		
+		/// <summary>
+		/// 根据键值查询该<%=GetStringSub(TargetTable.Description,"表")%>实体
+		/// <param name="<%= GetPKParamName() %>">键值</param>
+		/// <returns>返回该键值实体</returns>
+		/// </summary>
+		public <%= GetModelClassName() %> FetchEntityByKey (<%= GetPKPropertyType() %> <%= GetPKParamName() %>)
+		{
+			string sql = "SELECT * FROM [<%= TargetTable.Name %>] WHERE <%= GetPKPropertyName() %> = @<%= GetPKPropertyName() %>";
+			SqlParameter[] para = new SqlParameter[]
+			{
+				new SqlParameter("@<%= GetPKName() %>", <%= GetPKParamName() %>)
+			};
+			Database db = new Database(sql,para);
+			return db.ExecuteScalar<<%= GetModelClassName() %>>();
+		}
+		
+		/// <summary>
+		/// 根据非ID键值查询该<%=GetStringSub(TargetTable.Description,"表")%>实体
+		/// <param name="strWhere">条件语句</param>
+		/// <returns>返回该键值实体</returns>
+		/// </summary>		
+		public <%= GetModelClassName() %> FetchEntityByNoKey(string strWhere)
+		{
+			string sql = "SELECT * FROM [<%= TargetTable.Name %>]";
+            if (strWhere.Trim() != "")
+            {
+                sql += " where " + strWhere;
+            }
+            Database db = new Database(sql,null);
+            return db.ExecuteScalar<<%= GetModelClassName() %>>();			
+		}	
+		
+		/// <summary>
+		/// 查询所有<%=GetStringSub(TargetTable.Description,"表")%>实体        
+		/// <returns>返回结果列表</returns>
+		/// </summary>
+        public IList<<%= GetModelClassName() %>> GetAllEntities()
+        {
+			string sql = "SELECT * FROM [<%= TargetTable.Name %>] Order by <%= GetPKPropertyName() %> Desc";
+			Database db = new Database(sql,null);
+			return db.ExecuteQuery<<%= GetModelClassName() %>>();			
+        }
+		
+        /// <summary>
+		/// 查询所有<%=GetStringSub(TargetTable.Description,"表")%>实体
+        /// <param name="strWhere">条件语句</param>
+		/// <returns>返回结果列表</returns>
+		/// </summary>
+        public IList<<%= GetModelClassName() %>> GetAllEntities(string strWhere)
+        {
+			string sql = "SELECT * FROM [<%= TargetTable.Name %>]";
+			if (strWhere.Trim() != "")
+            {
+                sql += " where " + strWhere;                
+            }
+			sql += " Order by <%= GetPKPropertyName() %> Desc";
+			Database db = new Database(sql,null);
+			return db.ExecuteQuery<<%= GetModelClassName() %>>();			
+        }
+
+		/// <summary>
+		/// 查询所有实体返回DataTable
+		/// <returns>返回DataTable</returns>
+		/// </summary>
+		public DataTable GetAllEntitiesToDataTable()
+		{
+			string sql = "SELECT * FROM [<%= TargetTable.Name %>] Order by <%= GetPKPropertyName() %> Desc";
+			Database db = new Database(sql,null);
+			return db.ExecuteDataTable();
+		}
+		
+		/// <summary>
+		/// 查询所有实体返回DataTable
+		/// <returns>返回DataTable</returns>
+        /// <param name="strWhere">条件语句</param>
+		/// </summary>
+		public DataTable GetAllEntitiesToDataTable(string strWhere)
+		{
+			string sql = "SELECT * FROM [<%= TargetTable.Name %>]";
+			if (strWhere.Trim() != "")
+            {
+                sql += " where " + strWhere;
+            }
+			sql += " Order by <%= GetPKPropertyName() %> Desc";
+			Database db = new Database(sql,null);
+			return db.ExecuteDataTable();
+		}		
+		
+		/// 执行SQL语句 
+		/// <param name="sql">SQL语句</param>
+		/// <returns>返回查询结果实体列表</returns>
+		/// </summary>        
+        public IList<<%= GetModelClassName() %>> SearchBySql(string sql)
+        {              
+			Database db = new Database(sql,null);
+			return db.ExecuteQuery<<%= GetModelClassName() %>>();
+        }
+		
+		/// 执行SQL语句 
+		/// <param name="sql">SQL语句</param>
+		/// <param name="sql">参数数组</param>
+		/// <returns>返回查询结果实体列表</returns>
+		/// </summary>  
+		public IList<<%= GetModelClassName() %>> SearchBySql( string sql, params SqlParameter[] values )
+		{
+			Database db = new Database(sql,values);
+			return db.ExecuteQuery<<%= GetModelClassName() %>>();
+		}
+		
+		/// <summary>
+		/// 新增<%=GetStringSub(TargetTable.Description,"表")%>实体并返回自动增长id
+		/// <param name="<%= GetModelParamName() %>"><%=GetStringSub(TargetTable.Description,"表")%>实体</param>
+		/// <returns>返回自动增长id</returns>
+		/// </summary>
+		public int InsertEntity(<%= GetModelClassName() %> <%= GetModelParamName() %>)
+		{
+            string sql =<%= GetInsertSQLLine1()%>
+			<%= GetInsertSQLLine3()%>
+			SqlParameter[] para = new SqlParameter[]
+			{
+				<%			 
+				for(int i=0; i<TargetTable.NonPrimaryKeyColumns.Count; i++)
+				{
+					ColumnSchema column = TargetTable.NonPrimaryKeyColumns[i];
+					if( i==TargetTable.NonPrimaryKeyColumns.Count-1 )
+					{
+				%>
+				new SqlParameter("@<%= column.Name %>", <%= GetModelParamName() %>.<%= MakePascal(column.Name) %>)
+				<%
+					}
+					else
+					{
+				%>
+         		new SqlParameter("@<%= column.Name %>", <%= GetModelParamName() %>.<%= MakePascal(column.Name) %>),
+				<%
+					}
+				}
+				%>				
+			};				
+			Database db = new Database(sql, para);
+            object obj = db.GetSingle();
+            if (obj == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return Convert.ToInt32(obj);
+            }
+		}
+
+		/// <summary>
+		/// 删除<%=GetStringSub(TargetTable.Description,"表")%>实体
+		/// <param name="<%= GetPKParamName() %>"><%=GetStringSub(TargetTable.Description,"表")%>实体</param>
+		/// <returns>返回受影响行数</returns>
+		/// </summary>
+		public int DeleteEntityByKey(<%= GetPKPropertyType() %> <%= GetPKParamName() %>)
+		{    
+			string sql = "DELETE [<%= TargetTable.Name %>] WHERE <%= GetPKPropertyName() %> = @<%= GetPKPropertyName() %>";
+			SqlParameter[] para = new SqlParameter[]
+			{
+			new SqlParameter("@<%= GetPKName() %>", <%= GetPKParamName() %>)
+			};
+			Database db = new Database(sql,para);
+			return db.ExecuteNoQuery();			
+		}
+			
+        /// <summary>
+		/// 更新<%=GetStringSub(TargetTable.Description,"表")%>实体
+		/// <param name="<%= GetModelParamName() %>">键值</param>
+		/// <returns>返回该键值实体</returns>
+		/// </summary>
+		public int UpdateEntity(<%= GetModelClassName() %> <%= GetModelParamName() %>)
+		{
+			string sql ="UPDATE [<%= TargetTable.Name %>] " + "SET " +
+			<%
+		 
+			for(int i=0; i<TargetTable.NonPrimaryKeyColumns.Count; i++)
+			{
+				ColumnSchema column = TargetTable.NonPrimaryKeyColumns[i];
+				if ( i==TargetTable.NonPrimaryKeyColumns.Count-1 )
+				{
+			%>
+				"<%= column.Name %> = @<%= column.Name %> "  +
+			<%
+				}
+				else
+				{
+			%>
+				"<%= column.Name %> = @<%= column.Name %>, " +
+			<%
+				}
+			}
+			%>
+			"WHERE <%= GetPKName() %> = @<%= GetPKName() %>";
+			
+			SqlParameter[] para = new SqlParameter[]
+			{
+				new SqlParameter("@<%= GetPKName() %>", <%= GetModelParamName() %>.<%= GetPKName() %>),
+			<%			 
+			for(int i=0; i<TargetTable.NonPrimaryKeyColumns.Count; i++)
+			{
+				ColumnSchema column = TargetTable.NonPrimaryKeyColumns[i];
+				if( i==TargetTable.NonPrimaryKeyColumns.Count-1 )
+				{
+			%>
+				new SqlParameter("@<%= column.Name %>", <%= GetModelParamName() %>.<%= MakePascal(column.Name) %>)
+			<%
+				}
+				else
+				{
+			%>
+				new SqlParameter("@<%= column.Name %>", <%= GetModelParamName() %>.<%= MakePascal(column.Name) %>),
+			<%
+				}
+			}
+			%>	
+			};					
+			Database db = new Database(sql,para);
+			return db.ExecuteNoQuery();
+		}
+	}
+}
+<script runat="template">
+///////////////////////////////////////////////////////////////
+// CLASS NAMES 
+///////////////////////////////////////////////////////////////
+
+public string GetStringSub(string soure,string str)
+{
+    return soure.Substring(0,soure.IndexOf(str)==-1?soure.Length:soure.IndexOf(str));
+}
+
+
+public string GetDALClassName()
+{
+	return 	GetModelClassName() + DALClassNameSurfix;
+}
+
+public string GetModelClassName()
+{
+	return 	GetModelClassName(TargetTable);
+}
+
+public string GetModelMemberVarName()
+{
+	return GetModelParamName();
+}
+
+public string GetModelParamName()
+{
+	return MakeCamel(GetModelClassName());
+}
+
+public string GetModelClassName(TableSchema table)
+{
+	string result;
+	if ( table.ExtendedProperties.Contains("ModelName") )
+	{
+		result = (string)table.ExtendedProperties["ModelName"].Value;	
+		return MakePascal(result);
+	}
+
+	if (table.Name.EndsWith("s"))
+	{
+		result = MakeSingle(table.Name);
+	}
+	else
+	{
+		result = table.Name;
+	}
+
+	return MakePascal(result);
+}
+
+
+///////////////////////////////////////////////////////////////
+// INSERT SQL LINES
+///////////////////////////////////////////////////////////////
+public string GetInsertSQLLine1()
+{
+	string result;
+	result = "\"INSERT [" + TargetTable.Name + "] (";
+	foreach(ColumnSchema column in TargetTable.NonPrimaryKeyColumns)
+	{
+		result += column.Name + ", ";
+	}
+	result = result.Substring(0, result.Length-2);
+	result += ")\" +";
+
+	return result;
+}
+// "VALUES (...)";
+public string GetInsertSQLLine2()
+{
+	string result;
+	result = "\"VALUES (";
+	foreach(ColumnSchema column in TargetTable.NonPrimaryKeyColumns)
+	{
+		result += "@" + column.Name + ", ";
+	}
+	result = result.Substring(0, result.Length-2);
+	result += ")\";";
+	return result;
+}
+
+// "VALUES (...)";
+public string GetInsertSQLLine3()
+{
+	string result;
+	result = "\"VALUES (";
+	foreach(ColumnSchema column in TargetTable.NonPrimaryKeyColumns)
+	{
+		result += "@" + column.Name + ", ";
+	}
+	result = result.Substring(0, result.Length-2);
+	result += ");select @@IDENTITY\";";
+	return result;
+}
+///////////////////////////////////////////////////////////////
+// PRIMARY KEY TYPE by Shen Bo
+///////////////////////////////////////////////////////////////
+public string GetPKPropertyType()
+{
+	return 	GetPKType(TargetTable);
+}
+
+public string GetPKType()
+{
+	return 	GetPKType(TargetTable);
+}
+public System.Data.DbType GetPKDBType()
+{
+	return 	GetPKDBType(TargetTable);
+}
+
+public string GetPKType(TableSchema TargetTable)
+{
+	if (TargetTable.PrimaryKey != null)
+	{
+		if (TargetTable.PrimaryKey.MemberColumns.Count == 1)
+		{
+			return GetCSharpTypeFromDBFieldType(TargetTable.PrimaryKey.MemberColumns[0]);
+		}
+		else
+		{
+			throw new ApplicationException("This template will not work on primary keys with more than one member column.");
+		}
+	}
+	else
+	{
+		throw new ApplicationException("This template will only work on MyTables with a primary key.");
+	}
+}
+public System.Data.DbType GetPKDBType(TableSchema TargetTable)
+{
+	if (TargetTable.PrimaryKey != null)
+	{
+		if (TargetTable.PrimaryKey.MemberColumns.Count == 1)
+		{
+			return TargetTable.PrimaryKey.MemberColumns[0].DataType;
+		}
+		else
+		{
+			throw new ApplicationException("This template will not work on primary keys with more than one member column.");
+		}
+	}
+	else
+	{
+		throw new ApplicationException("This template will only work on tables with a primary key.");
+	}
+}
+
+///////////////////////////////////////////////////////////////
+// PRIMARY KEY NAME
+///////////////////////////////////////////////////////////////
+public string GetPKPropertyName()
+{
+	return MakePascal(GetPKName());
+}
+
+public string GetPKParamName()
+{
+	return GetPKMemberVarName();	
+}
+
+public string GetPKMemberVarName()
+{
+	return MakeCamel(GetPKName());	
+}
+
+public string GetPKName()
+{
+	return GetPKName(TargetTable);
+}
+
+public string GetPKName(TableSchema TargetTable)
+{
+	if (TargetTable.PrimaryKey != null)
+	{
+		if (TargetTable.PrimaryKey.MemberColumns.Count == 1)
+		{
+			return TargetTable.PrimaryKey.MemberColumns[0].Name;
+		}
+		else
+		{
+			throw new ApplicationException("This template will not work on primary keys with more than one member column.");
+		}
+	}
+	else
+	{
+		throw new ApplicationException("This template will only work on tables with a primary key.");
+	}
+}
+
+///////////////////////////////////////////////////////////////
+// FOREIGH KEY PROPERTY TYPE
+///////////////////////////////////////////////////////////////
+public string GetFKPropertyType(TableKeySchema key)
+{
+	return MakePascal(GetFKPrimaryModelClassName(key));
+}
+
+///////////////////////////////////////////////////////////////
+// FOREIGH KEY PROPERTY NAME
+///////////////////////////////////////////////////////////////
+public string GetFKMemberVarName(TableKeySchema key)
+{
+	string result = GetFKForeignIdName(key);
+	if( result.ToLower().EndsWith("id") )
+	{
+		result = result.Substring(0, result.Length - 2);	
+	}
+	return MakeCamel(result);
+}
+
+public string GetFKPropertyName(TableKeySchema key)
+{
+	return MakePascal(GetFKMemberVarName(key));
+}
+
+public string GetFKPrimaryModelClassName(TableKeySchema key)
+{
+	return GetModelClassName(key.PrimaryKeyTable);
+}
+
+///////////////////////////////////////////////////////////////
+// FOREIGH KEY ID NAMEs
+///////////////////////////////////////////////////////////////
+public string GetFKForeignIdName(TableKeySchema key)	
+{
+	return key.ForeignKeyMemberColumns[0].Name;
+}
+
+public string GetFKForeignCSharpType(TableKeySchema key)	
+{
+	return GetCSharpTypeFromDBFieldType(key.ForeignKeyMemberColumns[0]);
+}
+
+public string GetFKPrimaryIdName(TableKeySchema key)
+{
+	return key.PrimaryKeyMemberColumns[0].Name;
+}
+
+///////////////////////////////////////////////////////////////
+// PROPERTY TYPE
+///////////////////////////////////////////////////////////////
+public string GetPropertyType(ColumnSchema column)
+{
+	return GetCSharpTypeFromDBFieldType(column);
+}
+public string GetMemberVarType(ColumnSchema column)
+{
+	return GetCSharpTypeFromDBFieldType(column);
+}
+public string GetParamType(ColumnSchema column)
+{
+	return GetCSharpTypeFromDBFieldType(column);
+}
+public string GetCSharpTypeFromDBFieldType(ColumnSchema column)
+{
+	if (column.Name.EndsWith("TypeCode")) return column.Name;
+	
+	switch (column.DataType)
+	{
+		case DbType.AnsiString: return "string";
+		case DbType.AnsiStringFixedLength: return "string";
+		case DbType.Binary: return "byte[]";
+		case DbType.Boolean: return "bool";
+		case DbType.Byte: return "byte";
+		case DbType.Currency: return "decimal";
+		case DbType.Date: return "DateTime";
+		case DbType.DateTime: return "DateTime";
+		case DbType.Decimal: return "decimal";
+		case DbType.Double: return "double";
+		case DbType.Guid: return "Guid";
+		case DbType.Int16: return "short";
+		case DbType.Int32: return "int";
+		case DbType.Int64: return "long";
+		case DbType.Object: return "object";
+		case DbType.SByte: return "sbyte";
+		case DbType.Single: return "float";
+		case DbType.String: return "string";
+		case DbType.StringFixedLength: return "string";
+		case DbType.Time: return "TimeSpan";
+		case DbType.UInt16: return "ushort";
+		case DbType.UInt32: return "uint";
+		case DbType.UInt64: return "ulong";
+		case DbType.VarNumeric: return "decimal";
+		default:
+		{
+			return "__UNKNOWN__" + column.NativeType;
+		}
+	}
+}
+
+///////////////////////////////////////////////////////////////
+// PROPERTY NAME
+///////////////////////////////////////////////////////////////
+public string GetMemberVarName(ColumnSchema column)
+{
+	return MakeCamel(GetNameFromDBFieldName(column));
+}
+public string GetPropertyName(ColumnSchema column)
+{
+	return MakePascal(GetNameFromDBFieldName(column));
+}
+public string GetNameFromDBFieldName(ColumnSchema column)
+{
+	string name = column.Name;
+	if(name.StartsWith(GetDALClassName()))
+	{
+		name = name.Substring(GetDALClassName().Length);	
+	}
+	return name;
+}
+
+
+public string GetMemberVariableDefaultValue(ColumnSchema column)
+{
+	switch (column.DataType)
+	{
+		case DbType.Guid:
+		{
+			return "Guid.Empty";
+		}
+		case DbType.AnsiString:
+		case DbType.AnsiStringFixedLength:
+		case DbType.String:
+		case DbType.StringFixedLength:
+		{
+			return "String.Empty";
+		}
+		default:
+		{
+			return "";
+		}
+	}
+}
+
+
+public string GetReaderMethod(ColumnSchema column)
+{
+	switch (column.DataType)
+	{
+		case DbType.Byte:
+		{
+			return "GetByte";
+		}
+		case DbType.Int16:
+		{
+			return "GetInt16";
+		}
+		case DbType.Int32:
+		{
+			return "GetInt32";
+		}
+		case DbType.Int64:
+		{
+			return "GetInt64";
+		}
+		case DbType.AnsiStringFixedLength:
+		case DbType.AnsiString:
+		case DbType.String:
+		case DbType.StringFixedLength:
+		{
+			return "GetString";
+		}
+		case DbType.Boolean:
+		{
+			return "GetBoolean";
+		}
+		case DbType.Guid:
+		{
+			return "GetGuid";
+		}
+		case DbType.Currency:
+		case DbType.Decimal:
+		{
+			return "GetDecimal";
+		}
+		case DbType.DateTime:
+		case DbType.Date:
+		{
+			return "GetDateTime";
+		}
+		case DbType.Binary:
+		{
+			return "GetBytes";
+		}
+		default:
+		{
+			return "__SQL__" + column.DataType;
+		}
+	}
+}
+
+public string GetSqlDbType(ColumnSchema column)
+{
+	switch (column.NativeType)
+	{
+		case "bigint": return "BigInt";
+		case "binary": return "Binary";
+		case "bit": return "Bit";
+		case "char": return "Char";
+		case "datetime": return "DateTime";
+		case "decimal": return "Decimal";
+		case "float": return "Float";
+		case "image": return "Image";
+		case "int": return "Int";
+		case "money": return "Money";
+		case "nchar": return "NChar";
+		case "ntext": return "NText";
+		case "numeric": return "Decimal";
+		case "nvarchar": return "NVarChar";
+		case "real": return "Real";
+		case "smalldatetime": return "SmallDateTime";
+		case "smallint": return "SmallInt";
+		case "smallmoney": return "SmallMoney";
+		case "sql_variant": return "Variant";
+		case "sysname": return "NChar";
+		case "text": return "Text";
+		case "timestamp": return "Timestamp";
+		case "tinyint": return "TinyInt";
+		case "uniqueidentifier": return "UniqueIdentifier";
+		case "varbinary": return "VarBinary";
+		case "varchar": return "VarChar";
+		default: return "__UNKNOWN__" + column.NativeType;
+	}
+}
+
+public string MakeCamel(string value)
+{
+	return value.Substring(0, 1).ToLower() + value.Substring(1);
+}
+
+public string MakePascal(string value)
+{
+	return value.Substring(0, 1).ToUpper() + value.Substring(1);
+}
+
+public string MakePlural(string name)
+{
+	Regex plural1 = new Regex("(?<keep>[^aeiou])y$");
+	Regex plural2 = new Regex("(?<keep>[aeiou]y)$");
+	Regex plural3 = new Regex("(?<keep>[sxzh])$");
+	Regex plural4 = new Regex("(?<keep>[^sxzhy])$");
+
+	if(plural1.IsMatch(name))
+		return plural1.Replace(name, "${keep}ies");
+	else if(plural2.IsMatch(name))
+		return plural2.Replace(name, "${keep}s");
+	else if(plural3.IsMatch(name))
+		return plural3.Replace(name, "${keep}es");
+	else if(plural4.IsMatch(name))
+		return plural4.Replace(name, "${keep}s");
+
+	return name;
+}
+
+public string MakeSingle(string name)
+{
+	Regex plural1 = new Regex("(?<keep>[^aeiou])ies$");
+	Regex plural2 = new Regex("(?<keep>[aeiou]y)s$");
+	Regex plural3 = new Regex("(?<keep>[sxzh])es$");
+	Regex plural4 = new Regex("(?<keep>[^sxzhyu])s$");
+
+	if(plural1.IsMatch(name))
+		return plural1.Replace(name, "${keep}y");
+	else if(plural2.IsMatch(name))
+		return plural2.Replace(name, "${keep}");
+	else if(plural3.IsMatch(name))
+		return plural3.Replace(name, "${keep}");
+	else if(plural4.IsMatch(name))
+		return plural4.Replace(name, "${keep}");
+
+	return name;
+}
+
+public override string GetFileName()
+{
+	return this.GetDALClassName() + ".cs";
+}
+
+
+
+
+</script>

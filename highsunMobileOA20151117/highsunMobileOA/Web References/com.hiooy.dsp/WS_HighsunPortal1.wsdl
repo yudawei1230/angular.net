@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://dsp.hiooy.com:8200/WebServices" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://dsp.hiooy.com:8200/WebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://dsp.hiooy.com:8200/WebServices">
+      <s:element name="HighsunPortal_GetCenterNews">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newsType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="topNum" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_GetCenterNewsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HighsunPortal_GetCenterNewsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_GetCenterNewsByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newsID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_GetCenterNewsByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HighsunPortal_GetCenterNewsByIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_GetCenterNewsByTypeAndID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newsType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newsID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_GetCenterNewsByTypeAndIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HighsunPortal_GetCenterNewsByTypeAndIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_GetOANotices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="noticeType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_GetOANoticesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HighsunPortal_GetOANoticesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_LoadInsideCompetes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="topNum" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_LoadInsideCompetesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HighsunPortal_LoadInsideCompetesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_GetInsideCompeteByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="competeID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_GetInsideCompeteByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HighsunPortal_GetInsideCompeteByIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_LoadTrainingInfosByChannelID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="channelID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="topNum" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_LoadTrainingInfosByChannelIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HighsunPortal_LoadTrainingInfosByChannelIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_GetTrainingInfoByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_GetTrainingInfoByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HighsunPortal_GetTrainingInfoByIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_LoadChannelItemsByChannelID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="channelID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="numTop" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_LoadChannelItemsByChannelIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HighsunPortal_LoadChannelItemsByChannelIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_GetChannelItemByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_GetChannelItemByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HighsunPortal_GetChannelItemByIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_LoadCEOSpeakings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="topNum" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_LoadCEOSpeakingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HighsunPortal_LoadCEOSpeakingsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_GetCEOSpeaking">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="courseID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_GetCEOSpeakingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HighsunPortal_GetCEOSpeakingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_LodaKaoqinDateByYear">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="checkYear" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_LodaKaoqinDateByYearResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HighsunPortal_LodaKaoqinDateByYearResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_LoadKaoqinDataByDay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="checkYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="checkMonth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="checkDay" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_LoadKaoqinDataByDayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HighsunPortal_LoadKaoqinDataByDayResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_LoadKaoqinDataByMonth">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="checkYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="checkMonth" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_LoadKaoqinDataByMonthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HighsunPortal_LoadKaoqinDataByMonthResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_LoadSalaries">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_LoadSalariesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HighsunPortal_LoadSalariesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_LoadSalaryByMonth">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="month" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_LoadSalaryByMonthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HighsunPortal_LoadSalaryByMonthResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_LoadPersonConsume">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_LoadPersonConsumeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HighsunPortal_LoadPersonConsumeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_GetNiceName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PassWord" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HighsunPortal_GetNiceNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HighsunPortal_GetNiceNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HighsunPortal_GetCenterNewsSoapIn">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_GetCenterNews" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_GetCenterNewsSoapOut">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_GetCenterNewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_GetCenterNewsByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_GetCenterNewsByID" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_GetCenterNewsByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_GetCenterNewsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_GetCenterNewsByTypeAndIDSoapIn">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_GetCenterNewsByTypeAndID" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_GetCenterNewsByTypeAndIDSoapOut">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_GetCenterNewsByTypeAndIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_GetOANoticesSoapIn">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_GetOANotices" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_GetOANoticesSoapOut">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_GetOANoticesResponse" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_LoadInsideCompetesSoapIn">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_LoadInsideCompetes" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_LoadInsideCompetesSoapOut">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_LoadInsideCompetesResponse" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_GetInsideCompeteByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_GetInsideCompeteByID" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_GetInsideCompeteByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_GetInsideCompeteByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_LoadTrainingInfosByChannelIDSoapIn">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_LoadTrainingInfosByChannelID" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_LoadTrainingInfosByChannelIDSoapOut">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_LoadTrainingInfosByChannelIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_GetTrainingInfoByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_GetTrainingInfoByID" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_GetTrainingInfoByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_GetTrainingInfoByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_LoadChannelItemsByChannelIDSoapIn">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_LoadChannelItemsByChannelID" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_LoadChannelItemsByChannelIDSoapOut">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_LoadChannelItemsByChannelIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_GetChannelItemByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_GetChannelItemByID" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_GetChannelItemByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_GetChannelItemByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_LoadCEOSpeakingsSoapIn">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_LoadCEOSpeakings" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_LoadCEOSpeakingsSoapOut">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_LoadCEOSpeakingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_GetCEOSpeakingSoapIn">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_GetCEOSpeaking" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_GetCEOSpeakingSoapOut">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_GetCEOSpeakingResponse" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_LodaKaoqinDateByYearSoapIn">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_LodaKaoqinDateByYear" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_LodaKaoqinDateByYearSoapOut">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_LodaKaoqinDateByYearResponse" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_LoadKaoqinDataByDaySoapIn">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_LoadKaoqinDataByDay" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_LoadKaoqinDataByDaySoapOut">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_LoadKaoqinDataByDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_LoadKaoqinDataByMonthSoapIn">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_LoadKaoqinDataByMonth" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_LoadKaoqinDataByMonthSoapOut">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_LoadKaoqinDataByMonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_LoadSalariesSoapIn">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_LoadSalaries" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_LoadSalariesSoapOut">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_LoadSalariesResponse" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_LoadSalaryByMonthSoapIn">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_LoadSalaryByMonth" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_LoadSalaryByMonthSoapOut">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_LoadSalaryByMonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_LoadPersonConsumeSoapIn">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_LoadPersonConsume" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_LoadPersonConsumeSoapOut">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_LoadPersonConsumeResponse" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_GetNiceNameSoapIn">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_GetNiceName" />
+  </wsdl:message>
+  <wsdl:message name="HighsunPortal_GetNiceNameSoapOut">
+    <wsdl:part name="parameters" element="tns:HighsunPortal_GetNiceNameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS_HighsunPortal1Soap">
+    <wsdl:operation name="HighsunPortal_GetCenterNews">
+      <wsdl:input message="tns:HighsunPortal_GetCenterNewsSoapIn" />
+      <wsdl:output message="tns:HighsunPortal_GetCenterNewsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetCenterNewsByID">
+      <wsdl:input message="tns:HighsunPortal_GetCenterNewsByIDSoapIn" />
+      <wsdl:output message="tns:HighsunPortal_GetCenterNewsByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetCenterNewsByTypeAndID">
+      <wsdl:input message="tns:HighsunPortal_GetCenterNewsByTypeAndIDSoapIn" />
+      <wsdl:output message="tns:HighsunPortal_GetCenterNewsByTypeAndIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetOANotices">
+      <wsdl:input message="tns:HighsunPortal_GetOANoticesSoapIn" />
+      <wsdl:output message="tns:HighsunPortal_GetOANoticesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadInsideCompetes">
+      <wsdl:input message="tns:HighsunPortal_LoadInsideCompetesSoapIn" />
+      <wsdl:output message="tns:HighsunPortal_LoadInsideCompetesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetInsideCompeteByID">
+      <wsdl:input message="tns:HighsunPortal_GetInsideCompeteByIDSoapIn" />
+      <wsdl:output message="tns:HighsunPortal_GetInsideCompeteByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadTrainingInfosByChannelID">
+      <wsdl:input message="tns:HighsunPortal_LoadTrainingInfosByChannelIDSoapIn" />
+      <wsdl:output message="tns:HighsunPortal_LoadTrainingInfosByChannelIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetTrainingInfoByID">
+      <wsdl:input message="tns:HighsunPortal_GetTrainingInfoByIDSoapIn" />
+      <wsdl:output message="tns:HighsunPortal_GetTrainingInfoByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadChannelItemsByChannelID">
+      <wsdl:input message="tns:HighsunPortal_LoadChannelItemsByChannelIDSoapIn" />
+      <wsdl:output message="tns:HighsunPortal_LoadChannelItemsByChannelIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetChannelItemByID">
+      <wsdl:input message="tns:HighsunPortal_GetChannelItemByIDSoapIn" />
+      <wsdl:output message="tns:HighsunPortal_GetChannelItemByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadCEOSpeakings">
+      <wsdl:input message="tns:HighsunPortal_LoadCEOSpeakingsSoapIn" />
+      <wsdl:output message="tns:HighsunPortal_LoadCEOSpeakingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetCEOSpeaking">
+      <wsdl:input message="tns:HighsunPortal_GetCEOSpeakingSoapIn" />
+      <wsdl:output message="tns:HighsunPortal_GetCEOSpeakingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LodaKaoqinDateByYear">
+      <wsdl:input message="tns:HighsunPortal_LodaKaoqinDateByYearSoapIn" />
+      <wsdl:output message="tns:HighsunPortal_LodaKaoqinDateByYearSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadKaoqinDataByDay">
+      <wsdl:input message="tns:HighsunPortal_LoadKaoqinDataByDaySoapIn" />
+      <wsdl:output message="tns:HighsunPortal_LoadKaoqinDataByDaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadKaoqinDataByMonth">
+      <wsdl:input message="tns:HighsunPortal_LoadKaoqinDataByMonthSoapIn" />
+      <wsdl:output message="tns:HighsunPortal_LoadKaoqinDataByMonthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadSalaries">
+      <wsdl:input message="tns:HighsunPortal_LoadSalariesSoapIn" />
+      <wsdl:output message="tns:HighsunPortal_LoadSalariesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadSalaryByMonth">
+      <wsdl:input message="tns:HighsunPortal_LoadSalaryByMonthSoapIn" />
+      <wsdl:output message="tns:HighsunPortal_LoadSalaryByMonthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadPersonConsume">
+      <wsdl:input message="tns:HighsunPortal_LoadPersonConsumeSoapIn" />
+      <wsdl:output message="tns:HighsunPortal_LoadPersonConsumeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetNiceName">
+      <wsdl:input message="tns:HighsunPortal_GetNiceNameSoapIn" />
+      <wsdl:output message="tns:HighsunPortal_GetNiceNameSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_HighsunPortal1Soap" type="tns:WS_HighsunPortal1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HighsunPortal_GetCenterNews">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_GetCenterNews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetCenterNewsByID">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_GetCenterNewsByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetCenterNewsByTypeAndID">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_GetCenterNewsByTypeAndID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetOANotices">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_GetOANotices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadInsideCompetes">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_LoadInsideCompetes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetInsideCompeteByID">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_GetInsideCompeteByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadTrainingInfosByChannelID">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_LoadTrainingInfosByChannelID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetTrainingInfoByID">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_GetTrainingInfoByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadChannelItemsByChannelID">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_LoadChannelItemsByChannelID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetChannelItemByID">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_GetChannelItemByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadCEOSpeakings">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_LoadCEOSpeakings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetCEOSpeaking">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_GetCEOSpeaking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LodaKaoqinDateByYear">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_LodaKaoqinDateByYear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadKaoqinDataByDay">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_LoadKaoqinDataByDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadKaoqinDataByMonth">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_LoadKaoqinDataByMonth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadSalaries">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_LoadSalaries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadSalaryByMonth">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_LoadSalaryByMonth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadPersonConsume">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_LoadPersonConsume" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetNiceName">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_GetNiceName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_HighsunPortal1Soap12" type="tns:WS_HighsunPortal1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HighsunPortal_GetCenterNews">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_GetCenterNews" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetCenterNewsByID">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_GetCenterNewsByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetCenterNewsByTypeAndID">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_GetCenterNewsByTypeAndID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetOANotices">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_GetOANotices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadInsideCompetes">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_LoadInsideCompetes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetInsideCompeteByID">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_GetInsideCompeteByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadTrainingInfosByChannelID">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_LoadTrainingInfosByChannelID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetTrainingInfoByID">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_GetTrainingInfoByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadChannelItemsByChannelID">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_LoadChannelItemsByChannelID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetChannelItemByID">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_GetChannelItemByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadCEOSpeakings">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_LoadCEOSpeakings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetCEOSpeaking">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_GetCEOSpeaking" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LodaKaoqinDateByYear">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_LodaKaoqinDateByYear" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadKaoqinDataByDay">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_LoadKaoqinDataByDay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadKaoqinDataByMonth">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_LoadKaoqinDataByMonth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadSalaries">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_LoadSalaries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadSalaryByMonth">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_LoadSalaryByMonth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_LoadPersonConsume">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_LoadPersonConsume" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HighsunPortal_GetNiceName">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/HighsunPortal_GetNiceName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_HighsunPortal1">
+    <wsdl:port name="WS_HighsunPortal1Soap" binding="tns:WS_HighsunPortal1Soap">
+      <soap:address location="http://dsp.hiooy.com:8200/WebServices/WS_HighsunPortal1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_HighsunPortal1Soap12" binding="tns:WS_HighsunPortal1Soap12">
+      <soap12:address location="http://dsp.hiooy.com:8200/WebServices/WS_HighsunPortal1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

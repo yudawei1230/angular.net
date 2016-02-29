@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28555831-307E-401E-98D5-D892B3CEDCDD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebSite.BLL</RootNamespace>
+    <AssemblyName>WebSite.BLL</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\AdminBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Base\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Base\BasePageLoading.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Base\CheckLoginState.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Base\EnumBase.cs" />
+    <Compile Include="Base\PageBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Base\VerifyCode.cs" />
+    <Compile Include="Generate\AdvertBLL.cs" />
+    <Compile Include="Generate\AdvertImgBLL.cs" />
+    <Compile Include="Generate\ComplaintBLL.cs" />
+    <Compile Include="Generate\IndexImgBLL.cs" />
+    <Compile Include="Generate\IndustryBLL.cs" />
+    <Compile Include="Generate\MarketBLL.cs" />
+    <Compile Include="Generate\MediaSourceBLL.cs" />
+    <Compile Include="Generate\MemberBLL.cs" />
+    <Compile Include="Generate\OldProductBLL.cs" />
+    <Compile Include="Generate\OldProduct_CategoryBLL.cs" />
+    <Compile Include="Generate\OldProduct_ImgBLL.cs" />
+    <Compile Include="Generate\ShopBLL.cs" />
+    <Compile Include="Generate\ShopImgBLL.cs" />
+    <Compile Include="IRecycle.cs" />
+    <Compile Include="PageHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PublicHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebSite.Comman\WebSite.Comman.csproj">
+      <Project>{40b64b97-15ab-46e2-b9a4-f37ca820925c}</Project>
+      <Name>WebSite.Comman</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebSite.DALFactory\WebSite.DALFactory.csproj">
+      <Project>{ba615d79-8435-423f-b170-c535ecca74f9}</Project>
+      <Name>WebSite.DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebSite.DAL\WebSite.DAL.csproj">
+      <Project>{c01cd6cd-4c48-4781-9531-f7fa125dad67}</Project>
+      <Name>WebSite.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebSite.Model\WebSite.Model.csproj">
+      <Project>{09e44c1a-2265-423a-8c5d-54a60d926f5d}</Project>
+      <Name>WebSite.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Generate\BLLTemplate.csp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

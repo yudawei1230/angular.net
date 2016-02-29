@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
+  <defaultTemplate path="..\..\CodeSmithTemplate\Models.cst" />
+  <variables>
+    <add key="ConnectionString" value="Data Source=.;Initial Catalog=HighSunBroker;User ID=sa;Password=963" />
+  </variables>
+  <defaultProperties>
+    <property name="ModelsNamespace">WebSite.Models</property>
+  </defaultProperties>
+  <propertySets>
+    <propertySet name="IndexImg">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>IndexImg</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="Industry">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>Industry</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="Market">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>Market</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="Member">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>Member</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="Shop">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>Shop</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="ShopImg">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>ShopImg</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="Advert">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>Advert</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="AdvertImg">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>AdvertImg</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="MediaSource">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>MediaSource</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="Complaint">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>Complaint</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="OldProduct">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>OldProduct</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="OldProduct_Category">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>OldProduct_Category</name>
+        </table>
+      </property>
+    </propertySet>
+    <propertySet name="OldProduct_Img">
+      <property name="TargetTable">
+        <connectionString>$(ConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <table>
+          <owner>dbo</owner>
+          <name>OldProduct_Img</name>
+        </table>
+      </property>
+    </propertySet>
+  </propertySets>
+</codeSmith>

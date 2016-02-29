@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://dsp.hiooy.com:8200/WebServices" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://dsp.hiooy.com:8200/WebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://dsp.hiooy.com:8200/WebServices">
+      <s:element name="TYHAnalysisDayReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TYHAnalysisDayReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TYHAnalysisDayReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TYHAnylysisWeeklyReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TYHAnylysisWeeklyReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TYHAnylysisWeeklyReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TYHAnylysisTrendByMonth">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="month" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TYHAnylysisTrendByMonthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TYHAnylysisTrendByMonthResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="TYHAnalysisDayReportSoapIn">
+    <wsdl:part name="parameters" element="tns:TYHAnalysisDayReport" />
+  </wsdl:message>
+  <wsdl:message name="TYHAnalysisDayReportSoapOut">
+    <wsdl:part name="parameters" element="tns:TYHAnalysisDayReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="TYHAnylysisWeeklyReportSoapIn">
+    <wsdl:part name="parameters" element="tns:TYHAnylysisWeeklyReport" />
+  </wsdl:message>
+  <wsdl:message name="TYHAnylysisWeeklyReportSoapOut">
+    <wsdl:part name="parameters" element="tns:TYHAnylysisWeeklyReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="TYHAnylysisTrendByMonthSoapIn">
+    <wsdl:part name="parameters" element="tns:TYHAnylysisTrendByMonth" />
+  </wsdl:message>
+  <wsdl:message name="TYHAnylysisTrendByMonthSoapOut">
+    <wsdl:part name="parameters" element="tns:TYHAnylysisTrendByMonthResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS_TiyuhuiAnalysisSoap">
+    <wsdl:operation name="TYHAnalysisDayReport">
+      <wsdl:input message="tns:TYHAnalysisDayReportSoapIn" />
+      <wsdl:output message="tns:TYHAnalysisDayReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TYHAnylysisWeeklyReport">
+      <wsdl:input message="tns:TYHAnylysisWeeklyReportSoapIn" />
+      <wsdl:output message="tns:TYHAnylysisWeeklyReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TYHAnylysisTrendByMonth">
+      <wsdl:input message="tns:TYHAnylysisTrendByMonthSoapIn" />
+      <wsdl:output message="tns:TYHAnylysisTrendByMonthSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_TiyuhuiAnalysisSoap" type="tns:WS_TiyuhuiAnalysisSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TYHAnalysisDayReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/TYHAnalysisDayReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TYHAnylysisWeeklyReport">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/TYHAnylysisWeeklyReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TYHAnylysisTrendByMonth">
+      <soap:operation soapAction="http://dsp.hiooy.com:8200/WebServices/TYHAnylysisTrendByMonth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_TiyuhuiAnalysisSoap12" type="tns:WS_TiyuhuiAnalysisSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TYHAnalysisDayReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/TYHAnalysisDayReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TYHAnylysisWeeklyReport">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/TYHAnylysisWeeklyReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TYHAnylysisTrendByMonth">
+      <soap12:operation soapAction="http://dsp.hiooy.com:8200/WebServices/TYHAnylysisTrendByMonth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_TiyuhuiAnalysis">
+    <wsdl:port name="WS_TiyuhuiAnalysisSoap" binding="tns:WS_TiyuhuiAnalysisSoap">
+      <soap:address location="http://dsp.hiooy.com:8200/WebServices/WS_TiyuhuiAnalysis.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_TiyuhuiAnalysisSoap12" binding="tns:WS_TiyuhuiAnalysisSoap12">
+      <soap12:address location="http://dsp.hiooy.com:8200/WebServices/WS_TiyuhuiAnalysis.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
