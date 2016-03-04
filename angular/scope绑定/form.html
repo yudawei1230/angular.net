@@ -1,0 +1,16 @@
+<!doctype html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+<!-- 		<link rel="stylesheet" type="text/css" href="bootstrap.css"> -->
+	</head>
+	<body>
+		<form name="myform" ng-submit="save(user)" ng-controller="MyCtrl">
+			<input name="userName" type="text" ng-model="user.userName" required />
+			<input name="password" type="password" ng-model="user.password" required/>
+			<input type="submit" ng-disabled="myform.$invalid"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript" src="form.js"></script>
+</html>

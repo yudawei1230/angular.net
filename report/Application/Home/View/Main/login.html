@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
 		<title>登录 - 报表</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8 ">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/admin.css">
-		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="Application/Home/View/Main/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="Application/Home/View/Main/css/admin.css">
+		<script type="text/javascript" src="__TPL_PATH__/js/jquery-1.10.2.min.js"></script>
 	</head>
 
 	<body class="login">
@@ -67,11 +66,11 @@
 		</div><!--/middle-container-->
 	</body>
 </html>
-<script type="text/javascript" >
+<script type="text/javascript">
 $(function(){
 	$('#verify').click(function(){
 		var timenow = new Date().getTime();
-		$(this).attr("src","{:U('Login/verify',"+timenow+")}");
-	});
+		$(this).attr("src","{:U('Login/verify',"+timenow")}");
+	})
 })
 </script>

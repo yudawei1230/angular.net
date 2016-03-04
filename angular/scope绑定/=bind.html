@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	</head>
+	<body>
+		<div ng-controller="MyCtrl">
+			Ctrl:
+			<br>
+			<input type="text" ng-model="ctrlFlavor" id="dd">
+			<br>
+			Directive
+			<br>
+			<drink flavors="ctrlFlavor"></drink>
+		</div>
+	</body>
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript" src="=bind.js"></script>
+</html>

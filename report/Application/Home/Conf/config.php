@@ -3,9 +3,9 @@ return array(
 	//数据组配置
     'DB_TYPE'                   =>  'mysqli',
     'DB_HOST'                   =>  'localhost',
-    'DB_NAME'                   =>  'report',
+    'DB_NAME'                   =>  'xedreport',
     'DB_USER'                   =>  'root',
-    'DB_PWD'                    =>  'root',
+    'DB_PWD'                    =>  'YDW52025',
     'DB_PORT'                   =>  '3306',
     'DB_PREFIX'                 =>  'report_',
 
@@ -43,4 +43,6 @@ return array(
 	'TOKEN_NAME'				=> 'front_hash',
 
 	'AUTH_KEY'					=> 'this is my report',
+    'TMPL_CACHE_ON' => false,//禁止模板编译缓存
+    'HTML_CACHE_ON' => false,//禁止静态缓存
 );

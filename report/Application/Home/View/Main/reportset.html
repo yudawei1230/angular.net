@@ -65,7 +65,8 @@
 													<div class="form-actions form-actions-padding-sm">
 														<div class="row">
 															<div class="col-md-10 col-md-offset-2">
-																<button type="botton" class="btn btn-success" id="submit"><i class="glyphicon glyphicon-ok"></i> 保存</button>
+																<button type="submit" class="btn btn-success" id="submit"><i class="glyphicon glyphicon-ok"></i> 保存</button>
+																<input type="button" class="btn btn-defalt" style="margin-left:50px;width:72px" value="返回" id="back"></input>  
 															</div>
 														</div>
 													</div>
@@ -80,33 +81,12 @@
 					</div><!--/boxx-body-->
 				</div><!--/boxx-->
 			</div><!--/col-xs-12-->
-
 	</div><!--/container-->
 <include file="Main:console_footer" />
 <script type="text/javascript">
 $(function(){
-	// $('#save').click(function(){
-
-	// 	$('#table_post').submit();
-	// })
-	var data = {};
-	$('#save').click(function(){
-		var tr_obj = $('#table_list').find('tr');
-		tr_obj.each(function(i){
-			var code = tr_obj.eq(i).find('td').eq(1).html();
-			var prices = tr_obj.eq(i).find('input').val();
-
-
-			if(typeof(code) != 'undefined' && typeof(prices) != 'undefined' && prices != ''){
-				data[i] = code+'*'+prices;
-				console.log(code);
-			}
-		})
-
-
-		$.post('{:U('main/editreport')}',data,function(e){
-			console.log(e);
-		},'json');
-	})
+	$('#back').click(function(){
+		window.location.href = '{:U("main/index")}';
+	});
 })
 </script>

@@ -48,7 +48,7 @@ class FrontController extends Controller {
         $this->site_cfg = F('site_cfg');
         $this->assign('site_cfg',$this->site_cfg);
 
-        define('__TPL_PATH__','/file/Application/Home/View');
+        define('__TPL_PATH__','/Application/Home/View');
         C('TMPL_PARSE_STRING.__TPL_PATH__',__TPL_PATH__);
 
         $this->upload_dir = $this->root_path .'/upload/';

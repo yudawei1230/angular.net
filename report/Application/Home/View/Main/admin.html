@@ -4,9 +4,10 @@
 		<meta charset="utf-8">
 		<title>{$site_cfg.sitename}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-		<link  href="css/admin.css" type="text/css" rel="stylesheet" />
-		<script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="__TPL_PATH__/Main/css/bootstrap.min.css">
+		<link  href="__TPL_PATH__/Main/css/admin.css" type="text/css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="__TPL_PATH__/Main/css/admin.css">
+		<script type="text/javascript" src="__TPL_PATH__/js/jquery-1.10.2.min.js"></script>
 		{$other_script}
 	</head>
 	<body>
@@ -58,15 +59,12 @@
 												<tbody>
 													<!-- <volist name="data" id="vo"> -->
 													<tr>
-														<td>{$vo.username}</td>
-
+														<td>{$vo.username}<button class ="btn btn-primary" changePassword style="float:right ;margin-right:60px">修改密码</button>
+															<button class ="btn btn-defalt" deleteUser style="float:right ;margin-right:60px">删除</button>
+														</td>
 													</tr>
 													<!-- </volist> -->
 												</tbody>
-												<thead>
-													<th>用户名</th>
-
-												</thead>
 											</table>
 											<ul class="pagination">
 												{$page}
@@ -85,27 +83,16 @@
 <include file="Main:console_footer" />
 <script type="text/javascript">
 $(function(){
-	// $('#save').click(function(){
-
-	// 	$('#table_post').submit();
-	// })
-	var data = {};
-	$('#save').click(function(){
-		var tr_obj = $('#table_list').find('tr');
-		tr_obj.each(function(i){
-			var code = tr_obj.eq(i).find('td').eq(1).html();
-			var prices = tr_obj.eq(i).find('input').val();
-
-
-			if(typeof(code) != 'undefined' && typeof(prices) != 'undefined' && prices != ''){
-				data[i] = code+'*'+prices;
-				console.log(code);
-			}
+	$('button[changePassword]').click(function(e){
+		$.get('{:U('main/adminEditPassword')}',{'id':e.target.parentNode.firstChild.data},function(data){
+			alert(JSON.parse(data).msg);
 		});
-
-/*		$.post('{:U('main/editreport')}',data,function(e){
-			console.log(e);
-		},'json');*/
-	})
+	});
+	$('button[deleteUser]').click(function(e){
+		$.get('{:U('main/adminDeleteUser')}',{'id':e.target.parentNode.firstChild.data},function(data){
+			alert(JSON.parse(data).msg);
+			window.location.reload();
+		});
+	});
 })
 </script>

@@ -18,15 +18,15 @@ class LoginController extends FrontController {
             $username = $_POST['username'];
             $password = md5($_POST['password']);
             $verify_code = $_POST['verify'];
-            if(!$this->validTR(true)) {
+/*            if(!$this->validTR(true)) {
                 alert('非法数据','Login/login');
                 exit();
+            }*/
+            $verify = new \Think\Verify();
+            if(!$verify->check($verify_code)){
+                alert('验证码错误','Login/login');
+                exit;
             }
-            // $verify = new \Think\Verify();
-            // if(!$verify->check($verify_code)){
-            //     alert('验证码错误','Login/login');
-            //     exit;
-            // }
 
             if (empty($_POST['username']) || empty($_POST['password'])){
                 alert('请填写用户名及密码','Login/login');
