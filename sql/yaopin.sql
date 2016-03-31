@@ -1,5 +1,0 @@
-INSERT INTO `yaopin` (`ID`, `YaopinID`, `YaopinPrice`, `YaopinDate`, `IsDel`, `IsSort`, `AddDate`) VALUES (5, '硫酸                              ', 13.74, '2014-11-12 00:00:00', 0, 1, '2015-12-17 14:29:35');
-INSERT INTO `yaopin` (`ID`, `YaopinID`, `YaopinPrice`, `YaopinDate`, `IsDel`, `IsSort`, `AddDate`) VALUES (6, '保险粉                             ', 12.39, '2014-11-12 00:00:00', 0, 1, '2015-12-17 14:29:47');
-INSERT INTO `yaopin` (`ID`, `YaopinID`, `YaopinPrice`, `YaopinDate`, `IsDel`, `IsSort`, `AddDate`) VALUES (7, '六偏                              ', 12.39, '2014-11-12 00:00:00', 0, 1, '2015-12-17 14:29:58');
-INSERT INTO `yaopin` (`ID`, `YaopinID`, `YaopinPrice`, `YaopinDate`, `IsDel`, `IsSort`, `AddDate`) VALUES (8, 'DC                              ', 12.16, '2014-11-12 00:00:00', 0, 1, '2015-12-17 14:30:13');
-INSERT INTO `yaopin` (`ID`, `YaopinID`, `YaopinPrice`, `YaopinDate`, `IsDel`, `IsSort`, `AddDate`) VALUES (9, '液碱                              ', 15.61, '2015-10-12 09:00:00', 0, 1, '2015-12-17 14:30:29');

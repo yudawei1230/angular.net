@@ -1,6 +1,0 @@
-INSERT INTO `packingcost` (`ID`, `ProductDate`, `ProductID`, `PackingTodayCosts`, `AddDate`, `IsDel`, `IsSort`, `PackingTotalCosts`) VALUES (1, '2015-10-29 00:00:00', 'MM01', 22.4, '2015-12-17 13:54:18', 0, 1, 1374.3);
-INSERT INTO `packingcost` (`ID`, `ProductDate`, `ProductID`, `PackingTodayCosts`, `AddDate`, `IsDel`, `IsSort`, `PackingTotalCosts`) VALUES (2, '2015-10-29 00:00:00', 'MM02', 114, '2015-12-17 13:54:32', 0, 1, 1189.5);
-INSERT INTO `packingcost` (`ID`, `ProductDate`, `ProductID`, `PackingTodayCosts`, `AddDate`, `IsDel`, `IsSort`, `PackingTotalCosts`) VALUES (3, '2015-10-29 00:00:00', 'MM03', 0, '2015-12-17 13:54:49', 0, 1, 710.55);
-INSERT INTO `packingcost` (`ID`, `ProductDate`, `ProductID`, `PackingTodayCosts`, `AddDate`, `IsDel`, `IsSort`, `PackingTotalCosts`) VALUES (4, '2015-10-29 00:00:00', 'M04', 119, '2015-12-17 13:55:28', 0, 1, 1404);
-INSERT INTO `packingcost` (`ID`, `ProductDate`, `ProductID`, `PackingTodayCosts`, `AddDate`, `IsDel`, `IsSort`, `PackingTotalCosts`) VALUES (5, '2015-10-29 00:00:00', 'M08', 0, '2015-12-17 13:55:51', 0, 1, 331.5);
-INSERT INTO `packingcost` (`ID`, `ProductDate`, `ProductID`, `PackingTodayCosts`, `AddDate`, `IsDel`, `IsSort`, `PackingTotalCosts`) VALUES (6, '2016-2-29 00:00:00', '¥…Õ¡“ª', 0, '2016-2-29 17:02:16', 0, 1, 1189.5);
